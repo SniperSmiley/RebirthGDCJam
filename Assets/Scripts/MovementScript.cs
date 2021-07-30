@@ -67,6 +67,6 @@ public class MovementScript : MonoBehaviour
     }
 
     private void UpdateLayerOrder() {
-          rend.sortingOrder = Mathf.RoundToInt(100 - transform.position.y + 1);
+          rend.sortingOrder = Mathf.RoundToInt(100 - transform.position.y );
     }
 }
