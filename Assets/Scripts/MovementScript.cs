@@ -6,6 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof (Rigidbody2D))]
 public class MovementScript : MonoBehaviour
 {
+
+    public int BaseSortLayer = 500;
+    public Transform PlayerSortingPos;
+
     public float MoveSpeed = 20f;
 
     private Rigidbody2D _playerRig;
@@ -33,6 +37,7 @@ public class MovementScript : MonoBehaviour
         UpdateLayerOrder();
         CheckTile(); 
         GrabInput();
+
     }
 
     private void FixedUpdate() { MovePlayer(); }
@@ -44,11 +49,12 @@ public class MovementScript : MonoBehaviour
 
     private void MovePlayer() {
 
-        var movementOffset = _input * MoveSpeed * Time.fixedDeltaTime;
+        var movementOffset = _input * MoveSpeed / 10f;
         var newPos = _playerRig.position + movementOffset;
         //newPos = PixelPerfectClamp(newPos, 16);
 
         _playerRig.MovePosition(newPos);
+
     }
 
     private void CheckTile() {
@@ -67,6 +73,7 @@ public class MovementScript : MonoBehaviour
     }
 
     private void UpdateLayerOrder() {
-          rend.sortingOrder = Mathf.RoundToInt(100 - transform.position.y );
+        // Times 10 to make it have more layes of accuracy. Instead of per grid space.
+        rend.sortingOrder = Mathf.RoundToInt((BaseSortLayer - PlayerSortingPos.position.y ) * 10 );
     }
 }
