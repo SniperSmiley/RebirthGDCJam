@@ -7,8 +7,15 @@ public class CorrectRenderingOrder : MonoBehaviour
     public int BaseLayer = 500;
     private EnvironmentObjectScript envScript;
 
-  public void UpdateOrderFunc() {
+    private void Awake() {
 
+        // Ensures everthing is correctly ordered.
+        UpdateOrderFunc();
+    }
+
+
+    public void UpdateOrderFunc() {
+     
         foreach (SpriteRenderer rend in transform.GetComponentsInChildren<SpriteRenderer>()) {
 
             // Find the objects Script. 
