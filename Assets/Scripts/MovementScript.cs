@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 [RequireComponent(typeof (Rigidbody2D))]
@@ -15,39 +16,35 @@ public class MovementScript : MonoBehaviour
     private Rigidbody2D _playerRig;
     private Vector2 _input;
 
-
-    private PlayerInput _playerInputs;
     //private S_MapManager _mapManager;
 
     private SpriteRenderer rend = null;
 
-
     private void Awake() {
 
         rend = GetComponentInChildren<SpriteRenderer>();
-        _playerInputs = new PlayerInput(); _playerInputs.Enable();
-       // _mapManager = FindObjectOfType<S_MapManager>();
         _playerRig = GetComponent<Rigidbody2D>();
 
     }
 
 // Update is called once per frame
-    void Update()
-    {
-        UpdateLayerOrder();
-        CheckTile(); 
-        GrabInput();
-
-    }
-
-    private void FixedUpdate() { MovePlayer(); }
+    void Update()  { UpdateLayerOrder();  CheckTile();    }
+   
+    public void FixedUpdate() { MovePlayer(); }
        
-    private void GrabInput() {
-        _input = _playerInputs.Player.Move.ReadValue<Vector2>();
+    public void GrabMovementInput(InputAction.CallbackContext value) {
+        _input = value.ReadValue<Vector2>();
         _input.Normalize();
     }
 
     private void MovePlayer() {
+
+        // Correct rotation
+        if (Mathf.Abs(_input.x) > 0.1f) {
+            if (_input.x > 0) { if (rend.transform.localScale.x != 1) { rend.transform.localScale = new Vector3(1f, 1f, 1f); } }
+            else { if (rend.transform.localScale.x != -1) { rend.transform.localScale = new Vector3(-1f, 1f, 1f); } }
+        }
+     
 
         var movementOffset = _input * MoveSpeed / 10f;
         var newPos = _playerRig.position + movementOffset;
@@ -76,4 +73,6 @@ public class MovementScript : MonoBehaviour
         // Times 10 to make it have more layes of accuracy. Instead of per grid space.
         rend.sortingOrder = Mathf.RoundToInt((BaseSortLayer - PlayerSortingPos.position.y ) * 10 );
     }
+
+
 }
