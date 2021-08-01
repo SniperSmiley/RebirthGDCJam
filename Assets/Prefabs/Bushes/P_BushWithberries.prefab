@@ -107,6 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 9090871476262220572}
+  CoolDown: 0.2
+  Bush: {fileID: 21300000, guid: 34999dcd6836efd4691a264ec9367fe4, type: 3}
+  BushWithBerries: {fileID: 21300000, guid: cfdf0adc5e82c3047bdd73d46eef978b, type: 3}
+  Rend: {fileID: 9090871476262220572}
+  IsBerries: 1
 --- !u!1 &9090871476262220574
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,24 @@ using UnityEngine;
 
 public class BerryBushScript : IsInteractable
 {
-  public override void Interact() {
+    public Sprite Bush;
+    public Sprite BushWithBerries;
+    public SpriteRenderer Rend;
+
+    public bool IsBerries = true;
+
+    protected override void Awake() {
+        base.Awake();
+
+        if (IsBerries) { Rend.sprite = BushWithBerries; }
+        else { Rend.sprite = Bush; }
+
+    }
+
+
+    public override void Interact() {
+        
+        if (!IsBerries) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
@@ -12,6 +29,8 @@ public class BerryBushScript : IsInteractable
 
         GameManagerScript.GameManager.Food += 10f;
 
-        Destroy(gameObject);
+        IsBerries = false;
+        Rend.sprite = Bush;
+
     }
 }
