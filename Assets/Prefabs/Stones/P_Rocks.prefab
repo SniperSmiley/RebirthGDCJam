@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 5824881665825167048}
   - component: {fileID: 5824881665825167051}
   - component: {fileID: 5824881665825167049}
+  - component: {fileID: 4623434335932606828}
   m_Layer: 0
   m_Name: P_Rocks
   m_TagString: Untagged
@@ -175,3 +176,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SortingPos: {fileID: 5824881665125154109}
+--- !u!114 &4623434335932606828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824881665825167050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb0a15254a8ca040942a96c65bb1f80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 5824881664484488675}
+  CoolDown: 0.2
+  newSprite: {fileID: 21300000, guid: 630462198256665458379824fada50c9, type: 3}
