@@ -66,7 +66,7 @@ public class PlayerInteractScript : MonoBehaviour {
                 }
             }
 
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             CurrentInteraction.DisplayInteractable(true);
             target = CurrentInteraction;
         }

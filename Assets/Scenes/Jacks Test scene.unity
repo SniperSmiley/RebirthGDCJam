@@ -4126,7 +4126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseSortLayer: 500
   PlayerSortingPos: {fileID: 1117887719}
-  MoveSpeed: 1
+  StartSpeed: 0.5
+  MaxSpeed: 1.1
+  Duration: 1.5
   _input: {x: 0, y: 0}
 --- !u!114 &1169842655
 MonoBehaviour:
