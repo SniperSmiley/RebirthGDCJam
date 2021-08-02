@@ -14,7 +14,7 @@ public class MovementScript : MonoBehaviour
     public float MoveSpeed = 20f;
 
     private Rigidbody2D _playerRig;
-    private Vector2 _input;
+    public Vector2 _input;
 
     //private S_MapManager _mapManager;
 

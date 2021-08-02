@@ -8,12 +8,11 @@ public class StoneInteractionScript : IsInteractable {
     public Sprite newSprite;
 
     private bool isCrushed = false;
-    private CapsuleCollider2D col;
+    public CapsuleCollider2D col;
 
 
     protected override void Awake() {
         base.Awake();
-       col = GetComponent<CapsuleCollider2D>();
     }
 
     public override void Interact() {
@@ -30,7 +29,9 @@ public class StoneInteractionScript : IsInteractable {
         col.enabled = false;
         rend.sprite = newSprite;
         isCrushed = true;
+        rend.sortingOrder = 1;
 
     }
+
 
 }
