@@ -91,7 +91,7 @@ public class MovementScript : MonoBehaviour {
     private IEnumerator AdjustSpeed() {
 
         float elapsed = 0.0f;
-        Debug.Log("1" + moveSpeed);
+        //Debug.Log("1" + moveSpeed);
 
         while (elapsed < Duration) {
 
@@ -99,12 +99,12 @@ public class MovementScript : MonoBehaviour {
             if (isMoving == false) {
                 // break out, the player is no longer moving so reset values.
                 moveSpeed = StartSpeed;
-                Debug.Log("BROKEOUT");
+                //Debug.Log("BROKEOUT");
                 yield break;
             }
 
             moveSpeed = Mathf.Lerp(StartSpeed, MaxSpeed, elapsed / Duration);
-            Debug.Log(moveSpeed);
+            //Debug.Log(moveSpeed);
             elapsed += Time.deltaTime;
             yield return null;
 
