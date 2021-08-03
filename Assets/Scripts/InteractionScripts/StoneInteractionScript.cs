@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class StoneInteractionScript : IsInteractable {
 
-    
+
+    public float health = 100f;
+
     public Sprite newSprite;
 
     private bool isCrushed = false;
@@ -24,12 +26,17 @@ public class StoneInteractionScript : IsInteractable {
 
         base.Interact();
 
-        GameManagerScript.GameManager.Stone += 10f;
+        health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
-        col.enabled = false;
-        rend.sprite = newSprite;
-        isCrushed = true;
-        rend.sortingOrder = 1;
+        if (health <= 0) {
+            GameManagerScript.GameManager.Stone += 2f;
+            col.enabled = false;
+            Rend.sprite = newSprite;
+            isCrushed = true;
+            Rend.sortingOrder = 1;
+        }
+
+        else { StartCoroutine(FlashColourFunc()); }
 
     }
 

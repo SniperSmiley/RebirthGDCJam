@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BerryBushScript : IsInteractable
-{
-    public Sprite Bush;
-    public Sprite BushWithBerries;
+public class PlantInteractionScript : IsInteractable {
+
+    public Sprite Chopped;
+    public Sprite Grown;
+
     public float ResfreshTime = 5f;
 
-    public bool IsBerries = true;
+    public bool IsGrown = true;
 
     private float timeOfInteract = 0;
 
     protected override void Awake() {
         base.Awake();
 
-        if (IsBerries) {Rend.sprite = BushWithBerries; }
-        else { Rend.sprite = Bush; }
+        if (IsGrown) { Rend.sprite = Grown; }
+        else { Rend.sprite = Chopped; }
 
         timeOfInteract = Time.time;
     }
@@ -26,9 +27,9 @@ public class BerryBushScript : IsInteractable
         base.Update();
 
         if ((Time.time - timeOfInteract) > ResfreshTime ) {
-            if (!IsBerries) {
-                IsBerries = true;
-                Rend.sprite = BushWithBerries;
+            if (!IsGrown) {
+                IsGrown = true;
+                Rend.sprite = Grown;
             }
         
         }
@@ -37,17 +38,22 @@ public class BerryBushScript : IsInteractable
 
     public override void Interact() {
         
-        if (!IsBerries) { return; }
+        if (!IsGrown) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
         base.Interact();
 
-        GameManagerScript.GameManager.Food += 10f;
+        GameManagerScript.GameManager.Carbon += 3f;
 
         timeOfInteract = Time.time;
-        IsBerries = false;
-        Rend.sprite = Bush;
+        IsGrown = false;
+        Rend.sprite = Chopped;
 
     }
+
 }
+
+
+    
+
