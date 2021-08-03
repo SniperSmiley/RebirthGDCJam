@@ -30,7 +30,7 @@ public class CentipedeMovement : MonoBehaviour
         if (elapsed > 1.0f)
         {
             elapsed = 0.0f;
-            angle += Random.Range(-30.0f, 30.0f);
+            angle += Random.Range(-360.0f, 360.0f);
             direction.x = Mathf.Cos(angle / 180.0f * Mathf.PI);
             direction.y = Mathf.Sin(angle / 180.0f * Mathf.PI);
         }
@@ -38,6 +38,6 @@ public class CentipedeMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb2d.MovePosition(rb2d.position + direction * speed / 10f);
+        rb2d.velocity=direction * speed;
     }
 }
