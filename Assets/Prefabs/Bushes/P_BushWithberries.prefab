@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 9090871475988575219}
   - component: {fileID: 6027103036626558898}
   - component: {fileID: 1829896009910512383}
+  - component: {fileID: 3880251315741495365}
   m_Layer: 0
   m_Name: P_BushWithberries
   m_TagString: Untagged
@@ -72,7 +73,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9090871475988575229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -107,11 +108,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 9090871476262220572}
-  CoolDown: 0.2
+  CoolDown: 0
   Bush: {fileID: 21300000, guid: 34999dcd6836efd4691a264ec9367fe4, type: 3}
   BushWithBerries: {fileID: 21300000, guid: cfdf0adc5e82c3047bdd73d46eef978b, type: 3}
   Rend: {fileID: 9090871476262220572}
+  ResfreshTime: 5
   IsBerries: 1
+--- !u!61 &3880251315741495365
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090871475988575229}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.22814035}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5056753, y: 1.1314707}
+  m_EdgeRadius: 0
 --- !u!1 &9090871476262220574
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +150,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9090871476262220573}
   - component: {fileID: 9090871476262220572}
-  m_Layer: 0
+  - component: {fileID: 6934290480662202815}
+  m_Layer: 2
   m_Name: Bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,3 +223,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6934290480662202815
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090871476262220574}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.028053703, y: -0.57}
+  m_Size: {x: 3.4870753, y: 0.46621734}
+  m_Direction: 1

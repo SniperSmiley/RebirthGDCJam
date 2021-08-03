@@ -149,7 +149,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": ""XboxController"",
                     ""id"": ""59fe26a4-fb6b-4162-abec-7f078344dd1b"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -216,6 +216,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""7d355944-1801-48b0-8b3e-fccf1710880d"",
                     ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttemptInteraction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43915848-54ba-4da3-8059-9b6cce449821"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
