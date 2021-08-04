@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneInteractionScript : IsInteractable {
-
-
-    public float health = 100f;
+public class IronInteractionScript : IsInteractable
+{
+    public float health = 140f;
 
     public Sprite newSprite;
 
@@ -29,7 +28,8 @@ public class StoneInteractionScript : IsInteractable {
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]  += 2f;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron] += 2f;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone] += 1f;
             col.enabled = false;
             Rend.sprite = newSprite;
             isCrushed = true;
@@ -39,6 +39,5 @@ public class StoneInteractionScript : IsInteractable {
         else { StartCoroutine(FlashColourFunc()); }
 
     }
-
 
 }

@@ -44,7 +44,7 @@ public class PlantInteractionScript : IsInteractable {
 
         base.Interact();
 
-        GameManagerScript.GameManager.Carbon += 3f;
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += 5f;
 
         timeOfInteract = Time.time;
         IsGrown = false;

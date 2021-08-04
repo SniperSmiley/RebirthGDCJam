@@ -43,7 +43,7 @@ public class BerryBushScript : IsInteractable
 
         base.Interact();
 
-        GameManagerScript.GameManager.Food += 10f;
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food] += 10f;
 
         timeOfInteract = Time.time;
         IsBerries = false;

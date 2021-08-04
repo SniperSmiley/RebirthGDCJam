@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117283fc275d3e341abcf861ee294a79, type: 3}
+  m_Name: StarResources
+  m_EditorClassIdentifier: 
+  Wood: 30
+  Stone: 20
+  Food: 20
+  Carbon: 21
+  Iron: 1
+  Copper: 12
+  Titanium: 3
+  Bruxite: 123
+  Gold: 23
+  Energy: 10
+  Array:
+  - 30
+  - 20
+  - 20
+  - 21
+  - 1
+  - 12
+  - 3
+  - 123
+  - 23
+  - 10

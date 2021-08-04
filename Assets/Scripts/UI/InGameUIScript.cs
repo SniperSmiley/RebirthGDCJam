@@ -27,15 +27,15 @@ public class InGameUIScript : MonoBehaviour {
     }
 
     public void OnUpdateUI() {
-        WoodText.text = "Wood: " + GameManagerScript.GameManager.Wood;
-        StoneText.text = "Stone: " + GameManagerScript.GameManager.Stone;
-        FoodText.text = "Food: " + GameManagerScript.GameManager.Food;
-        IronText.text = "Iron: " + GameManagerScript.GameManager.Iron;
-        CopperText.text = "Copper: " + GameManagerScript.GameManager.Copper;
-        BruxiteText.text = "Bruxite: " + GameManagerScript.GameManager.Bruxite;
-        TitaniumText.text = "Titanium: " + GameManagerScript.GameManager.Titanium;
-        GoldText.text = "Gold: " + GameManagerScript.GameManager.Gold;
-        CarbonText.text = "Carbon: " + GameManagerScript.GameManager.Carbon;   
-        EnergyText.text = "Energy: " + GameManagerScript.GameManager.Energy;  
+        WoodText.text = "Wood: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood];
+        StoneText.text = "Stone: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone];
+        FoodText.text = "Food: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food];
+        IronText.text = "Iron: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron];
+        CopperText.text = "Copper: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper];
+        BruxiteText.text = "Bruxite: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite];
+        TitaniumText.text = "Titanium: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium];
+        GoldText.text = "Gold: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Gold];
+        CarbonText.text = "Carbon: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon];   
+        EnergyText.text = "Energy: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];  
     }
 }

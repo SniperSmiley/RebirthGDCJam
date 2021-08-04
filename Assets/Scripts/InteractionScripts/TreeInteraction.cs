@@ -29,8 +29,8 @@ public class TreeInteraction : IsInteractable {
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.Wood += WoodResourceGainFrom;
-            GameManagerScript.GameManager.Carbon += CarbonResourceGainFrom;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood] += WoodResourceGainFrom;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonResourceGainFrom;
             Rend.sprite = newSprite;
             isTrunk = true;
         }
