@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rend: {fileID: 3108606058014990729}
-  CoolDown: 0.2
+  CoolDown: 0.6
   TreeShake: {fileID: 1209593309393295540}
   health: 120
   WoodResourceGainFrom: 4

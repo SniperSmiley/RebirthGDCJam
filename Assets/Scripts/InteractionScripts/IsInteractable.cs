@@ -64,7 +64,7 @@ public class IsInteractable : MonoBehaviour {
     public virtual IEnumerator FlashColourFunc() {
         Rend.color = FlashColour;
 
-        yield return new WaitForSeconds(CoolDown);
+        yield return new WaitForSeconds(CoolDown - 0.1f);
 
         Rend.color = color;
     }

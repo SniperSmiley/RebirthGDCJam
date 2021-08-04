@@ -22,6 +22,8 @@ public class GameManagerScript : MonoBehaviour
     public CharacterStats PlayerStats = new CharacterStats( 100, 1, 1, 1 );
         
     public AudioManager AudioManagerScript;
+    public InputManager InputManagerScript;
+
 
     private void Awake() {
         if (GameManager != null) { Destroy(gameObject); }
