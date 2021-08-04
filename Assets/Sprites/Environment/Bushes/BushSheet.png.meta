@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: b4ec8dfb7165751468c3112b80884116
+guid: be59034ead7a61343a6ca70939ebde8c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -509880427076460002
-    second: CattailPicked_0
+      213: -2410474751825186868
+    second: BushSheet_0
   - first:
-      213: 5606769376712476492
-    second: CattailPicked_1
+      213: 6955152548768831977
+    second: BushSheet_1
   - first:
-      213: -8797926168873751762
-    second: CattailPicked_2
+      213: 2965112459235562237
+    second: BushSheet_2
+  - first:
+      213: -1165302534241978935
+    second: BushSheet_3
+  - first:
+      213: 8808047230732163222
+    second: BushSheet_4
+  - first:
+      213: 8946249018731918539
+    second: BushSheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,64 +133,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CattailPicked_0
+      name: BushSheet_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 32
-        height: 64
+        x: 24
+        y: 10
+        width: 28
+        height: 33
       alignment: 9
-      pivot: {x: 0.46875, y: 0.4375}
+      pivot: {x: 0.5, y: 0.36363637}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12ee2af37a8ce8f0800000000000000
-      internalID: -509880427076460002
+      spriteID: ccf69650cf54c8ed0800000000000000
+      internalID: -2410474751825186868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_1
+      name: BushSheet_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 0
-        width: 32
-        height: 64
+        x: 88
+        y: 10
+        width: 28
+        height: 33
       alignment: 9
-      pivot: {x: 0.5, y: 0.421875}
+      pivot: {x: 0.5, y: 0.36363637}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474c7cca0f3fcd40800000000000000
-      internalID: 5606769376712476492
+      spriteID: 9e9d404a46aa58060800000000000000
+      internalID: 6955152548768831977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_2
+      name: BushSheet_2
       rect:
         serializedVersion: 2
-        x: 146
-        y: 0
-        width: 32
-        height: 64
+        x: 148
+        y: 4
+        width: 34
+        height: 40
       alignment: 9
-      pivot: {x: 0.375, y: 0.4375}
+      pivot: {x: 0.5, y: 0.45000002}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2baa2843cc77e580800000000000000
-      internalID: -8797926168873751762
+      spriteID: df212d36212362920800000000000000
+      internalID: 2965112459235562237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BushSheet_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 4
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.45000002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5f4a6e48304dfe0800000000000000
+      internalID: -1165302534241978935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BushSheet_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 58
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4489796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69857a01a487c3a70800000000000000
+      internalID: 8808047230732163222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BushSheet_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 58
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4489796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4f3b15516772c70800000000000000
+      internalID: 8946249018731918539
       vertices: []
       indices: 
       edges: []

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b4ec8dfb7165751468c3112b80884116
+guid: 0668c708f86db8b4296975d4ead33835
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -509880427076460002
-    second: CattailPicked_0
+      213: -1419349382128094535
+    second: Cattails_0
   - first:
-      213: 5606769376712476492
-    second: CattailPicked_1
+      213: -1526165505576963474
+    second: Cattails_1
   - first:
-      213: -8797926168873751762
-    second: CattailPicked_2
+      213: -7478770804086185374
+    second: Cattails_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CattailPicked_0
+      name: Cattails_0
       rect:
         serializedVersion: 2
         x: 15
@@ -138,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12ee2af37a8ce8f0800000000000000
-      internalID: -509880427076460002
+      spriteID: 9b2b51ac1457d4ce0800000000000000
+      internalID: -1419349382128094535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_1
+      name: Cattails_1
       rect:
         serializedVersion: 2
         x: 79
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474c7cca0f3fcd40800000000000000
-      internalID: 5606769376712476492
+      spriteID: e6271a30f88f1dae0800000000000000
+      internalID: -1526165505576963474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_2
+      name: Cattails_2
       rect:
         serializedVersion: 2
         x: 146
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2baa2843cc77e580800000000000000
-      internalID: -8797926168873751762
+      spriteID: 26261e1f391163890800000000000000
+      internalID: -7478770804086185374
       vertices: []
       indices: 
       edges: []
