@@ -120,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5002
-  m_Sprite: {fileID: 21300000, guid: 223f630a0c46122419f4778ca0c38ce4, type: 3}
+  m_Sprite: {fileID: -6186775346929679735, guid: e3fe6f2d0a63a9444a91460ac370ccc1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   health: 140
   WoodResourceGainFrom: 5
   CarbonResourceGainFrom: 3
-  newSprite: {fileID: 21300000, guid: 4b0f434981c8e404b9fe817482b77f8a, type: 3}
+  newSprite: {fileID: -7571291637044328373, guid: e3fe6f2d0a63a9444a91460ac370ccc1, type: 3}
 --- !u!61 &7583705152949043604
 BoxCollider2D:
   m_ObjectHideFlags: 0

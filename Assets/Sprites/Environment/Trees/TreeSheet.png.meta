@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: b4ec8dfb7165751468c3112b80884116
+guid: e3fe6f2d0a63a9444a91460ac370ccc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -509880427076460002
-    second: CattailPicked_0
+      213: -6186775346929679735
+    second: TreeSheet_0
   - first:
-      213: 5606769376712476492
-    second: CattailPicked_1
+      213: -2548247952273501294
+    second: TreeSheet_1
   - first:
-      213: -8797926168873751762
-    second: CattailPicked_2
+      213: -448569402321790231
+    second: TreeSheet_2
+  - first:
+      213: -7571291637044328373
+    second: TreeSheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,64 +127,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CattailPicked_0
+      name: TreeSheet_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
+        x: 16
+        y: 3
         width: 32
-        height: 64
+        height: 61
       alignment: 9
-      pivot: {x: 0.46875, y: 0.4375}
+      pivot: {x: 0.46875, y: 0.06557377}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12ee2af37a8ce8f0800000000000000
-      internalID: -509880427076460002
+      spriteID: 982cc15d998242aa0800000000000000
+      internalID: -6186775346929679735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_1
+      name: TreeSheet_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 0
+        x: 80
+        y: 3
         width: 32
-        height: 64
+        height: 61
       alignment: 9
-      pivot: {x: 0.5, y: 0.421875}
+      pivot: {x: 0.46875, y: 0.06557377}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474c7cca0f3fcd40800000000000000
-      internalID: 5606769376712476492
+      spriteID: 2931f151dfdc2acd0800000000000000
+      internalID: -2548247952273501294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_2
+      name: TreeSheet_2
       rect:
         serializedVersion: 2
-        x: 146
-        y: 0
+        x: 143
+        y: 3
         width: 32
-        height: 64
+        height: 61
       alignment: 9
-      pivot: {x: 0.375, y: 0.4375}
+      pivot: {x: 0.5, y: 0.06557377}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2baa2843cc77e580800000000000000
-      internalID: -8797926168873751762
+      spriteID: 9ea1085518c56c9f0800000000000000
+      internalID: -448569402321790231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeSheet_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.109375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48461bde5e5de690800000000000000
+      internalID: -7571291637044328373
       vertices: []
       indices: 
       edges: []

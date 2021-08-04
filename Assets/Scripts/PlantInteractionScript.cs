@@ -7,6 +7,7 @@ public class PlantInteractionScript : IsInteractable {
     public Sprite Chopped;
     public Sprite Grown;
 
+    public float CarbonGive = 5f;
     public float ResfreshTime = 5f;
 
     public bool IsGrown = true;
@@ -44,7 +45,7 @@ public class PlantInteractionScript : IsInteractable {
 
         base.Interact();
 
-        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += 5f;
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonGive;
 
         timeOfInteract = Time.time;
         IsGrown = false;

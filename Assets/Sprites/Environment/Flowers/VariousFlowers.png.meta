@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b4ec8dfb7165751468c3112b80884116
+guid: 3a097cf636455e5489c3fd764798cf10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -509880427076460002
-    second: CattailPicked_0
+      213: 4140292179560770938
+    second: VariousFlowers_0
   - first:
-      213: 5606769376712476492
-    second: CattailPicked_1
+      213: -961735833858590210
+    second: VariousFlowers_1
   - first:
-      213: -8797926168873751762
-    second: CattailPicked_2
+      213: 4564036596264045005
+    second: VariousFlowers_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,64 +124,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CattailPicked_0
+      name: VariousFlowers_0
       rect:
         serializedVersion: 2
         x: 15
-        y: 0
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.46875, y: 0.4375}
+        y: 12
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12ee2af37a8ce8f0800000000000000
-      internalID: -509880427076460002
+      spriteID: a7d2c051dc5457930800000000000000
+      internalID: 4140292179560770938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_1
+      name: VariousFlowers_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 0
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.421875}
+        x: 85
+        y: 17
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474c7cca0f3fcd40800000000000000
-      internalID: 5606769376712476492
+      spriteID: ef93817ca5a37a2f0800000000000000
+      internalID: -961735833858590210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CattailPicked_2
+      name: VariousFlowers_2
       rect:
         serializedVersion: 2
         x: 146
-        y: 0
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.375, y: 0.4375}
+        y: 10
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2baa2843cc77e580800000000000000
-      internalID: -8797926168873751762
+      spriteID: dc9833e5a17b65f30800000000000000
+      internalID: 4564036596264045005
       vertices: []
       indices: 
       edges: []

@@ -12,6 +12,8 @@ public class BerryBushScript : IsInteractable
 
     private float timeOfInteract = 0;
 
+    public float BerryGive = 5f;
+
     protected override void Awake() {
         base.Awake();
 
@@ -43,7 +45,7 @@ public class BerryBushScript : IsInteractable
 
         base.Interact();
 
-        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food] += 10f;
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food] += BerryGive;
 
         timeOfInteract = Time.time;
         IsBerries = false;
