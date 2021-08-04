@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117283fc275d3e341abcf861ee294a79, type: 3}
   m_Name: StarResources
   m_EditorClassIdentifier: 
-  Wood: 30
-  Stone: 20
-  Food: 20
-  Carbon: 21
-  Iron: 1
-  Copper: 12
-  Titanium: 3
-  Bruxite: 123
-  Gold: 23
-  Energy: 10
+  Wood: 120
+  Stone: 120
+  Food: 120
+  Carbon: 120
+  Iron: 120
+  Copper: 120
+  Titanium: 120
+  Bruxite: 120
+  Gold: 120
+  Energy: 0
   Array:
   - 30
-  - 20
-  - 20
-  - 21
-  - 1
-  - 12
-  - 3
-  - 123
-  - 23
-  - 10
+  - 30
+  - 120
+  - 109
+  - 110
+  - 120
+  - 120
+  - 120
+  - 120
+  - 104
