@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IsInteractable : MonoBehaviour {
-    public SpriteRenderer rend;
+    public SpriteRenderer Rend;
 
 
     private Color FlashColour;
@@ -16,11 +16,11 @@ public class IsInteractable : MonoBehaviour {
 
 
     protected virtual void Awake() {
-        color = rend.color;
+        color = Rend.color;
         newcol = color;
         newcol.b = newcol.b - 0.3f;
         FlashColour = newcol;
-        FlashColour.a = newcol.a - 0.3f;
+        FlashColour.a = newcol.a - 0.18f;
     }
 
     protected virtual void Update() {
@@ -55,18 +55,18 @@ public class IsInteractable : MonoBehaviour {
             
 
         // Debug.Log("Intercting with " + transform.name );
-        if (display) { rend.color = newcol; }
-        else { rend.color = color; }
+        if (display) { Rend.color = newcol; }
+        else { Rend.color = color; }
     }
 
     
 
     public virtual IEnumerator FlashColourFunc() {
-        rend.color = FlashColour;
+        Rend.color = FlashColour;
 
-        yield return new WaitForSeconds(CoolDown);
+        yield return new WaitForSeconds(CoolDown - 0.1f);
 
-        rend.color = color;
+        Rend.color = color;
     }
 
 

@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInteractScript : MonoBehaviour {
+
+
     //PlayerInput _playerInputs = new PlayerInput();
     private bool AttemptInteract = false;
-
-
 
     public Transform RayCastFirePoint;
     public float InteractDistance;
@@ -24,9 +24,21 @@ public class PlayerInteractScript : MonoBehaviour {
     private Vector2 input;
     private Vector3 adjustedInput;
 
+    private PlayerInput inputScript;
+
+    private bool tryToInteract = false;
 
     private void Awake() {
         moveScript = GetComponent<MovementScript>();
+        
+
+
+    }
+
+    private void Start() {
+        inputScript = GameManagerScript.GameManager.InputManagerScript.PlayerInputScript;
+        inputScript.Player.AttemptInteraction.started += context => IsInteracting(true);
+        inputScript.Player.AttemptInteraction.canceled += context => IsInteracting(false);
     }
 
     private void Update() {
@@ -77,20 +89,35 @@ public class PlayerInteractScript : MonoBehaviour {
                 CurrentInteraction = null;
             }
         }
+
+        if (tryToInteract) { AttemptInteraction(); }
     }
 
-    public void AttemptInteraction(InputAction.CallbackContext value) {
+    public void IsInteracting(bool yes) {
+        if (yes) { tryToInteract = true;  }
+        else { tryToInteract = false; }
+    }
+
+
+
+    //InputAction.CallbackContext value
+
+    public void AttemptInteraction() {
+
+      
+
+       // Debug.Log("TEST");
 
         // Already interacting yeet
-        if (AttemptInteract) { return; }
+       // if (AttemptInteract) { return; }
 
-        AttemptInteract = true;
+       // AttemptInteract = true;
 
         if (CurrentInteraction != null) { CurrentInteraction.Interact(); }
 
 
 
-        AttemptInteract = false;
+      //  AttemptInteract = false;
 
 
     }
