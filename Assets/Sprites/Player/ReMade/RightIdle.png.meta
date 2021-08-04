@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: bd32e25d523e05644b3167ba2ef43e48
+guid: 643452112c2a8ad469fe761d7d0a7c8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 915423689310101656
-    second: PlayerWalkSheet_0
+      213: 8864136069241387470
+    second: RightIdle_0
   - first:
-      213: -7584453347637711473
-    second: PlayerWalkSheet_1
+      213: 3079331862606360091
+    second: RightIdle_1
   - first:
-      213: -2482314474333944157
-    second: PlayerWalkSheet_2
+      213: 3878613870061347504
+    second: RightIdle_2
   - first:
-      213: 5090696220668784832
-    second: PlayerWalkSheet_3
-  - first:
-      213: -8602729299642241512
-    second: PlayerWalkSheet_4
-  - first:
-      213: 4047768151723169920
-    second: PlayerWalkSheet_5
-  - first:
-      213: -3154934289695594323
-    second: PlayerWalkSheet_6
-  - first:
-      213: -2836928502454150601
-    second: PlayerWalkSheet_7
+      213: 8903180613029191251
+    second: RightIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,169 +127,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalkSheet_0
+      name: RightIdle_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 2
-        width: 13
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.09375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8906e4ccefc34bc00800000000000000
-      internalID: 915423689310101656
+      spriteID: ec93cdf6accb30b70800000000000000
+      internalID: 8864136069241387470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkSheet_1
+      name: RightIdle_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 3
-        width: 13
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.09375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8d288e4ddb9eb690800000000000000
-      internalID: -7584453347637711473
+      spriteID: b1ea138930cfbba20800000000000000
+      internalID: 3079331862606360091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkSheet_2
+      name: RightIdle_2
       rect:
         serializedVersion: 2
-        x: 77
-        y: 2
-        width: 13
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.09375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a6c380332c0d8dd0800000000000000
-      internalID: -2482314474333944157
+      spriteID: 0b2e8e9d3ca93d530800000000000000
+      internalID: 3878613870061347504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerWalkSheet_3
+      name: RightIdle_3
       rect:
         serializedVersion: 2
-        x: 109
-        y: 2
-        width: 13
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.59375, y: 0.09375}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0f264bd39c5a640800000000000000
-      internalID: 5090696220668784832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalkSheet_4
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 2
-        width: 13
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81eaafbf747fc9880800000000000000
-      internalID: -8602729299642241512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalkSheet_5
-      rect:
-        serializedVersion: 2
-        x: 173
-        y: 3
-        width: 13
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 088599020bf8c2830800000000000000
-      internalID: 4047768151723169920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalkSheet_6
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 2
-        width: 14
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da8aef4aafb6734d0800000000000000
-      internalID: -3154934289695594323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerWalkSheet_7
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 2
-        width: 13
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73a1a06ce8431a8d0800000000000000
-      internalID: -2836928502454150601
+      spriteID: 35edfb2b8937e8b70800000000000000
+      internalID: 8903180613029191251
       vertices: []
       indices: 
       edges: []
