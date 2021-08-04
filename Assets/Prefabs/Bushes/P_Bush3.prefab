@@ -183,6 +183,7 @@ MonoBehaviour:
   BushWithBerries: {fileID: 6955152548768831977, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
   ResfreshTime: 5
   IsBerries: 0
+  BerryGive: 2
 --- !u!61 &3580558388956141171
 BoxCollider2D:
   m_ObjectHideFlags: 0

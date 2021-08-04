@@ -220,7 +220,7 @@ TextureImporter:
       name: BushSheet_4
       rect:
         serializedVersion: 2
-        x: 259
+        x: 256
         y: 0
         width: 58
         height: 49
@@ -241,7 +241,7 @@ TextureImporter:
       name: BushSheet_5
       rect:
         serializedVersion: 2
-        x: 323
+        x: 320
         y: 0
         width: 58
         height: 49

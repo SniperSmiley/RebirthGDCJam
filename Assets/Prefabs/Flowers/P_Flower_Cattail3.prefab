@@ -193,6 +193,7 @@ MonoBehaviour:
   CoolDown: 0.2
   Chopped: {fileID: -8797926168873751762, guid: b4ec8dfb7165751468c3112b80884116, type: 3}
   Grown: {fileID: -7478770804086185374, guid: 0668c708f86db8b4296975d4ead33835, type: 3}
+  CarbonGive: 2
   ResfreshTime: 5
   IsGrown: 1
 --- !u!61 &7567031677372366106

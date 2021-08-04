@@ -79,9 +79,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 5108548710606079506}
   CoolDown: 0.6
-  health: 100
+  health: 60
   newSprite: {fileID: 21300000, guid: 630462198256665458379824fada50c9, type: 3}
   col: {fileID: 2450073192997902919}
+  StoneGive: 2
 --- !u!61 &453331523109408376
 BoxCollider2D:
   m_ObjectHideFlags: 0
