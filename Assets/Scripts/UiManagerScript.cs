@@ -8,6 +8,7 @@ public class UiManagerScript : MonoBehaviour
 
 
     public GameObject CarbonGeneratorUI;
+    public GameObject PrisonnerManagementUI;
 
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
@@ -16,7 +17,8 @@ public class UiManagerScript : MonoBehaviour
 
     public enum UI {
         NOTHING,
-        CarbonGenerator
+        CarbonGenerator,
+        PrisonerManagement
     };
 
 
@@ -27,6 +29,7 @@ public class UiManagerScript : MonoBehaviour
 
         switch (uiToShow) {
             case UI.CarbonGenerator: CarbonGeneratorUI.SetActive(true); currentlyShowingUI = CarbonGeneratorUI;  break;
+            case UI.PrisonerManagement: PrisonnerManagementUI.SetActive(true); currentlyShowingUI = PrisonnerManagementUI;  break;
             default:   break;
              
         }
