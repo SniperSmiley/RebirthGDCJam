@@ -10,11 +10,18 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup EffectsMixer;
     public int NumberOfAudioSources = 25;
     public List<AudioSource> AudioSourcesList = new List<AudioSource>();
+    AudioSource audioSource;
 
-     public IEnumerator PlayEffect(AudioClip clip) {
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefsController.GetMusicVolume();
+    }
+    public IEnumerator PlayEffect(AudioClip clip) {
 
-            AudioSource _audioSource = null;
-            foreach (AudioSource source in AudioSourcesList) {
+        AudioSource _audioSource = null;
+        foreach (AudioSource source in AudioSourcesList) {
                 if (source.clip == null) {
                     // Not being used.
                     _audioSource = source;
@@ -35,4 +42,10 @@ public class AudioManager : MonoBehaviour
 
             }
         }
+    public void SetVolume(float volume)
+    {
+        
+        audioSource.volume = volume;
+    }
+
 }
