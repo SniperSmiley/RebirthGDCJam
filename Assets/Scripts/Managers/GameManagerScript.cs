@@ -6,6 +6,8 @@ public class GameManagerScript : MonoBehaviour {
     public static GameManagerScript GameManager;
 
 
+    public List<PrisonerAction> PrisonerActions = new List<PrisonerAction>();
+
     public Resources PlayerResources;
     public UpgradeCostsSO StartResources;
 
@@ -39,17 +41,37 @@ public class GameManagerScript : MonoBehaviour {
         if (UiManagerScripto.IsGeneratorBroken) { return; }
 
         if (Time.time - LastTime > 1) {
-            if (PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] >= 1) {
-                PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] -= 1;
-                PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] += CarbonGeneratorEnergy;
+            if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Carbon] >= 1) {
+                PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Carbon] -= 1;
+                PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] += CarbonGeneratorEnergy;
                 LastTime = Time.time;
             }
+
+            for (int i = 0; i < PrisonerActions.Count; i++) {
+                if (Time.time - PrisonerActions[i]._lastUpdated > PrisonerActions[i].Delay) {
+                    PlayerResources.ResourceArray[(int)PrisonerActions[i].resource] += PrisonerActions[i].Change;
+                    PrisonerActions[i]._lastUpdated = Time.time;
+                }
+            }
+
+
+
         }
 
-        
-        
+
+
 
     }
+}
+
+public class PrisonerAction {
+
+    public float _lastUpdated = 0;
+    public float Delay = 2;
+    public Resources.ResourcesIndex resource = Resources.ResourcesIndex.Wood;
+    public float Change = 0f;
+    public int PrisIndex = 0;
+    public float BaseChange = 5;
 }
 
 

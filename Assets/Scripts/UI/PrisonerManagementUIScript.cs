@@ -13,10 +13,13 @@ public class Prisoner {
     public int ResourceGainRate = 100;
     public int ResourceGainPercentage = 0;
     public bool Awake = false;
+    public Button resourceButtonSelected = null;
 }
 
 
 public class PrisonerManagementUIScript : MonoBehaviour {
+
+    public GameObject Buttons;
 
     public Color AwkenedColour;
 
@@ -73,6 +76,12 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
     }
 
+    private void resetButtons() {
+        foreach (Button but in Buttons.GetComponentsInChildren<Button>()) {
+            but.interactable = true;
+        }
+    }
+
     public void MugClicked(int id) {
 
 
@@ -89,6 +98,16 @@ public class PrisonerManagementUIScript : MonoBehaviour {
         MugShots.SetActive(false);
 
         UpdateCrimText();
+
+        resetButtons();
+
+        // Update option is awake
+        if (Prisoners[CurrentPrisonerIndex].Awake) {
+            // Set old button on if active?
+            if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
+                Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = false;
+            }
+        }
 
 
         RapSheet.SetActive(true);
@@ -109,7 +128,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
             Prisoners[CurrentPrisonerIndex].Level += 1;
 
-            if (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage == 0) { Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = 5; }
+            if (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage == 0) { Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = 50; }
             else {
                 Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = (2 * Prisoners[CurrentPrisonerIndex].ResourceGainPercentage);
             }
@@ -118,6 +137,16 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             Prisoners[CurrentPrisonerIndex].ResourceGainRate += Prisoners[CurrentPrisonerIndex].ResourceGainPercentage;
 
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] -= FoodRequired;
+
+            // Actually increase change
+            for (int i = 0; i <  GameManagerScript.GameManager.PrisonerActions.Count; i++) {
+                if (GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
+                     GameManagerScript.GameManager.PrisonerActions[i].Change =  GameManagerScript.GameManager.PrisonerActions[i].BaseChange * ( Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100 );
+                    break;
+                }
+
+            }
+
             UpdateCrimText();
         }
 
@@ -161,15 +190,54 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
         if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] >= CurrentCostToAwake) {
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
-            Debug.Log("WAKE UP!! ");
-            Prisoners[CurrentPrisonerIndex].Awake = true;
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] -= CurrentCostToAwake;
-            Asleep.SetActive(false); Awake.SetActive(true);
-            Prisoners[CurrentPrisonerIndex].MugImageGO.GetComponent<Image>().color = AwkenedColour;
-            CurrentCostToAwake *= 2.5f;
+            OnWakeUp();
         }
         else {
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UIFail));
+        }
+    }
+
+
+    public void OnWakeUp() {
+
+        Debug.Log("WAKE UP!! ");
+        Prisoners[CurrentPrisonerIndex].Awake = true;
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] -= CurrentCostToAwake;
+        Asleep.SetActive(false); Awake.SetActive(true);
+        Prisoners[CurrentPrisonerIndex].MugImageGO.GetComponent<Image>().color = AwkenedColour;
+        CurrentCostToAwake *= 2.5f;
+
+        // Setting up action
+        PrisonerAction newAction = new PrisonerAction();
+        newAction.Change = 4;
+        newAction.BaseChange = 4;
+        newAction.Delay = 5;
+        newAction.PrisIndex = CurrentPrisonerIndex;
+        newAction.resource = Resources.ResourcesIndex.Wood;
+
+        GameManagerScript.GameManager.PrisonerActions.Add(newAction);
+    }
+
+    public void OnResourceGatherSettingSet(Resources.ResourcesIndex res, Button but) {
+        for (int i = 0; i <   GameManagerScript.GameManager.PrisonerActions.Count; i++) {
+            if (  GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
+                GameManagerScript.GameManager.PrisonerActions[i].resource = res;
+
+                 // Set old button on if active?
+                if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != but &&  Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
+                    Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = true;
+                }
+
+                Prisoners[CurrentPrisonerIndex].resourceButtonSelected = but;
+                but.interactable = false;
+                //but.enabled = false;
+
+                //but.gameObject.SetActive(false);
+
+               
+
+                break;
+            }
         }
     }
 

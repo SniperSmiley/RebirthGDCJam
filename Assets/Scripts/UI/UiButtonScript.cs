@@ -12,11 +12,15 @@ public class UiButtonScript : MonoBehaviour
 
     private float LastClick;
 
+    private void Start() {
+         ButtonGO = GetComponent<Button>();
+         ButtonGO.onClick.AddListener(OnClick);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        ButtonGO = GetComponent<Button>();
-        ButtonGO.onClick.AddListener(OnClick);
+    
     }
 
     public void OnClick() {
