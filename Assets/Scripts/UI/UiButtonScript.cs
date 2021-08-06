@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class UiButtonScript : MonoBehaviour
 {
     private Button ButtonGO;
-    public CriminalInfoSO Info;
+    // public CriminalInfoSO Info;
+
+    public int Id;
 
     private float LastClick;
 
@@ -23,9 +25,9 @@ public class UiButtonScript : MonoBehaviour
 
         LastClick = Time.time;
 
-        Debug.Log("TEst " + Info.name);
+       // Debug.Log("TEst " + Info.name);
 
-        GameManagerScript.GameManager.UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MugClicked(Info);
+        GameManagerScript.GameManager.UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MugClicked(Id);
 
 
 

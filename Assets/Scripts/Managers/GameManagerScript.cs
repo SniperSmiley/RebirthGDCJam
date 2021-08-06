@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour {
     public UiManagerScript UiManagerScripto;
 
     public float CarbonGeneratorEnergy = 2f;
+    private float LastTime = 0;
 
     private void Awake() {
 
@@ -30,6 +31,23 @@ public class GameManagerScript : MonoBehaviour {
         }
 
         AudioManagerScript = GetComponentInChildren<AudioManager>();
+
+    }
+
+    private void Update() {
+        // Update the generators production
+        if (UiManagerScripto.IsGeneratorBroken) { return; }
+
+        if (Time.time - LastTime > 1) {
+            if (PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] >= 1) {
+                PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] -= 1;
+                PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] += CarbonGeneratorEnergy;
+                LastTime = Time.time;
+            }
+        }
+
+        
+        
 
     }
 }
@@ -54,7 +72,7 @@ public class Resources {
 
     public Resources() {
         ResourceArray = new float[10];
-        Debug.Log("REs" + ResourceArray.Length);
+        //Debug.Log("REs" + ResourceArray.Length);
     }
 
     public enum ResourcesIndex {

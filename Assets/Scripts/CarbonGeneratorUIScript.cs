@@ -53,23 +53,36 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
 
     public void AttemptRepair() {
         if (script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Wood] >= 10 && script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] >= 10) {
+
+
+            StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
+            script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Wood] -= 10;
+            script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] -= 10;
+
+          
+
             Debug.Log("Gen repaired");
             script.UiManagerScripto.IsGeneratorBroken = false;
 
+        }
+        else {
+              StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail));
         }
     }
 
     public void AttemptUpgrade() {
 
-        if (Time.time - UpgradeLastTime < UpgradeDelay) { return; }
+        if (Time.time - UpgradeLastTime < UpgradeDelay) { StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail));  return; }
 
         UpgradeLastTime = Time.time;
 
         Debug.Log("Attempt Upgrade");
 
-        if (!GameManagerScript.GameManager.PlayerResources.CheckIfEnoughResources(upgradeRequirments.ResourceArray)) { return; }
+        if (!GameManagerScript.GameManager.PlayerResources.CheckIfEnoughResources(upgradeRequirments.ResourceArray)) {  StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail)); return; }
 
 
+        StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
+        
         //if (upgradeRequirments)
         GameManagerScript.GameManager.PlayerResources.SubtractResource(upgradeRequirments.ResourceArray);
         CurrentUpgrade += 1;

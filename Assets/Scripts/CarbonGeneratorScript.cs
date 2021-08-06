@@ -18,17 +18,7 @@ public class CarbonGeneratorScript : IsInteractable {
     protected override void Update() {
         base.Update();
 
-        if (GameManagerScript.GameManager.UiManagerScripto.IsGeneratorBroken) { return;  }
 
-        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] >= 1) {
-            if (Time.time - LastTime > Delay) {
-                LastTime = Time.time;
-                 GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] -= 1f;
-                GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] += GameManagerScript.GameManager.CarbonGeneratorEnergy ;
-            }
-
-       
-        }
 
     }
 
@@ -38,7 +28,7 @@ public class CarbonGeneratorScript : IsInteractable {
 
         base.Interact();
 
-        Debug.Log("BEEP BOOP");
+       // Debug.Log("BEEP BOOP");
 
         GameManagerScript.GameManager.UiManagerScripto.ShowUI(UiManagerScript.UI.CarbonGenerator);
         DisplayingUI = true;

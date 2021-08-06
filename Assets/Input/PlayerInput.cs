@@ -33,6 +33,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CloseMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""b4c72bac-5409-404f-9f10-eb45b6d36e21"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -233,6 +241,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""AttemptInteraction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""626fb25c-9fab-443f-9917-b3ea2a2da5bf"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64675937-97a9-42ea-88e0-43affac7fe39"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CloseMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -243,6 +273,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_AttemptInteraction = m_Player.FindAction("AttemptInteraction", throwIfNotFound: true);
+        m_Player_CloseMenu = m_Player.FindAction("CloseMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -294,12 +325,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_AttemptInteraction;
+    private readonly InputAction m_Player_CloseMenu;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @AttemptInteraction => m_Wrapper.m_Player_AttemptInteraction;
+        public InputAction @CloseMenu => m_Wrapper.m_Player_CloseMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -315,6 +348,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @AttemptInteraction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttemptInteraction;
                 @AttemptInteraction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttemptInteraction;
                 @AttemptInteraction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttemptInteraction;
+                @CloseMenu.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCloseMenu;
+                @CloseMenu.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCloseMenu;
+                @CloseMenu.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCloseMenu;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -325,6 +361,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @AttemptInteraction.started += instance.OnAttemptInteraction;
                 @AttemptInteraction.performed += instance.OnAttemptInteraction;
                 @AttemptInteraction.canceled += instance.OnAttemptInteraction;
+                @CloseMenu.started += instance.OnCloseMenu;
+                @CloseMenu.performed += instance.OnCloseMenu;
+                @CloseMenu.canceled += instance.OnCloseMenu;
             }
         }
     }
@@ -333,5 +372,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnAttemptInteraction(InputAction.CallbackContext context);
+        void OnCloseMenu(InputAction.CallbackContext context);
     }
 }
