@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
     private void Awake() {
         PlayerInputScript = new PlayerInput();
         PlayerInputScript.Enable();
+
+        PlayerInputScript.Player.CloseMenu.performed += ctx => GameManagerScript.GameManager.UiManagerScripto.CloseUI();
     }
 
     // Start is called before the first frame update

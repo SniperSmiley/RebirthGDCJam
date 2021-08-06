@@ -48,18 +48,11 @@ public class UiManagerScript : MonoBehaviour
     }
 
 
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void CloseCurrentMenu() {
+         if (isShowingUi) { currentlyShowingUI.SetActive(false); }
+         CurrentActiveUI = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

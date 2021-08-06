@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Wood: 120
   Stone: 120
-  Food: 120
+  Food: 300
   Carbon: 120
   Iron: 120
   Copper: 120
@@ -23,13 +23,13 @@ MonoBehaviour:
   Gold: 120
   Energy: 0
   Array:
-  - 30
-  - 30
   - 120
-  - 109
-  - 110
+  - 120
+  - 300
   - 120
   - 120
   - 120
   - 120
-  - 104
+  - 120
+  - 120
+  - 0

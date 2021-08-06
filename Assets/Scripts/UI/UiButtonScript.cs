@@ -6,15 +6,21 @@ using UnityEngine.UI;
 public class UiButtonScript : MonoBehaviour
 {
     private Button ButtonGO;
-    public CriminalInfoSO Info;
+    // public CriminalInfoSO Info;
+
+    public int Id;
 
     private float LastClick;
+
+    private void Start() {
+         ButtonGO = GetComponent<Button>();
+         ButtonGO.onClick.AddListener(OnClick);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        ButtonGO = GetComponent<Button>();
-        ButtonGO.onClick.AddListener(OnClick);
+    
     }
 
     public void OnClick() {
@@ -23,9 +29,9 @@ public class UiButtonScript : MonoBehaviour
 
         LastClick = Time.time;
 
-        Debug.Log("TEst " + Info.name);
+       // Debug.Log("TEst " + Info.name);
 
-        GameManagerScript.GameManager.UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MugClicked(Info);
+        GameManagerScript.GameManager.UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MugClicked(Id);
 
 
 

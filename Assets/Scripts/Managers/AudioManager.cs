@@ -10,7 +10,31 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup EffectsMixer;
     public int NumberOfAudioSources = 25;
     public List<AudioSource> AudioSourcesList = new List<AudioSource>();
-    AudioSource audioSource;
+
+
+    public GameObject SoundEffectsGo;
+
+    public AudioClip UISuccess;
+    public AudioClip UIFail;
+    public AudioClip UIHover;
+
+    private bool ranStart = false;
+
+    private void Awake() {
+
+        if (ranStart) { return; }
+        ranStart = true;
+
+        AudioSource source;
+        for (int i = 0; i < NumberOfAudioSources; i++) {
+            source = SoundEffectsGo.AddComponent<AudioSource>();
+            source.outputAudioMixerGroup = EffectsMixer;
+            AudioSourcesList.Add(source);
+        }
+
+    }
+    
+     AudioSource audioSource;
 
     private void Start()
     {
@@ -18,10 +42,13 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
+
+
     public IEnumerator PlayEffect(AudioClip clip) {
 
-        AudioSource _audioSource = null;
-        foreach (AudioSource source in AudioSourcesList) {
+        Debug.Log("Play effect");
+            AudioSource _audioSource = null;
+            foreach (AudioSource source in AudioSourcesList) {
                 if (source.clip == null) {
                     // Not being used.
                     _audioSource = source;
@@ -42,6 +69,7 @@ public class AudioManager : MonoBehaviour
 
             }
         }
+
     public void SetVolume(float volume)
     {
         
