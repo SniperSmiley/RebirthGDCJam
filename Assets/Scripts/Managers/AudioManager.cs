@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup EffectsMixer;
     public int NumberOfAudioSources = 25;
     public List<AudioSource> AudioSourcesList = new List<AudioSource>();
+
+
     public GameObject SoundEffectsGo;
 
     public AudioClip UISuccess;
@@ -30,6 +32,15 @@ public class AudioManager : MonoBehaviour
             AudioSourcesList.Add(source);
         }
 
+    }
+    
+     AudioSource audioSource;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
 
 
@@ -59,5 +70,10 @@ public class AudioManager : MonoBehaviour
             }
         }
 
-   
+    public void SetVolume(float volume)
+    {
+        
+        audioSource.volume = volume;
+    }
+
 }
