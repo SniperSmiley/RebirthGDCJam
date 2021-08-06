@@ -5293,7 +5293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1370665326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5775,6 +5775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7cfe1969ba81f4da7297e07a314557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Buttons: {fileID: 2927546084159771442}
   AwkenedColour: {r: 0, g: 1, b: 0.011921406, a: 1}
   MugShots: {fileID: 1370665325}
   RapSheet: {fileID: 1642947932}
@@ -6935,7 +6936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1642947933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7056,7 +7057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1669677191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13457,6 +13458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
       value: Iron
@@ -13562,6 +13567,10 @@ PrefabInstance:
     - target: {fileID: 1017172257300279053, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2608054503067469027, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_Color.b
@@ -13693,6 +13702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
       value: Bruxite
@@ -13798,6 +13811,10 @@ PrefabInstance:
     - target: {fileID: 1017172257300279053, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
@@ -13905,6 +13922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
       value: Copper
@@ -14010,6 +14031,10 @@ PrefabInstance:
     - target: {fileID: 1017172257300279053, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
@@ -14251,6 +14276,10 @@ PrefabInstance:
     - target: {fileID: 1017172257300279053, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333027488048209883, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
+      propertyPath: ResourceToSet
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2986866584852334189, guid: 32b069fdebfcf014a993f8a4ab7eb4a6, type: 3}
       propertyPath: m_text
