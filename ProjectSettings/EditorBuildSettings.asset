@@ -5,19 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: d6c782984b8bce34b93d7676383d72a8
+  - enabled: 0
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: a2f64fc91f6d049f7828205dd9c87122
   - enabled: 1
     path: Assets/Scenes/MainScenes/Grassland.unity
     guid: 48e272d4df107ff4d8632e48c41109c6
-  - enabled: 0
-    path: Assets/Scenes/Jacks Test scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/PurpleGrassland.unity
-    guid: f790ab5f9ab8d534a8a13b0f9654b219
   - enabled: 1
-    path: Assets/Scenes/OptionsMenu.unity
-    guid: a2f64fc91f6d049f7828205dd9c87122
+    path: Assets/Scenes/MainScenes/Forrest.unity
+    guid: 15ebf4018a1bb4645ba6637af3310eff
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Swamp.unity
+    guid: 448d9cad946fa984185ef89247bb5910
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Desert.unity
+    guid: 6c3052aac4205d14bbabf2b2c8714d7e
+  - enabled: 1
+    path: Assets/Scenes/MainScenes/Tundra.unity
+    guid: e65a09e05682eb44fa6ab0cbd8c614f2
   m_configObjects: {}

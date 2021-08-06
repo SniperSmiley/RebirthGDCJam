@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(this);
+     //   DontDestroyOnLoad(this);
         audioSource = GetComponent<AudioSource>();
         audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
