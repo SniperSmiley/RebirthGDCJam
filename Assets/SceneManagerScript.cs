@@ -47,7 +47,7 @@ public class SceneManagerScript : MonoBehaviour {
                 if (grass == 1) { FindAndMovePlayer(new Vector2(pos.x, UpGrass)); }
                 else if (grass == 2) { FindAndMovePlayer(new Vector2(RightGrass, pos.y)); }
                 else if (grass == 3) { FindAndMovePlayer(new Vector2(pos.x, DownGrass)); }
-                else if (grass == 2) { FindAndMovePlayer(new Vector2(LeftGrass, pos.y)); }
+                else if (grass == 4) { FindAndMovePlayer(new Vector2(LeftGrass, pos.y)); }
 
 
                 break; // Grassland

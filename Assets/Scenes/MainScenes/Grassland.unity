@@ -11423,6 +11423,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1240525963, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: LeftSwamp
+      value: -34
+      objectReference: {fileID: 0}
     - target: {fileID: 5370567749727209300, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
       propertyPath: m_RootOrder
       value: 6

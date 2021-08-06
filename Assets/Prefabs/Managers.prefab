@@ -4785,8 +4785,8 @@ MonoBehaviour:
   LeftGrass: -39
   DownGrass: -31
   UpGrass: 30
-  DownForest: -29
-  LeftSwamp: -37
+  DownForest: -27
+  LeftSwamp: -34
   TopDesert: 27
   RightTundra: 32
 --- !u!1 &1240640178
