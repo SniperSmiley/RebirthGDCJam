@@ -166,7 +166,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] -= CurrentCostToAwake;
             Asleep.SetActive(false); Awake.SetActive(true);
             Prisoners[CurrentPrisonerIndex].MugImageGO.GetComponent<Image>().color = AwkenedColour;
-            
+            CurrentCostToAwake *= 2.5f;
         }
         else {
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UIFail));
