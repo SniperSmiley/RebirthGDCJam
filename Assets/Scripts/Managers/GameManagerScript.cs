@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour {
     public AudioManager AudioManagerScript;
     public InputManager InputManagerScript;
     public UiManagerScript UiManagerScripto;
+    public SceneManagerScript SceneManagerScritpto;
 
     public float CarbonGeneratorEnergy = 2f;
     private float LastTime = 0;
