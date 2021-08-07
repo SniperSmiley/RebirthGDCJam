@@ -171,7 +171,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             ResourceGainText.text = "Resource Gain: " + Prisoners[CurrentPrisonerIndex].ResourceGainRate + "%";
             MugCrimes.text = crimes;
             MugImageDisplay.sprite = Prisoners[CurrentPrisonerIndex].Data.img;
-            Nametxt.text = "name: " + CurrentPrisoner.Data.name;
+            Nametxt.text = "name: " + CurrentPrisoner.Data.Name;
             FoodRequiredForLevelUp.text = "Food To LVL Up: " + (Prisoners[CurrentPrisonerIndex].Level + 1) * 10;
         }
         catch (Exception e) {

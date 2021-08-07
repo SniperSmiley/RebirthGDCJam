@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: 3
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
-  Description: 
-  Crimes: []
-  img: {fileID: 0}
-  Level: 1
-  ResourceGainRate: 100
-  ResourcePercentageGain: 0
+  Name: Timnoth
+  Description: Chad, footballer with PHD in memes
+  Crimes:
+  - '- Posted cringe meme x88'
+  - '- Listens to music out loud on bus'
+  - '- Keeps Destabilising Tectonic Plates'
+  - '- Made a child cry for fun x2'
+  - '- Made a child cry for 7 hours'
+  img: {fileID: 21300000, guid: 3bff78c57a670284ca7a79dd1c3b7d9d, type: 3}
