@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IronInteractionScript : IsInteractable
+public class GoldInteractionScript : IsInteractable 
 {
     public float health = 140f;
-    public float IronGain = 2f;
+    public float goldGain = 2f;
 
     public Sprite newSprite;
 
@@ -29,7 +29,7 @@ public class IronInteractionScript : IsInteractable
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron] += IronGain;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Gold] += goldGain;
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone] += 1f;
             col.enabled = false;
             Rend.sprite = newSprite;
@@ -40,5 +40,4 @@ public class IronInteractionScript : IsInteractable
         else { StartCoroutine(FlashColourFunc()); }
 
     }
-
 }
