@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: 10
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
+  Name: Ximon
   Description: 
-  Crimes: []
-  img: {fileID: 0}
-  Level: 1
-  ResourceGainRate: 100
-  ResourcePercentageGain: 0
+  Crimes:
+  - '- Hijacked a dual splingle x22  '
+  - '- Stole a flabadoodle x5'
+  - '- Grand Theft Flanky x2'
+  - '- Spit on the grand poobob x1'
+  - '- Cried in front of schleeb x1'
+  - '- Put only one olive on my sandwich x1'
+  img: {fileID: 21300000, guid: 1bafb9f9a18c6e24d8e68637892ea09b, type: 3}

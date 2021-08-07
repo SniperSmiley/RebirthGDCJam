@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: 0
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
-  Description: 
-  Crimes: []
-  img: {fileID: 0}
-  Level: 1
-  ResourceGainRate: 100
-  ResourcePercentageGain: 0
+  Name: Big Al
+  Description: Makes music and stuff
+  Crimes:
+  - '- Stole Jeff''s guitar'
+  - '- Fried an egg wrong!'
+  - '- Noise complaint x 4000'
+  - '- Watches anime '
+  img: {fileID: 21300000, guid: 8c35a3bda1a6e21478c7a49135c6d8fb, type: 3}

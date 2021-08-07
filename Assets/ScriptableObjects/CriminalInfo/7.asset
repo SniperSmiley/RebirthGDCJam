@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
+  Name: Dave Doner
   Description: 
   Crimes: []
-  img: {fileID: 0}
-  Level: 1
-  ResourceGainRate: 100
-  ResourcePercentageGain: 0
+  img: {fileID: 21300000, guid: 1697abdbb93d83140b665744a9fd4a6b, type: 3}

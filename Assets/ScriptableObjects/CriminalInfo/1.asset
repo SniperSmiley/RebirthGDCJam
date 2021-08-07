@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
-  Description: 
-  Crimes: []
-  img: {fileID: 0}
-  Level: 1
-  ResourceGainRate: 100
-  ResourcePercentageGain: 0
+  Name: Jaze
+  Description: Honestly.. the worst one here..
+  Crimes:
+  - '- Tax evasion x10'
+  - '- SugarDaddy x2'
+  - '- SugarMumma x1'
+  - '- Yelled at kid in fornite x1'
+  - '- Sneezes without covering mouth'
+  img: {fileID: 21300000, guid: 3fa3e20e5b6fc754691bae6492171cf5, type: 3}
