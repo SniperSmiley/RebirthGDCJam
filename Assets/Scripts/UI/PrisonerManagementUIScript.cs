@@ -170,7 +170,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             // Actually increase change
             for (int i = 0; i < GameManagerScript.GameManager.PrisonerActions.Count; i++) {
                 if (GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
-                    GameManagerScript.GameManager.PrisonerActions[i].Change = GameManagerScript.GameManager.PrisonerActions[i].BaseChange * (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100);
+                    GameManagerScript.GameManager.PrisonerActions[i].Change = Prisoners[CurrentPrisonerIndex].ResourceGainRate * GameManagerScript.GameManager.PrisonerActions[i].BaseChange / 100f; //  GameManagerScript.GameManager.PrisonerActions[i].BaseChange * (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100f);
                     break;
                 }
 

@@ -57,6 +57,7 @@ public class GameManagerScript : MonoBehaviour {
 
             for (int i = 0; i < PrisonerActions.Count; i++) {
                 if (Time.time - PrisonerActions[i]._lastUpdated > PrisonerActions[i].Delay) {
+                    Debug.Log("Prisoner " + PrisonerActions[i].PrisIndex);
                     PlayerResources.ResourceArray[(int)PrisonerActions[i].resource] += PrisonerActions[i].Change;
                     PrisonerActions[i]._lastUpdated = Time.time;
                 }
