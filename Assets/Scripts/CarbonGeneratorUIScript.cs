@@ -112,13 +112,13 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
 
         // Colours
 
-        if (UpgradeCosts[CurrentUpgrade].Gold >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold]) { GoldTxt.color = NotEnough; } else { GoldTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Wood >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Wood]) { WoodTxt.color = NotEnough; } else { WoodTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Stone >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone]) { StoneTxt.color = NotEnough; } else { StoneTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Copper >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Copper]) { CopperTxt.color = NotEnough; } else { CopperTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Iron >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Iron]) { IronTxt.color = NotEnough; } else { IronTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Titanium >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium]) { TitaniumTxt.color = NotEnough; } else { TitaniumTxt.color = EnoughResources; }
-        if (UpgradeCosts[CurrentUpgrade].Bruxite >= script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Buxite]) { BruxiteTxt.color = NotEnough; } else { BruxiteTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Gold > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold]) { GoldTxt.color = NotEnough; } else { GoldTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Wood > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Wood]) { WoodTxt.color = NotEnough; } else { WoodTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Stone > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone]) { StoneTxt.color = NotEnough; } else { StoneTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Copper > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Copper]) { CopperTxt.color = NotEnough; } else { CopperTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Iron > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Iron]) { IronTxt.color = NotEnough; } else { IronTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Titanium > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium]) { TitaniumTxt.color = NotEnough; } else { TitaniumTxt.color = EnoughResources; }
+        if (UpgradeCosts[CurrentUpgrade].Bruxite > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Buxite]) { BruxiteTxt.color = NotEnough; } else { BruxiteTxt.color = EnoughResources; }
       
         
     }

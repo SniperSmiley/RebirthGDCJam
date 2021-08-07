@@ -19,6 +19,16 @@ public class Prisoner {
 
 public class PrisonerManagementUIScript : MonoBehaviour {
 
+    public Button IronButton;
+    public Button CopperButton;
+    public Button BruxiteButton;
+    public Button Titaniumbutton;
+    public Button GoldButton;
+
+
+    public GameObject PowerOn;
+    public GameObject PowerOff;
+
     public GameObject Buttons;
 
     public Color AwkenedColour;
@@ -61,6 +71,14 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             Prisoners.Add(pris);
         }
 
+        PowerOn.SetActive(false);
+        PowerOff.SetActive(true);
+        MugShots.SetActive(false);
+        RapSheet.SetActive(false);
+        Asleep.SetActive(false);
+        Awake.SetActive(false);
+
+
         Debug.Log(Prisoners.Count);
 
         /*
@@ -74,10 +92,21 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        if (PowerOff.activeSelf) {
+            if (!GameManagerScript.GameManager.UiManagerScripto.IsGeneratorBroken) {
+                PowerOff.SetActive(false);
+                PowerOn.SetActive(true);
+                MugShots.SetActive(true);
+            }
+        }
+
     }
 
     private void resetButtons() {
+       
         foreach (Button but in Buttons.GetComponentsInChildren<Button>()) {
+            if (but.colors.disabledColor != Color.black) { continue;  }
+            
             but.interactable = true;
         }
     }
@@ -139,9 +168,9 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] -= FoodRequired;
 
             // Actually increase change
-            for (int i = 0; i <  GameManagerScript.GameManager.PrisonerActions.Count; i++) {
+            for (int i = 0; i < GameManagerScript.GameManager.PrisonerActions.Count; i++) {
                 if (GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
-                     GameManagerScript.GameManager.PrisonerActions[i].Change =  GameManagerScript.GameManager.PrisonerActions[i].BaseChange * ( Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100 );
+                    GameManagerScript.GameManager.PrisonerActions[i].Change = GameManagerScript.GameManager.PrisonerActions[i].BaseChange * (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100);
                     break;
                 }
 
@@ -219,12 +248,12 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     }
 
     public void OnResourceGatherSettingSet(Resources.ResourcesIndex res, Button but) {
-        for (int i = 0; i <   GameManagerScript.GameManager.PrisonerActions.Count; i++) {
-            if (  GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
+        for (int i = 0; i < GameManagerScript.GameManager.PrisonerActions.Count; i++) {
+            if (GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
                 GameManagerScript.GameManager.PrisonerActions[i].resource = res;
 
-                 // Set old button on if active?
-                if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != but &&  Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
+                // Set old button on if active?
+                if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != but && Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
                     Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = true;
                 }
 
@@ -234,10 +263,26 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
                 //but.gameObject.SetActive(false);
 
-               
+
 
                 break;
             }
+        }
+    }
+
+
+    public void MakeButtonActive(Resources.ResourcesIndex res) {
+
+        var newColorBlock = IronButton.colors;
+        newColorBlock.disabledColor = Color.black;
+
+        switch (res) {
+            case Resources.ResourcesIndex.Iron: IronButton.colors = newColorBlock; IronButton.interactable = true; break;
+            case Resources.ResourcesIndex.Copper: CopperButton.colors = newColorBlock; CopperButton.interactable = true; break;
+            case Resources.ResourcesIndex.Buxite: BruxiteButton.colors = newColorBlock; BruxiteButton.interactable = true; break;
+            case Resources.ResourcesIndex.Titanium: Titaniumbutton.colors = newColorBlock; Titaniumbutton.interactable = true; break;
+            case Resources.ResourcesIndex.Gold: GoldButton.colors = newColorBlock; GoldButton.interactable = true; break;
+
         }
     }
 
