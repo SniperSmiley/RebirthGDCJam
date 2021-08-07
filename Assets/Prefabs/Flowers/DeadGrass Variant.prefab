@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 334414359918591495, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Size.y
-      value: 0.6065974
+      value: 1.5373573
       objectReference: {fileID: 0}
     - target: {fileID: 334414359918591495, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Offset.x
@@ -29,12 +29,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 334414359918591495, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Offset.y
-      value: -0.95496917
+      value: 0.13500023
       objectReference: {fileID: 0}
     - target: {fileID: 1379768660707501744, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 282646467927124392, guid: 25a72874a04d74aa984c0d64fea43246, type: 3}
+      objectReference: {fileID: -4877358200649656357, guid: 25a72874a04d74aa984c0d64fea43246, type: 3}
+    - target: {fileID: 2223432901609186996, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
     - target: {fileID: 2223432901706206529, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -81,23 +85,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2223432901706206531, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Name
-      value: DeadGrass
+      value: DeadGrass Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7950289901018220714, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Size.x
-      value: 0.6409184
+      value: 0.74719495
       objectReference: {fileID: 0}
     - target: {fileID: 7950289901018220714, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Size.y
-      value: 0.5514441
+      value: 0.4369979
       objectReference: {fileID: 0}
     - target: {fileID: 7950289901018220714, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Offset.x
-      value: -0.008657745
+      value: 0.0036058028
       objectReference: {fileID: 0}
     - target: {fileID: 7950289901018220714, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
       propertyPath: m_Offset.y
-      value: -0.4187588
+      value: 0.1627755
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}

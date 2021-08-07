@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5604411363761301359
+--- !u!1 &6893992375649227893
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5604411363761301264}
-  - component: {fileID: 5604411363761301265}
-  - component: {fileID: 5618649787095504568}
+  - component: {fileID: 6893992375649227786}
+  - component: {fileID: 6893992375649227787}
+  - component: {fileID: 6887072338384496034}
   m_Layer: 2
   m_Name: Sprite
   m_TagString: Untagged
@@ -18,27 +18,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &5604411363761301264
+--- !u!4 &6893992375649227786
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411363761301359}
+  m_GameObject: {fileID: 6893992375649227893}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.006, y: -0.897, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5604411365107090490}
+  m_Father: {fileID: 6893992376988841760}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5604411363761301265
+--- !u!212 &6893992375649227787
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411363761301359}
+  m_GameObject: {fileID: 6893992375649227893}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5048
-  m_Sprite: {fileID: 4632571876146079005, guid: 8a5aa1dffa9024d8dbbdf7f837678aa5, type: 3}
+  m_Sprite: {fileID: -5821692141204517646, guid: 8a5aa1dffa9024d8dbbdf7f837678aa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,23 +83,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5618649787095504568
+--- !u!70 &6887072338384496034
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411363761301359}
+  m_GameObject: {fileID: 6893992375649227893}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06261562, y: 0.19}
-  m_Size: {x: 1.6299889, y: 0.38890553}
+  m_Offset: {x: 0.025743391, y: 0.18999998}
+  m_Size: {x: 1.4061407, y: 0.38890392}
   m_Direction: 1
---- !u!1 &5604411364464881614
+--- !u!1 &6893992376019328212
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5604411364464881615}
+  - component: {fileID: 6893992376019328213}
   m_Layer: 0
   m_Name: SortingPos
   m_TagString: Untagged
@@ -115,21 +115,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &5604411364464881615
+--- !u!4 &6893992376019328213
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411364464881614}
+  m_GameObject: {fileID: 6893992376019328212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.03000021, y: -0.787, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5604411365107090490}
+  m_Father: {fileID: 6893992376988841760}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5604411365107090488
+--- !u!1 &6893992376988841762
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,41 +137,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5604411365107090490}
-  - component: {fileID: 5604411365107090489}
-  - component: {fileID: 5604411365107090491}
-  - component: {fileID: 5253488170694623051}
-  - component: {fileID: 2901145668802649914}
+  - component: {fileID: 6893992376988841760}
+  - component: {fileID: 6893992376988841763}
+  - component: {fileID: 6893992376988841761}
+  - component: {fileID: 6521947091739954257}
+  - component: {fileID: 6976672616641066600}
   m_Layer: 0
-  m_Name: P_Iron
+  m_Name: P_Bruxite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &5604411365107090490
+--- !u!4 &6893992376988841760
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411365107090488}
+  m_GameObject: {fileID: 6893992376988841762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -4, z: 0}
+  m_LocalPosition: {x: 11, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5604411363761301264}
-  - {fileID: 5604411364464881615}
+  - {fileID: 6893992375649227786}
+  - {fileID: 6893992376019328213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &5604411365107090489
+--- !u!70 &6893992376988841763
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411365107090488}
+  m_GameObject: {fileID: 6893992376988841762}
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
@@ -181,33 +181,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0.084649846, y: -0.72584677}
   m_Size: {x: 1.5239526, y: 0.3889025}
   m_Direction: 1
---- !u!114 &5604411365107090491
+--- !u!114 &6893992376988841761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411365107090488}
+  m_GameObject: {fileID: 6893992376988841762}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7200ef6811305b4db078d81b50174fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortingPos: {fileID: 5604411364464881615}
---- !u!61 &5253488170694623051
+  SortingPos: {fileID: 6893992376019328213}
+--- !u!61 &6521947091739954257
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411365107090488}
+  m_GameObject: {fileID: 6893992376988841762}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.025285006, y: -0.48267412}
+  m_Offset: {x: 0.09420967, y: -0.48267412}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -218,23 +218,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8377643, y: 0.9166956}
+  m_Size: {x: 1.5987749, y: 0.9166956}
   m_EdgeRadius: 0
---- !u!114 &2901145668802649914
+--- !u!114 &6976672616641066600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604411365107090488}
+  m_GameObject: {fileID: 6893992376988841762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8420f4ea93ac4a8448721ee91d42ce26, type: 3}
+  m_Script: {fileID: 11500000, guid: 19458e90d3467a54890be5af6394c924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rend: {fileID: 5604411363761301265}
+  Rend: {fileID: 6893992375649227787}
   CoolDown: 0.2
-  health: 140
-  IronGain: 2
+  health: 100
   newSprite: {fileID: 21300000, guid: 630462198256665458379824fada50c9, type: 3}
-  col: {fileID: 5618649787095504568}
+  col: {fileID: 6887072338384496034}
+  StoneGive: 2
+  BruxiteGive: 6
