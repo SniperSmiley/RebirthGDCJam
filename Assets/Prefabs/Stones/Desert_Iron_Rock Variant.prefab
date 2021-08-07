@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4229373522758693987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.919129
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5508146
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327817, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447028930327819, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Name
+      value: Desert_Iron_Rock_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447029361843964, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 244447029361843964, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.388
+      objectReference: {fileID: 0}
+    - target: {fileID: 453331523109408376, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Size.y
+      value: 1.1515985
+      objectReference: {fileID: 0}
+    - target: {fileID: 453331523109408376, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.80892825
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450073192997902919, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5761551
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450073192997902919, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Size.y
+      value: 0.40195566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450073192997902919, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0061000986
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450073192997902919, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.33158186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108548710606079506, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6914415918714806675, guid: 1ee8356f845a24f63b342369fe73dfe9, type: 3}
+    - target: {fileID: 5108548710606079506, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5070
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07b87fbad2b9e1f4b8b698ea47bbb160, type: 3}
