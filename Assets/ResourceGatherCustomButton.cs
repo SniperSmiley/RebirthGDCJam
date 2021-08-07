@@ -8,6 +8,7 @@ public class ResourceGatherCustomButton : MonoBehaviour {
     
     private float LastClick;
     private Button ButtonGO;
+    
 
     public int ResourceToSet;
 

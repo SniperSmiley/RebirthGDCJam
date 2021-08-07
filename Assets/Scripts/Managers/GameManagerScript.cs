@@ -6,6 +6,13 @@ public class GameManagerScript : MonoBehaviour {
     public static GameManagerScript GameManager;
 
 
+    private bool discoveredIron = false;
+    private bool discoveredCopper = false;
+    private bool discoveredBruxite = false;
+    private bool discoveredTitanium = false;
+    private bool discoveredGold = false;
+
+
     public List<PrisonerAction> PrisonerActions = new List<PrisonerAction>();
 
     public Resources PlayerResources;
@@ -59,11 +66,22 @@ public class GameManagerScript : MonoBehaviour {
 
         }
 
-
+        // Check if new resource gathered.
+        if (!discoveredIron) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Iron] > 0) { discoveredIron = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Iron); } }
+        if (!discoveredCopper) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Copper] > 0) { discoveredCopper = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Copper); } }
+        if (!discoveredBruxite) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Buxite] > 0) { discoveredBruxite = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Buxite); } }
+        if (!discoveredTitanium) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium] > 0) { discoveredTitanium = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Titanium); } }
+        if (!discoveredGold) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold] > 0) { discoveredGold = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Gold); } }
 
 
     }
+
+
+
+
 }
+
+
 
 public class PrisonerAction {
 
