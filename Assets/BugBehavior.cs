@@ -8,13 +8,14 @@ public class BugBehavior : MonoBehaviour
     public float walkDist = 5.0f;
     public float attackDistance = 3.0f;
     public float waitTime = 3.0f;
+    public float centered = 0.1f;
 
+    private float currSpeed = 1.0f;
     private Vector2 startingPosition;
     private Animator animator;
     private Rigidbody2D rb2d;
     private Vector2 direction;
     private bool goingBack = true;
-    private bool centered = true;
     private float elapsed = 0.0f;
     private float angle = 0.0f;
     void Awake()
@@ -40,22 +41,19 @@ public class BugBehavior : MonoBehaviour
         {
             Vector2 curr = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
             float diff = Vector2.Distance(startingPosition, curr);
-            if (diff < 0.5f && goingBack)
+            if (diff < centered && goingBack)
             {
                 angle = Random.Range(-360.0f, 360.0f);
-                centered = false;
+                direction.x = Mathf.Cos(angle / 180.0f * Mathf.PI);
+                direction.y = Mathf.Sin(angle / 180.0f * Mathf.PI);
                 goingBack = false;
             }
-            if (!goingBack && diff > walkDist)
+            if (diff > walkDist)
             {
                 direction = (startingPosition - curr).normalized;
                 goingBack = true;
             }
-            else
-            {
-                direction.x = Mathf.Cos(angle / 180.0f * Mathf.PI);
-                direction.y = Mathf.Sin(angle / 180.0f * Mathf.PI);
-            }
+            currSpeed = speed;
         }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("AngryBug"))
         {
@@ -67,12 +65,12 @@ public class BugBehavior : MonoBehaviour
         }
         else if (animator.GetCurrentAnimatorStateInfo(0).IsName("BugIdle"))
         {
-            direction = new Vector2(0.0f,0.0f);
+            currSpeed = 0;
         }
     }
 
     private void FixedUpdate()
     {
-        rb2d.velocity = direction * speed;
+        rb2d.velocity = direction * currSpeed;
     }
 }
