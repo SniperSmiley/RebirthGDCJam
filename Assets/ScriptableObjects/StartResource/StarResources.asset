@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: StarResources
   m_EditorClassIdentifier: 
   Wood: 10
-  Stone: 10
-  Food: 0
-  Carbon: 0
-  Iron: 0
+  Stone: 5000
+  Food: 1000005
+  Carbon: 50000
+  Iron: 500000
   Copper: 0
   Titanium: 0
   Bruxite: 0
   Gold: 0
   Energy: 0
   Array:
+  - 15
+  - 4980
+  - 1000227
+  - 49942
+  - 500000
   - 0
   - 0
   - 0
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 174
