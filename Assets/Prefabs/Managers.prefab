@@ -409,7 +409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: 110fca3d0f9cdcc49942f8db7d801649, type: 2}
+  m_Texture: {fileID: 8400000, guid: 49c648037cec1794ca05696347b43247, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -424,11 +424,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58564152}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 779a02a4a436e4100aed6994bd4d7869, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3929e16eab064164ea01b8bfdc9fa396, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: 110fca3d0f9cdcc49942f8db7d801649, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 49c648037cec1794ca05696347b43247, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -5740,6 +5740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a60d26c96030084d9b4d30a1d73d86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PowerRestored: {fileID: 8300000, guid: 904f9d59175269e4188706181b1a488c, type: 3}
   EnoughResources: {r: 0.032707386, g: 0.990566, b: 0.22902174, a: 1}
   NotEnough: {r: 1, g: 0, b: 0, a: 1}
   UpgradeCosts:
@@ -6100,6 +6101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789796873c52f66418eff67dd50dcbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IntroSpeach: {fileID: 8300000, guid: 22d8343e95e02d04193366ff2547593f, type: 3}
 --- !u!1 &1215628335
 GameObject:
   m_ObjectHideFlags: 0

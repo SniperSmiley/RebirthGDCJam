@@ -5,6 +5,9 @@ using TMPro;
 
 public class CarbonGeneratorUIScript : MonoBehaviour {
 
+    
+    public AudioClip PowerRestored;
+
     public Color EnoughResources;
     public Color NotEnough;
 
@@ -61,7 +64,7 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
             StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
             script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Wood] -= 10;
             script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] -= 10;
-
+            StartCoroutine(script.AudioManagerScript.PlayEffect(PowerRestored));
           
 
             Debug.Log("Gen repaired");
@@ -83,8 +86,8 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
         Debug.Log("Attempt Upgrade");
 
         if (!GameManagerScript.GameManager.PlayerResources.CheckIfEnoughResources(upgradeRequirments.ResourceArray)) {  StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail)); return; }
-
-
+ 
+       
         StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
 
         script.UiManagerScripto.CarbonGenLevel++;

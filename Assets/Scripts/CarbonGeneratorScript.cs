@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CarbonGeneratorScript : IsInteractable {
 
+
     public Animator anim;
 
     public GameObject Col1;

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class IntroScene : MonoBehaviour
 {
-
+    public AudioClip IntroSpeach;
     private MovementScript mov;
 
 
@@ -38,10 +38,16 @@ public class IntroScene : MonoBehaviour
         
         yield return new WaitForSeconds(25);
 
-        gameObject.SetActive(false);
+
+        
+        StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(IntroSpeach));
         mov.isDisabled = false;                     
         GameManagerScript.GameManager.InputManagerScript.ToggleControls(true);
-    
+
+
+        gameObject.SetActive(false);
+      
+
 
     }
 }
