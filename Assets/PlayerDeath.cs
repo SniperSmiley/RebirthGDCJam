@@ -26,9 +26,10 @@ public class PlayerDeath : MonoBehaviour
 
     private void Die()
     {
+       
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Enemy"))&& SceneManager.GetActiveScene().buildIndex!=2)
         {
-         
+         /*
             if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] >= 100)
             {
                 gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] -= energyDeathDecrease * gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];
@@ -36,7 +37,8 @@ public class PlayerDeath : MonoBehaviour
             else if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] < 100)
             {
                gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] = 0;
-            }
+            }*/
+
             SceneManager.LoadScene(2);
 
 
@@ -45,6 +47,7 @@ public class PlayerDeath : MonoBehaviour
         {
             Debug.Log("Bug collides");
             gameObject.transform.position = new Vector3(0, 0, 0);
+            /*
             if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] >= 100)
             {
                gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] -= energyDeathDecrease * gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];
@@ -52,9 +55,10 @@ public class PlayerDeath : MonoBehaviour
             else if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] < 100)
             {
                 gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] = 0;
-            }
+            }*/
         }
 
         else { return; }
+        
     }
 }
