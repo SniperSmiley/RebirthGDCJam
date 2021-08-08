@@ -152,7 +152,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
         float FoodRequired = (CurrentPrisoner.Level + 1) * 10;
 
-        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] > FoodRequired) {
+        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] > FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 6) {
 
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
             Prisoners[CurrentPrisonerIndex].Level += 1;
@@ -197,7 +197,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             }
 
             LevelText.text = "Current Level: " + Prisoners[CurrentPrisonerIndex].Level;
-            ResourceGainText.text = "Resource Gain: " + Prisoners[CurrentPrisonerIndex].ResourceGainRate + "%";
+            ResourceGainText.text = "Resource Gain: " + Mathf.Round(Prisoners[CurrentPrisonerIndex].ResourceGainRate).ToString() + "%";
             MugCrimes.text = crimes;
             MugImageDisplay.sprite = Prisoners[CurrentPrisonerIndex].Data.img;
             Nametxt.text = "name: " + CurrentPrisoner.Data.Name;
