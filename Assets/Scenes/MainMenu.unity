@@ -986,6 +986,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 58564154, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 3929e16eab064164ea01b8bfdc9fa396, type: 3}
+    - target: {fileID: 58564154, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 49c648037cec1794ca05696347b43247, type: 2}
+    - target: {fileID: 58564155, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 49c648037cec1794ca05696347b43247, type: 2}
+    - target: {fileID: 1181222507, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5370567749727209300, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
       propertyPath: m_RootOrder
       value: 4

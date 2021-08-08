@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementScript : MonoBehaviour {
 
+    public bool isDisabled;
+
     public AudioClip[] FootSteps;
 
     public Animator PlayerAnimator;
@@ -58,6 +60,9 @@ public class MovementScript : MonoBehaviour {
     public void FixedUpdate() { MovePlayer(); }
 
     public void GrabMovementInput(InputAction.CallbackContext value) {
+
+        if (isDisabled) { return; }
+
         _input = value.ReadValue<Vector2>();
         _input.Normalize();
     }

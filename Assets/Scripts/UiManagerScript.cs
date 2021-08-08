@@ -6,12 +6,13 @@ public class UiManagerScript : MonoBehaviour
 {
     public UI CurrentActiveUI;
 
-
     public GameObject CarbonGeneratorUI;
     public GameObject PrisonnerManagementUI;
     public GameObject ShipUI;
     public GameObject PlayerUI;
     public GameObject Options;
+    public GameObject IntroScene;
+    public GameObject EndScene;
 
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
@@ -86,6 +87,13 @@ public class UiManagerScript : MonoBehaviour
          CurrentActiveUI = 0;
     }
 
+    public void QuitToMenu() {
+        Time.timeScale = 1;
+        EndScene.SetActive(false);
+        GameManagerScript.GameManager.SceneManagerScritpto.SwitchScene(0, Vector2.zero);
+    }
 
+    public void PrisonScene() { EndScene.SetActive(true); EndScene.GetComponent<EndScene>().DisplayPrison(); }
+    public void FreedomeScene() { EndScene.SetActive(true); EndScene.GetComponent<EndScene>().DisplayFreedomeee(); }
 
 }
