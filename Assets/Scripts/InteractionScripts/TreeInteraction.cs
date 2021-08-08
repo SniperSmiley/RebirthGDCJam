@@ -5,7 +5,6 @@ using System;
 
 public class TreeInteraction : IsInteractable {
 
-    public AudioClip CutTree;
 
     public Animator TreeShake;
 
@@ -26,8 +25,6 @@ public class TreeInteraction : IsInteractable {
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
-        StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(CutTree));
-
         //   Debug.Log("Interacted with " + transform.name);
 
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
@@ -37,6 +34,7 @@ public class TreeInteraction : IsInteractable {
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonResourceGainFrom;
             Rend.sprite = newSprite;
             isTrunk = true;
+            base.Disabled = true;
         }
 
         else { TreeShake.SetTrigger("ShakeTree"); StartCoroutine(FlashColourFunc()); }

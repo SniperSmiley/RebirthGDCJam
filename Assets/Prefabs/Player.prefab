@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 6061959288046067306}
   - component: {fileID: 6061959288046067305}
   - component: {fileID: 6061959288046067304}
+  - component: {fileID: 1464981541}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -365,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acebf738e712ce43aeb91ae5dee12b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 1464981541}
   RayCastFirePoint: {fileID: 6061959288672975981}
   InteractDistance: 1
   InteractMask:
@@ -425,6 +427,24 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1464981541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6061959288046067302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d62461b5a95a5e4468c867eae230d84b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitTree: {fileID: 8300000, guid: 94c220fba3dc4eb48a18d1d414ba5052, type: 3}
+  HitTree1: {fileID: 8300000, guid: a683532712ff1344882e6fce281aa035, type: 3}
+  HitTree2: {fileID: 8300000, guid: 300f665be96820b4b9b6ca357fadf09c, type: 3}
+  HitRock: {fileID: 8300000, guid: 19d3977a044201f409b6b3e2c3a71f91, type: 3}
+  GrabFruit: {fileID: 8300000, guid: 00e0f5feaaad4774b90af2a16a198c60, type: 3}
+  GrabLeaf: {fileID: 8300000, guid: 4ef353402a40e214f8cd30d24738b003, type: 3}
 --- !u!1 &6061959288298975646
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3191520026644926381}
   m_Layer: 0
   m_Name: P_ShroomLog
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 3039983928197834083}
   CoolDown: 0
+  isCoolingDown: 0
   Bush: {fileID: 1138722808431340877, guid: f06d210f16d882e4fa781781f59afd2d, type: 3}
   BushWithBerries: {fileID: 550104022284466094, guid: f06d210f16d882e4fa781781f59afd2d, type: 3}
   ResfreshTime: 5

@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerInteractScript : MonoBehaviour {
 
 
+
+    public PlayerAudioAndAnimations audio;
+
     //PlayerInput _playerInputs = new PlayerInput();
     private bool AttemptInteract = false;
 
@@ -27,6 +30,8 @@ public class PlayerInteractScript : MonoBehaviour {
     private PlayerInput inputScript;
 
     private bool tryToInteract = false;
+
+    private float LastInteractionTime = 0;
 
     private void Awake() {
         moveScript = GetComponent<MovementScript>();
@@ -113,7 +118,19 @@ public class PlayerInteractScript : MonoBehaviour {
 
        // AttemptInteract = true;
 
-        if (CurrentInteraction != null) { CurrentInteraction.Interact(); }
+        if (CurrentInteraction != null) {
+
+
+            if (!CurrentInteraction.isCoolingDown && CurrentInteraction.Disabled == false) {
+                 // Audio Stuff here
+                 audio.PlayCorrectAudio(CurrentInteraction);
+            }
+        
+
+            CurrentInteraction.Interact(); 
+        
+        
+        }
 
 
 

@@ -34,6 +34,7 @@ public class GoldInteractionScript : IsInteractable
             col.enabled = false;
             Rend.sprite = newSprite;
             isCrushed = true;
+                   base.Disabled = true;
             Rend.sortingOrder = 1;
         }
 

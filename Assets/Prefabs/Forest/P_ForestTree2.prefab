@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 125563921241792123}
   m_Layer: 0
   m_Name: P_ForestTree2
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 143190000611733746}
   CoolDown: 0.6
+  CutTree: {fileID: 0}
   TreeShake: {fileID: 4185564263698811343}
   health: 120
   WoodResourceGainFrom: 4

@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2210198399946658649}
   m_Layer: 0
   m_Name: TundraIron
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -135,7 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 110177964761223800}
   CoolDown: 0.2
+  isCoolingDown: 0
   health: 140
+  IronGain: 2
   newSprite: {fileID: 21300000, guid: 630462198256665458379824fada50c9, type: 3}
   col: {fileID: 124064499243836369}
 --- !u!1 &110177964761223686

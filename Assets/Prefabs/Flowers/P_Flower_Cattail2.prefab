@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 467468006113566538}
   m_Layer: 0
   m_Name: P_Flower_Cattail2
-  m_TagString: Untagged
+  m_TagString: Leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -161,8 +161,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 1296262581590231037}
   CoolDown: 0.2
+  isCoolingDown: 0
   Chopped: {fileID: 5606769376712476492, guid: b4ec8dfb7165751468c3112b80884116, type: 3}
   Grown: {fileID: -1526165505576963474, guid: 0668c708f86db8b4296975d4ead33835, type: 3}
+  CarbonGive: 5
   ResfreshTime: 5
   IsGrown: 1
 --- !u!61 &467468006113566538

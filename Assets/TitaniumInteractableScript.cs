@@ -34,6 +34,8 @@ public class TitaniumInteractableScript : IsInteractable
             col.enabled = false;
             Rend.sprite = newSprite;
             isCrushed = true;
+
+            base.Disabled = true;
             Rend.sortingOrder = 1;
         }
 

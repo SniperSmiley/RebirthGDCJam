@@ -5,13 +5,14 @@ using UnityEngine;
 public class IsInteractable : MonoBehaviour {
     public SpriteRenderer Rend;
 
+    public bool Disabled = false;
 
     private Color FlashColour;
     private Color color;
     private Color newcol;
 
     public float CoolDown = 0.2f;
-    private bool isCoolingDown = false;
+    public bool isCoolingDown = false;
     private float coolDownStartTime = 0;
 
 

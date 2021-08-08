@@ -17,8 +17,8 @@ public class BerryBushScript : IsInteractable
     protected override void Awake() {
         base.Awake();
 
-        if (IsBerries) {Rend.sprite = BushWithBerries; }
-        else { Rend.sprite = Bush; }
+        if (IsBerries) {Rend.sprite = BushWithBerries;         base.Disabled = false;}
+        else { Rend.sprite = Bush;        base.Disabled = true; }
 
         timeOfInteract = Time.time;
     }
@@ -30,6 +30,7 @@ public class BerryBushScript : IsInteractable
         if ((Time.time - timeOfInteract) > ResfreshTime ) {
             if (!IsBerries) {
                 IsBerries = true;
+                base.Disabled = false;
                 Rend.sprite = BushWithBerries;
             }
         
@@ -49,6 +50,7 @@ public class BerryBushScript : IsInteractable
 
         timeOfInteract = Time.time;
         IsBerries = false;
+               base.Disabled = true;
         Rend.sprite = Bush;
 
     }

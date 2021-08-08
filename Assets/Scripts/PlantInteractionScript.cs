@@ -17,8 +17,8 @@ public class PlantInteractionScript : IsInteractable {
     protected override void Awake() {
         base.Awake();
 
-        if (IsGrown) { Rend.sprite = Grown; }
-        else { Rend.sprite = Chopped; }
+        if (IsGrown) { Rend.sprite = Grown;        base.Disabled = false; }
+        else { Rend.sprite = Chopped;         base.Disabled = true;}
 
         timeOfInteract = Time.time;
     }
@@ -30,6 +30,7 @@ public class PlantInteractionScript : IsInteractable {
         if ((Time.time - timeOfInteract) > ResfreshTime ) {
             if (!IsGrown) {
                 IsGrown = true;
+                       base.Disabled = false;
                 Rend.sprite = Grown;
             }
         
@@ -49,6 +50,7 @@ public class PlantInteractionScript : IsInteractable {
 
         timeOfInteract = Time.time;
         IsGrown = false;
+               base.Disabled = true;
         Rend.sprite = Chopped;
 
     }

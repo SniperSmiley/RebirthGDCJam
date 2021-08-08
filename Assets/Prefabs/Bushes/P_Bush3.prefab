@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 3580558388956141171}
   m_Layer: 0
   m_Name: P_Bush3
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 1897976785971781216}
   CoolDown: 0
+  isCoolingDown: 0
   Bush: {fileID: -2410474751825186868, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
   BushWithBerries: {fileID: 6955152548768831977, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
   ResfreshTime: 5

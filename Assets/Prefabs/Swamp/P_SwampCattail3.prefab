@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4577667963123764718}
   m_Layer: 0
   m_Name: P_SwampCattail3
-  m_TagString: Untagged
+  m_TagString: Leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -62,6 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 2884235181445535065}
   CoolDown: 0.2
+  isCoolingDown: 0
   Chopped: {fileID: 8095577545884238877, guid: ce5007662dfcdf24c989f099df279246, type: 3}
   Grown: {fileID: 1701126485917809970, guid: ce5007662dfcdf24c989f099df279246, type: 3}
   CarbonGive: 2

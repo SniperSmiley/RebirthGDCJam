@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3425036846712008840}
   m_Layer: 0
   m_Name: P_Mangroove3
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 3443720897297767937}
   CoolDown: 0.6
+  CutTree: {fileID: 0}
   TreeShake: {fileID: 1450202925296658236}
   health: 200
   WoodResourceGainFrom: 10

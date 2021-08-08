@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 453331523109408376}
   m_Layer: 0
   m_Name: P_Rock2
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -78,8 +78,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rend: {fileID: 5108548710606079506}
-  CoolDown: 0.6
-  health: 60
+  Disabled: 0
+  CoolDown: 0.2
+  isCoolingDown: 0
+  health: 160
   newSprite: {fileID: 21300000, guid: 630462198256665458379824fada50c9, type: 3}
   col: {fileID: 2450073192997902919}
   StoneGive: 2
