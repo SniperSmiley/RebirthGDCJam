@@ -208,11 +208,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rend: {fileID: 3721050589603576459}
+  Disabled: 0
   CoolDown: 0
   isCoolingDown: 0
   Bush: {fileID: 8946249018731918539, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
   BushWithBerries: {fileID: 8808047230732163222, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
-  ResfreshTime: 5
+  ResfreshTime: 25
   IsBerries: 1
   BerryGive: 8
 --- !u!61 &3880251315741495365

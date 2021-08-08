@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grass: 2
-  SceneToSwitchTo: 0
+  SceneToSwitchTo: 2
 --- !u!61 &69921505
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -41,7 +41,7 @@ public class SceneManagerScript : MonoBehaviour {
         // take their position of entry, calculate their new position;=
 
         switch (Scene) {
-            case 0:
+            case 2:
 
                 // Forest
                 if (grass == 1) { FindAndMovePlayer(new Vector2(pos.x, UpGrass)); }
@@ -51,10 +51,10 @@ public class SceneManagerScript : MonoBehaviour {
 
 
                 break; // Grassland
-            case 1: FindAndMovePlayer(new Vector2(pos.x, DownForest)); break;   // Forest,  Up from Grass
-            case 2: FindAndMovePlayer(new Vector2(LeftSwamp, pos.y)); break;   // Swamp,   Rigth from grass
-            case 3: FindAndMovePlayer(new Vector2(pos.x, TopDesert)); break;   // Desert   down from grass
-            case 4: FindAndMovePlayer(new Vector2(RightTundra, pos.y)); break;   // Tundra   left from grass
+            case 3: FindAndMovePlayer(new Vector2(pos.x, DownForest)); break;   // Forest,  Up from Grass
+            case 4: FindAndMovePlayer(new Vector2(LeftSwamp, pos.y)); break;   // Swamp,   Rigth from grass
+            case 5: FindAndMovePlayer(new Vector2(pos.x, TopDesert)); break;   // Desert   down from grass
+            case 6: FindAndMovePlayer(new Vector2(RightTundra, pos.y)); break;   // Tundra   left from grass
         }
     }
 

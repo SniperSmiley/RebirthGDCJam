@@ -26,4 +26,10 @@ public class LevelLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void OnStartGame() {
+
+        SceneManager.LoadScene(2);
+
+    }
 }

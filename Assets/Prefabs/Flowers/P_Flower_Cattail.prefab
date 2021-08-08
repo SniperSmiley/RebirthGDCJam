@@ -190,12 +190,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rend: {fileID: 1379768660707501744}
+  Disabled: 0
   CoolDown: 0.2
   isCoolingDown: 0
   Chopped: {fileID: -509880427076460002, guid: b4ec8dfb7165751468c3112b80884116, type: 3}
   Grown: {fileID: -1419349382128094535, guid: 0668c708f86db8b4296975d4ead33835, type: 3}
   CarbonGive: 10
-  ResfreshTime: 5
+  ResfreshTime: 25
   IsGrown: 1
 --- !u!61 &334414359918591495
 BoxCollider2D:

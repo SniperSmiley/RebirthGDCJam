@@ -21,15 +21,15 @@ MonoBehaviour:
   Titanium: 0
   Bruxite: 0
   Gold: 0
-  Energy: 0
+  Energy: 100
   Array:
-  - 15
-  - 4980
-  - 1000227
-  - 49942
+  - 0
+  - 4990
+  - 1000005
+  - 49989
   - 500000
   - 0
   - 0
   - 0
   - 0
-  - 174
+  - 122
