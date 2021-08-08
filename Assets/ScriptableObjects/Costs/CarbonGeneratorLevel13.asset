@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 117283fc275d3e341abcf861ee294a79, type: 3}
-  m_Name: StarResources
+  m_Name: CarbonGeneratorLevel13
   m_EditorClassIdentifier: 
-  Wood: 100000
-  Stone: 100000
-  Food: 100000
-  Carbon: 100000
-  Iron: 100000
-  Copper: 100000
-  Titanium: 100000
-  Bruxite: 100000
-  Gold: 100000
-  Energy: 100000
+  Wood: 200
+  Stone: 600
+  Food: 0
+  Carbon: 0
+  Iron: 250
+  Copper: 230
+  Titanium: 230
+  Bruxite: 230
+  Gold: 230
+  Energy: 0
   Array:
-  - 99096
-  - 97660
-  - 95952.4
-  - 99857
-  - 99235
-  - 99025
-  - 99055
-  - 99015
-  - 99180
-  - 657913.75
+  - 200
+  - 600
+  - 0
+  - 0
+  - 250
+  - 230
+  - 230
+  - 230
+  - 230
+  - 0

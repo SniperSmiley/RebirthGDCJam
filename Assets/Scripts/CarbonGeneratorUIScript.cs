@@ -100,7 +100,7 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
 
     public void updateText() {
         // RequirmentsText.text = "Wood: " + UpgradeCosts[CurrentUpgrade].Wood + " Stone: " + UpgradeCosts[CurrentUpgrade].Stone + " Iron: " + UpgradeCosts[CurrentUpgrade].Iron + " Copper: " + UpgradeCosts[CurrentUpgrade].Copper + " Bruxite: " + UpgradeCosts[CurrentUpgrade].Bruxite + " Titanium: " + UpgradeCosts[CurrentUpgrade].Titanium + " Gold: " + UpgradeCosts[CurrentUpgrade].Gold;
-        EnergryText.text = "( " + GameManagerScript.GameManager.CarbonGeneratorEnergy + " Per Second )";
+        EnergryText.text = "" + GameManagerScript.GameManager.CarbonGeneratorEnergy + " Per Second";
 
         WoodTxt.text = "Wood: " + UpgradeCosts[CurrentUpgrade].Wood;
         StoneTxt.text = "Stone: " + UpgradeCosts[CurrentUpgrade].Stone;
