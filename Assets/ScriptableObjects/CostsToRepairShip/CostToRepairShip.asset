@@ -21,7 +21,7 @@ MonoBehaviour:
   Titanium: 1500
   Bruxite: 1500
   Gold: 1500
-  Energy: 5000000
+  Energy: 250000
   Array:
   - 8000
   - 8000
@@ -32,4 +32,4 @@ MonoBehaviour:
   - 1500
   - 1500
   - 1500
-  - 5000000
+  - 250000
