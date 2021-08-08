@@ -76,9 +76,9 @@ public class SceneManagerScript : MonoBehaviour {
 
     private void FindAndMovePlayer(Vector2 newPos) {
 
-        Debug.Log("TES!!!T");
+       // Debug.Log("TES!!!T");
         Player = GameObject.Find("Player");
-        if (Player == null) { Debug.Log("AAA"); }
+
         Player.transform.position = newPos;
     }
 }
