@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeechBehaviour : IsInteractable
-{
-    public float health = 100;
+public class SlimeBehaviour : IsInteractable
+{    public float health = 100;
 
     public float speed = 1.0f;
     public float chargeSpeed = 3.0f;
@@ -75,7 +74,7 @@ public class LeechBehaviour : IsInteractable
         }
         //Player kills Bug
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("LeechWalk"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("SlimeWalk"))
         {
             float diff = Vector2.Distance(startingPosition, curr);
             if (diff < centered && goingBack)
@@ -92,7 +91,7 @@ public class LeechBehaviour : IsInteractable
             }
             currSpeed = speed;
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("AngryLeech"))
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("AngrySlime"))
         {
             //charge the player
             if (!charge)
@@ -105,11 +104,11 @@ public class LeechBehaviour : IsInteractable
                 currSpeed = chargeSpeed;
             }
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("LeechDie"))
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("SlimeDie"))
         {
             //die
         }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("LeechIdle"))
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("SlimeIdle"))
         {
             currSpeed = 0.0001f;
         }
