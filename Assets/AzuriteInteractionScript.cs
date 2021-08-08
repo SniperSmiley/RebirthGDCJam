@@ -29,7 +29,7 @@ public class AzuriteInteractionScript : IsInteractable
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite] += AzuriteGain;
+            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper] += AzuriteGain;
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone] += 1f;
             col.enabled = false;
             Rend.sprite = newSprite;

@@ -16,20 +16,20 @@ MonoBehaviour:
   Stone: 80
   Food: 0
   Carbon: 0
-  Iron: 0
-  Copper: 0
-  Titanium: 0
-  Bruxite: 0
-  Gold: 10
+  Iron: 30
+  Copper: 30
+  Titanium: 30
+  Bruxite: 30
+  Gold: 30
   Energy: 0
   Array:
   - 80
   - 80
   - 0
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 10
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
   - 0

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour
-{
+public class AudioManager : MonoBehaviour {
 
     [Header(" Effects Related ")]
     public AudioMixerGroup EffectsMixer;
@@ -33,46 +32,44 @@ public class AudioManager : MonoBehaviour
         }
 
     }
-    
-     AudioSource audioSource;
 
-    private void Start()
-    {
-     //   DontDestroyOnLoad(this);
+    AudioSource audioSource;
+
+    private void Start() {
+        //   DontDestroyOnLoad(this);
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = PlayerPrefsController.GetMusicVolume();
+        //audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
 
 
     public IEnumerator PlayEffect(AudioClip clip) {
 
         Debug.Log("Play effect");
-            AudioSource _audioSource = null;
-            foreach (AudioSource source in AudioSourcesList) {
-                if (source.clip == null) {
-                    // Not being used.
-                    _audioSource = source;
-                    break;
-                }
-            }
-
-            if (_audioSource == null) { Debug.Log("Audio source ran out of sources."); }
-            else {
-
-                //Debug.Log("Play");
-                _audioSource.clip = clip;
-                _audioSource.Play();
-
-                yield return new WaitForSeconds(_audioSource.clip.length);
-
-                _audioSource.clip = null;
-
+        AudioSource _audioSource = null;
+        foreach (AudioSource source in AudioSourcesList) {
+            if (source.clip == null) {
+                // Not being used.
+                _audioSource = source;
+                break;
             }
         }
 
-    public void SetVolume(float volume)
-    {
-        
+        if (_audioSource == null) { Debug.Log("Audio source ran out of sources."); }
+        else {
+
+            //Debug.Log("Play");
+            _audioSource.clip = clip;
+            _audioSource.Play();
+
+            yield return new WaitForSeconds(_audioSource.clip.length);
+
+            _audioSource.clip = null;
+
+        }
+    }
+
+    public void SetVolume(float volume) {
+
         audioSource.volume = volume;
     }
 
