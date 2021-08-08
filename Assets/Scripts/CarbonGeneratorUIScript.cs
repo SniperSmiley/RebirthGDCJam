@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class CarbonGeneratorUIScript : MonoBehaviour {
+
     public Color EnoughResources;
     public Color NotEnough;
 
@@ -34,7 +35,9 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
     private float UpgradeLastTime = 0;
 
     private void Awake() {
+
         script = GameManagerScript.GameManager;
+
         upgradeRequirments = new Resources();
         upgradeRequirments.ResourceArray = UpgradeCosts[CurrentUpgrade].Array;
 
@@ -62,6 +65,7 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
           
 
             Debug.Log("Gen repaired");
+                    script.UiManagerScripto.CarbonGenLevel++;
             script.UiManagerScripto.IsGeneratorBroken = false;
 
         }
@@ -82,9 +86,12 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
 
 
         StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
-        
+
+        script.UiManagerScripto.CarbonGenLevel++;
+
         //if (upgradeRequirments)
         GameManagerScript.GameManager.PlayerResources.SubtractResource(upgradeRequirments.ResourceArray);
+
         CurrentUpgrade += 1;
         upgradeRequirments.ResourceArray = UpgradeCosts[CurrentUpgrade].Array;
 

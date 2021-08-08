@@ -15,7 +15,7 @@ MonoBehaviour:
   Wood: 1000
   Stone: 1000
   Food: 1000
-  Carbon: 1000
+  Carbon: 6
   Iron: 1000
   Copper: 1000
   Titanium: 1000
@@ -23,13 +23,13 @@ MonoBehaviour:
   Gold: 1000
   Energy: 1000
   Array:
-  - 994
-  - 990
+  - 80
+  - 80
   - 1000
-  - 992
-  - 1000
-  - 1000
-  - 1000
-  - 1000
-  - 1000
-  - 916
+  - 0
+  - 715
+  - 685
+  - 715
+  - 645
+  - 810
+  - 1084
