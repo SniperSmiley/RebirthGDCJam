@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour {
     public int NumberOfAudioSources = 25;
     public List<AudioSource> AudioSourcesList = new List<AudioSource>();
 
+    public AudioSource Chil1;
+    public AudioSource Chill2;
+
 
     public GameObject SoundEffectsGo;
 

@@ -28,7 +28,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Enemy"))&& SceneManager.GetActiveScene().buildIndex!=2)
         {
-            SceneManager.LoadScene(2);
+         
             if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] >= 100)
             {
                 gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] -= energyDeathDecrease * gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];
@@ -37,6 +37,7 @@ public class PlayerDeath : MonoBehaviour
             {
                gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] = 0;
             }
+            SceneManager.LoadScene(2);
 
 
         }
