@@ -16,6 +16,8 @@ public class UiManagerScript : MonoBehaviour
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
 
+    public int CarbonGenLevel = 0;
+
     public bool IsGeneratorBroken = true;
 
     public enum UI {
