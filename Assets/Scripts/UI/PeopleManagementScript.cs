@@ -24,6 +24,9 @@ public class PeopleManagementScript : IsInteractable
 
         base.Interact();
 
+         if (GameManagerScript.GameManager.UiManagerScripto.CurrentActiveUI != 0) {return;  }
+     
+
         Debug.Log("BEEP BOOP");
 
         GameManagerScript.GameManager.UiManagerScripto.ShowUI(UiManagerScript.UI.PrisonerManagement);

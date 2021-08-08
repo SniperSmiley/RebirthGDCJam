@@ -26,9 +26,12 @@ public class CarbonGeneratorScript : IsInteractable {
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
+        if (GameManagerScript.GameManager.UiManagerScripto.CurrentActiveUI != 0) {  return;  }
+
         base.Interact();
 
        // Debug.Log("BEEP BOOP");
+       
 
         GameManagerScript.GameManager.UiManagerScripto.ShowUI(UiManagerScript.UI.CarbonGenerator);
         DisplayingUI = true;

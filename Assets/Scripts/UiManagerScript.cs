@@ -81,7 +81,7 @@ public class UiManagerScript : MonoBehaviour
             currentlyShowingUI = null;
               isShowingUi = false;
          }
-        
+         CurrentActiveUI = 0;
     }
 
 
