@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 6061959288046067305}
   - component: {fileID: 6061959288046067304}
   - component: {fileID: 1464981541}
+  - component: {fileID: 1945767405666209053}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -347,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17b4beba7bd5d44aaecac190534d9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDisabled: 0
   FootSteps:
   - {fileID: 8300000, guid: 1edeb91fae2a83e4e93dc71245abed02, type: 3}
   - {fileID: 8300000, guid: 39c448dfc81b8a645b51173fe5c5f54c, type: 3}
@@ -452,6 +454,20 @@ MonoBehaviour:
   HitRock: {fileID: 8300000, guid: 19d3977a044201f409b6b3e2c3a71f91, type: 3}
   GrabFruit: {fileID: 8300000, guid: 00e0f5feaaad4774b90af2a16a198c60, type: 3}
   GrabLeaf: {fileID: 8300000, guid: 4ef353402a40e214f8cd30d24738b003, type: 3}
+--- !u!114 &1945767405666209053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6061959288046067302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a48ca605fdd4e2fb0dc078fa511d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 6061959288046067302}
+  energyDeathDecrease: 0.1
 --- !u!1 &6061959288298975646
 GameObject:
   m_ObjectHideFlags: 0

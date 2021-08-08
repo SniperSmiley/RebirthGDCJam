@@ -4344,6 +4344,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6061959288046067303, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
   m_PrefabInstance: {fileID: 226761550}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &226761552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6061959288046067302, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
+  m_PrefabInstance: {fileID: 226761550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &227637036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6780,7 +6785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307906450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.88018, y: -12.034758, z: -10}
+  m_LocalPosition: {x: -20.847797, y: -12.034708, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16773,6 +16778,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2946985726988147933, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 226761552}
     - target: {fileID: 2946985726988147935, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
       propertyPath: m_Name
       value: P_Leech (2)
@@ -22831,6 +22840,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2946985726988147933, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 226761552}
     - target: {fileID: 2946985726988147935, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
       propertyPath: m_Name
       value: P_Leech (4)
@@ -23003,6 +23016,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2946985726988147933, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 226761552}
     - target: {fileID: 2946985726988147935, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
       propertyPath: m_Name
       value: P_Leech (1)
@@ -74980,6 +74997,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2946985726988147933, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 226761552}
     - target: {fileID: 2946985726988147935, guid: 32d81179b88714d4c8f11c71867a51fd, type: 3}
       propertyPath: m_Name
       value: P_Leech (3)
