@@ -158,7 +158,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
         float FoodRequired = (CurrentPrisoner.Level) * 10;
 
-        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] >= FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 20) {
+        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] >= FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 21) {
 
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
             Prisoners[CurrentPrisonerIndex].Level += 1;

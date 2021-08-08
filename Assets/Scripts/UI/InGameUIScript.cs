@@ -49,18 +49,18 @@ public class InGameUIScript : MonoBehaviour {
         // 1M    000 000
 
         if (val >= 1000000000) {
-            newVal = Mathf.Round(val / 1000000000).ToString() + "B"; 
+            newVal = Math.Round(val / 1000000000, 1).ToString() + "B"; 
         }
 
         else if (val >= 1000000) {
-            newVal = Mathf.Round(val / 1000000).ToString() + "M";   ///.ToString("B") + "M";
+            newVal = Math.Round(val / 1000000, 1).ToString() + "M";   ///.ToString("B") + "M";
         }
         else if (val >= 1000) {
-              newVal = Mathf.Round(val / 1000).ToString() + "K";  
+              newVal = Math.Round(val / 1000 , 1).ToString() + "K";  
         }
 
         else {
-            newVal =  Mathf.Round(val).ToString();
+            newVal =  Math.Round(val,1).ToString();
         }
 
         return newVal;

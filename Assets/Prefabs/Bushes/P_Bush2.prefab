@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641737646920864969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.51, z: 0}
+  m_LocalPosition: {x: 0, y: -0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1735869466886893787}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rend: {fileID: 8494141221644425409}
+  Disabled: 0
   CoolDown: 0
   isCoolingDown: 0
   Bush: {fileID: 2965112459235562237, guid: be59034ead7a61343a6ca70939ebde8c, type: 3}
