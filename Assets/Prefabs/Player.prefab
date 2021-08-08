@@ -347,6 +347,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c17b4beba7bd5d44aaecac190534d9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FootSteps:
+  - {fileID: 8300000, guid: 1edeb91fae2a83e4e93dc71245abed02, type: 3}
+  - {fileID: 8300000, guid: 39c448dfc81b8a645b51173fe5c5f54c, type: 3}
+  - {fileID: 8300000, guid: c831df9f98f5c5e4fbdb84dd2fc8ab9e, type: 3}
+  - {fileID: 8300000, guid: 73408590f8049374fa8b744fc3c488ca, type: 3}
+  - {fileID: 8300000, guid: d0d5383bd3bb18846ab476afa9d93654, type: 3}
   PlayerAnimator: {fileID: 6061959288298975647}
   BaseSortLayer: 500
   PlayerSortingPos: {fileID: 6061959288298975713}

@@ -54640,10 +54640,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6061959287541919473, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6061959288046067302, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
       propertyPath: m_Name
       value: Player
@@ -54691,14 +54687,6 @@ PrefabInstance:
     - target: {fileID: 6061959288046067303, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6061959288046067306, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
-      propertyPath: PlayerSortingPos
-      value: 
-      objectReference: {fileID: 1991690854}
-    - target: {fileID: 6061959288298975646, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
-      propertyPath: m_Name
-      value: PlayerSpriteNew
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}

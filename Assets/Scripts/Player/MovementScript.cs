@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovementScript : MonoBehaviour {
 
+    public AudioClip[] FootSteps;
+
     public Animator PlayerAnimator;
 
     public int BaseSortLayer = 500;
@@ -27,6 +29,9 @@ public class MovementScript : MonoBehaviour {
 
     private SpriteRenderer rend = null;
 
+    private float LastTimeFootStepPlayed = 0;
+    private AudioManager audio;
+
     private void Awake() {
 
         rend = GetComponentInChildren<SpriteRenderer>();
@@ -34,8 +39,21 @@ public class MovementScript : MonoBehaviour {
 
     }
 
+    private void Start() {
+        audio = GameManagerScript.GameManager.AudioManagerScript;
+    }
+
     // Update is called once per frame
-    void Update() { UpdateLayerOrder(); CheckTile(); UpdateAnimation(); }
+    void Update() { UpdateLayerOrder(); CheckTile(); UpdateAnimation(); Footsteps(); }
+
+    private void Footsteps() {
+        if (!isMoving) { return; }
+
+        if (Time.time - LastTimeFootStepPlayed > 0.3f) {
+            StartCoroutine(audio.PlayEffect(FootSteps[Random.Range(0,FootSteps.Length)]));
+            LastTimeFootStepPlayed = Time.time;
+        }
+    }
 
     public void FixedUpdate() { MovePlayer(); }
 
