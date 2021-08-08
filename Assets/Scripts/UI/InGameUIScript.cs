@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class InGameUIScript : MonoBehaviour {
 
@@ -27,15 +28,41 @@ public class InGameUIScript : MonoBehaviour {
     }
 
     public void OnUpdateUI() {
-        WoodText.text = "Wood: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood];
-        StoneText.text = "Stone: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone];
-        FoodText.text = "Food: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food];
-        IronText.text = "Iron: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron];
-        CopperText.text = "Copper: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper];
-        BruxiteText.text = "Bruxite: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite];
-        TitaniumText.text = "Titanium: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium];
-        GoldText.text = "Gold: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Gold];
-        CarbonText.text = "Carbon: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon];   
-        EnergyText.text = "Energy: " + GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];  
+        WoodText.text = "Wood: " +  CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood]);
+        StoneText.text = "Stone: " + CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]);
+        FoodText.text = "Food: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food]);
+        IronText.text = "Iron: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron]);
+        CopperText.text = "Copper: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper]);
+        BruxiteText.text = "Bruxite: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]);
+        TitaniumText.text = "Titanium: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium]);
+        GoldText.text = "Gold: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold]);
+        CarbonText.text = "Carbon: " +CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon]);   
+        EnergyText.text = "Energy: " +CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy]);  
+    }
+
+    private string CorrectUiValue(float val) {
+        float test;
+        string newVal = "Error";
+        // 1k   000
+        // 10k  000
+        // 100k  000
+        // 1M    000 000
+
+        if (val >= 1000000000) {
+            newVal = Mathf.Round(val / 1000000000).ToString() + "B"; 
+        }
+
+        else if (val >= 1000000) {
+            newVal = Mathf.Round(val / 1000000).ToString() + "M";   ///.ToString("B") + "M";
+        }
+        else if (val >= 1000) {
+              newVal = Mathf.Round(val / 1000).ToString() + "K";  
+        }
+
+        else {
+            newVal =  Mathf.Round(val).ToString();
+        }
+
+        return newVal;
     }
 }
