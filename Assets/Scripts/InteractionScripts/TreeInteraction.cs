@@ -5,6 +5,8 @@ using System;
 
 public class TreeInteraction : IsInteractable {
 
+    public AudioClip CutTree;
+
     public Animator TreeShake;
 
     public float health = 120f;
@@ -23,6 +25,8 @@ public class TreeInteraction : IsInteractable {
         base.Interact();
 
         if (!base.EnsureOnlyOneExecution()) { return; }
+
+        StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(CutTree));
 
         //   Debug.Log("Interacted with " + transform.name);
 

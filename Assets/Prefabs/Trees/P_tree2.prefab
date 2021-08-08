@@ -276,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 8423785913390359757}
   CoolDown: 0.6
+  CutTree: {fileID: 8300000, guid: c3ff50db81a9f2f41ac19261d8988660, type: 3}
   TreeShake: {fileID: 8503561341264640241}
   health: 140
   WoodResourceGainFrom: 5
