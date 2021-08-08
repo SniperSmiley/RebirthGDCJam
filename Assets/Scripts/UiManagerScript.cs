@@ -10,6 +10,7 @@ public class UiManagerScript : MonoBehaviour
     public GameObject CarbonGeneratorUI;
     public GameObject PrisonnerManagementUI;
     public GameObject ShipUI;
+    public GameObject PlayerUI;
 
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
@@ -22,6 +23,14 @@ public class UiManagerScript : MonoBehaviour
         PrisonerManagement,
         ShipUi
     };
+
+
+    public void OnPlayingUI(bool On) {
+        if (On) { PlayerUI.SetActive(true); }
+        else {
+            PlayerUI.SetActive(false);
+        }
+    }
 
 
     public void ShowUI(UI uiToShow) {

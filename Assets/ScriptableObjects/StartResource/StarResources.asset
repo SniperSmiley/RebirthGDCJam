@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117283fc275d3e341abcf861ee294a79, type: 3}
   m_Name: StarResources
   m_EditorClassIdentifier: 
-  Wood: 10
-  Stone: 5000
-  Food: 1000005
-  Carbon: 50000
-  Iron: 500000
+  Wood: 0
+  Stone: 0
+  Food: 0
+  Carbon: 0
+  Iron: 0
   Copper: 0
   Titanium: 0
   Bruxite: 0
   Gold: 0
-  Energy: 100
+  Energy: 0
   Array:
   - 0
-  - 4990
-  - 1000005
-  - 49989
-  - 500000
   - 0
   - 0
   - 0
   - 0
-  - 122
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

@@ -29,7 +29,9 @@ public class LevelLoader : MonoBehaviour
 
     public void OnStartGame() {
 
+        GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(true);
         SceneManager.LoadScene(2);
+   
 
     }
 }

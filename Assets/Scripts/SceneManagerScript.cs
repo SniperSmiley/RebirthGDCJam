@@ -17,8 +17,22 @@ public class SceneManagerScript : MonoBehaviour {
     public float RightTundra;
 
 
+    private void Start() {
+        if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1) {
+              GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(true);
+        }
+    }
+
     public void SwitchScene(int scene, Vector2 Pos, int Grass = 0) {
         SceneManager.LoadScene(scene);
+
+        if (scene == 0 || scene == 1) {
+            GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(false);
+        }
+        else {
+            GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(true);
+        }
+  
 
         if (Pos == new Vector2(0, 0)) {
             return;

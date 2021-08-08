@@ -60,6 +60,12 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     private int CurrentPrisonerIndex = 0;
 
 
+    private void OnEnable() {
+        // 
+        MugShots.SetActive(true);
+        RapSheet.SetActive(false);
+    }
+
     // Start is called before the first frame update
     void Start() {
         Prisoners = new List<Prisoner>();
@@ -150,20 +156,21 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
     public void AttemptLevelUpCharacter() {
 
-        float FoodRequired = (CurrentPrisoner.Level + 1) * 10;
+        float FoodRequired = (CurrentPrisoner.Level) * 10;
 
-        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] > FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 6) {
+        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] >= FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 20) {
 
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
             Prisoners[CurrentPrisonerIndex].Level += 1;
 
-            if (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage == 0) { Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = 50; }
+            /*
+            if (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage == 0) { Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = 10; }
             else {
-                Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = (2 * Prisoners[CurrentPrisonerIndex].ResourceGainPercentage);
-            }
+                Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = ( Prisoners[CurrentPrisonerIndex].ResourceGainPercentage + 10);
+            }*/
 
             Debug.Log("TEST: " + Prisoners[CurrentPrisonerIndex].ResourceGainPercentage);
-            Prisoners[CurrentPrisonerIndex].ResourceGainRate += Prisoners[CurrentPrisonerIndex].ResourceGainPercentage;
+            Prisoners[CurrentPrisonerIndex].ResourceGainRate += 10;
 
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] -= FoodRequired;
 
@@ -201,7 +208,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
             MugCrimes.text = crimes;
             MugImageDisplay.sprite = Prisoners[CurrentPrisonerIndex].Data.img;
             Nametxt.text = "name: " + CurrentPrisoner.Data.Name;
-            FoodRequiredForLevelUp.text = "Food To LVL Up: " + (Prisoners[CurrentPrisonerIndex].Level + 1) * 10;
+            FoodRequiredForLevelUp.text = "Food To LVL Up: " + (Prisoners[CurrentPrisonerIndex].Level) * 10;
         }
         catch (Exception e) {
             Debug.Log("ERROR: " + e.Message);
