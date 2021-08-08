@@ -6512,7 +6512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1370665326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8161,7 +8161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1642947933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21730,7 +21730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6592287433754745985, guid: 8400708b16249f149bf029176d1f5a50, type: 3}
       propertyPath: m_text
-      value: "Dave D\xF6ner "
+      value: 'Dave Doner '
       objectReference: {fileID: 0}
     - target: {fileID: 7045695659160102710, guid: 8400708b16249f149bf029176d1f5a50, type: 3}
       propertyPath: m_Name
