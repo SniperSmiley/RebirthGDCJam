@@ -11,6 +11,7 @@ public class UiManagerScript : MonoBehaviour
     public GameObject PrisonnerManagementUI;
     public GameObject ShipUI;
     public GameObject PlayerUI;
+    public GameObject Options;
 
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
@@ -21,7 +22,8 @@ public class UiManagerScript : MonoBehaviour
         NOTHING,
         CarbonGenerator,
         PrisonerManagement,
-        ShipUi
+        ShipUi,
+        Options
     };
 
 
@@ -42,18 +44,28 @@ public class UiManagerScript : MonoBehaviour
             case UI.CarbonGenerator: CarbonGeneratorUI.SetActive(true); currentlyShowingUI = CarbonGeneratorUI;  break;
             case UI.PrisonerManagement: PrisonnerManagementUI.SetActive(true); currentlyShowingUI = PrisonnerManagementUI;  break;
             case UI.ShipUi: ShipUI.SetActive(true); currentlyShowingUI = ShipUI;  break;
+            case UI.Options:  Options.SetActive(true); currentlyShowingUI = Options; break;
             default:   break;
              
         }
 
-        if (currentlyShowingUI != null) {  CurrentActiveUI = uiToShow; }
+        if (currentlyShowingUI != null) {  CurrentActiveUI = uiToShow; isShowingUi = true; }
         else { CurrentActiveUI = 0; }
     }
 
-    public void CloseUI() {
+    public void OpenCloseOptions() {
+
         if (currentlyShowingUI != null) {
                 currentlyShowingUI.SetActive(false);
               currentlyShowingUI = null;
+            isShowingUi = false;
+
+            if (Time.timeScale != 1) { Time.timeScale = 1; }
+        }
+        else {
+            // Open Options
+            ShowUI(UI.Options);
+            Time.timeScale = 0;
         }
    
         CurrentActiveUI = 0;
@@ -61,8 +73,15 @@ public class UiManagerScript : MonoBehaviour
 
 
     public void CloseCurrentMenu() {
-         if (isShowingUi) { currentlyShowingUI.SetActive(false); }
-         CurrentActiveUI = 0;
+        
+
+         if (currentlyShowingUI != null) {
+             if (isShowingUi) { currentlyShowingUI.SetActive(false); }
+             CurrentActiveUI = 0;
+            currentlyShowingUI = null;
+              isShowingUi = false;
+         }
+        
     }
 
 

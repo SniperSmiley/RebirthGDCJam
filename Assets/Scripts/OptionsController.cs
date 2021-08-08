@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 
 public class OptionsController : MonoBehaviour
 {
+
     public AudioMixer mixer;
 
     public Slider MasterSlider;
@@ -78,5 +79,10 @@ public class OptionsController : MonoBehaviour
         EffectsSlider.value = defaultSFX;
 
         // Actually make the change in the mixers
+    }
+
+    public void QuitToMenu() {
+        Time.timeScale = 1;
+        GameManagerScript.GameManager.SceneManagerScritpto.SwitchScene(0, Vector2.zero);
     }
 }

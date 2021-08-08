@@ -24,8 +24,9 @@ public class SceneManagerScript : MonoBehaviour {
     }
 
     public void SwitchScene(int scene, Vector2 Pos, int Grass = 0) {
+           GameManagerScript.GameManager.UiManagerScripto.CloseCurrentMenu();
         SceneManager.LoadScene(scene);
-
+     
         if (scene == 0 || scene == 1) {
             GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(false);
         }

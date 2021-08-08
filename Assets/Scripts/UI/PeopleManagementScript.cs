@@ -35,7 +35,7 @@ public class PeopleManagementScript : IsInteractable
 
         if (display == false) {
             DisplayingUI = false;
-            GameManagerScript.GameManager.UiManagerScripto.CloseUI();
+            GameManagerScript.GameManager.UiManagerScripto.CloseCurrentMenu();
             Debug.Log("CLOSE");
         }
 
