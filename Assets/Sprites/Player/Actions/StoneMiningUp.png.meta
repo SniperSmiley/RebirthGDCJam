@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 383eff560bd747f4d8e7e6e808f7e113
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7783188256827719122
+    second: StoneMiningUp_0
+  - first:
+      213: 8697945920708350463
+    second: StoneMiningUp_1
+  - first:
+      213: 835350601799294781
+    second: StoneMiningUp_2
+  - first:
+      213: 1858491980651330876
+    second: StoneMiningUp_3
+  - first:
+      213: 4762099331894726690
+    second: StoneMiningUp_4
+  - first:
+      213: 2358024561239451337
+    second: StoneMiningUp_5
+  - first:
+      213: 3003487496542049835
+    second: StoneMiningUp_6
+  - first:
+      213: -2918937313542171778
+    second: StoneMiningUp_7
+  - first:
+      213: -454062854037182592
+    second: StoneMiningUp_8
+  - first:
+      213: -6023948603222536091
+    second: StoneMiningUp_9
+  - first:
+      213: -3478659512137981612
+    second: StoneMiningUp_10
+  - first:
+      213: 5473884115876371393
+    second: StoneMiningUp_11
+  - first:
+      213: 8112751680233096065
+    second: StoneMiningUp_12
+  - first:
+      213: 4315459051878615342
+    second: StoneMiningUp_13
+  - first:
+      213: 2785982369681651843
+    second: StoneMiningUp_14
+  - first:
+      213: -9081051874204504926
+    second: StoneMiningUp_15
+  - first:
+      213: -4205130108781653980
+    second: StoneMiningUp_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StoneMiningUp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd35348b70730c60800000000000000
+      internalID: 7783188256827719122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1116f2bbf45b870800000000000000
+      internalID: 8697945920708350463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fd72b42f2c79b00800000000000000
+      internalID: 835350601799294781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d72a41c90bac910800000000000000
+      internalID: 1858491980651330876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220d5b69c10661240800000000000000
+      internalID: 4762099331894726690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6e25858d269b020800000000000000
+      internalID: 2358024561239451337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2657b607f78ea920800000000000000
+      internalID: 3003487496542049835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e739fa08af9dd77d0800000000000000
+      internalID: -2918937313542171778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2
+        width: 14
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087e96f6d38d2b9f0800000000000000
+      internalID: -454062854037182592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560d5bf59a2a66ca0800000000000000
+      internalID: -6023948603222536091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 2
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4516b7cba9159bfc0800000000000000
+      internalID: -3478659512137981612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbd67cf99427fb40800000000000000
+      internalID: 5473884115876371393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1834f338ba8469070800000000000000
+      internalID: 8112751680233096065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 2
+        width: 14
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2908f5b42793eb30800000000000000
+      internalID: 4315459051878615342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 2
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3883067543cc9a620800000000000000
+      internalID: 2785982369681651843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac25231f6f99f180800000000000000
+      internalID: -9081051874204504926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StoneMiningUp_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2
+        width: 13
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42015cf127064a5c0800000000000000
+      internalID: -4205130108781653980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

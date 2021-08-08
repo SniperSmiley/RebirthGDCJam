@@ -7,6 +7,7 @@ public class PlayerInteractScript : MonoBehaviour {
 
 
 
+
     public PlayerAudioAndAnimations audio;
 
     //PlayerInput _playerInputs = new PlayerInput();
