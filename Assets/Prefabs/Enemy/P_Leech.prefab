@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2946985726988147930}
   - component: {fileID: 2946985726988147933}
   - component: {fileID: 2946985726988147926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: P_Leech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2946985727364616402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
