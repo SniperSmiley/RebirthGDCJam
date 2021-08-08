@@ -29,13 +29,13 @@ public class PlayerDeath : MonoBehaviour
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Enemy"))&& SceneManager.GetActiveScene().buildIndex!=2)
         {
             SceneManager.LoadScene(2);
-            if (gameManager.CarbonGeneratorEnergy >= 100)
+            if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] >= 100)
             {
-                gameManager.CarbonGeneratorEnergy -= energyDeathDecrease * gameManager.CarbonGeneratorEnergy;
+                gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] -= energyDeathDecrease * gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];
             }
-            else if (gameManager.CarbonGeneratorEnergy < 100)
+            else if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] < 100)
             {
-                gameManager.CarbonGeneratorEnergy = 0;
+               gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] = 0;
             }
 
 
@@ -44,13 +44,13 @@ public class PlayerDeath : MonoBehaviour
         {
             Debug.Log("Bug collides");
             gameObject.transform.position = new Vector3(0, 0, 0);
-            if (gameManager.CarbonGeneratorEnergy >= 100)
+            if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] >= 100)
             {
-                gameManager.CarbonGeneratorEnergy -= energyDeathDecrease * gameManager.CarbonGeneratorEnergy;
+               gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] -= energyDeathDecrease * gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy];
             }
-            else if (gameManager.CarbonGeneratorEnergy < 100)
+            else if (gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] < 100)
             {
-                gameManager.CarbonGeneratorEnergy = 0;
+                gameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy] = 0;
             }
         }
 
