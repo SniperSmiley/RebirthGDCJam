@@ -41,6 +41,7 @@ public class PlayerAudioAndAnimations : MonoBehaviour {
         else if (interact.transform.tag == "Rock") {         Animtor.SetTrigger("IsMiningStone"); StartCoroutine(audioScript.PlayEffect(HitRock)); }
         else if (interact.transform.tag == "Fruit") { StartCoroutine(audioScript.PlayEffect(GrabFruit)); }
         else if (interact.transform.tag == "Leaf") { StartCoroutine(audioScript.PlayEffect(GrabLeaf)); }
+        else if (interact.transform.tag == "Enemy") { Animtor.SetTrigger("Sword"); StartCoroutine(audioScript.PlayEffect(GrabLeaf)); }
 
 
 

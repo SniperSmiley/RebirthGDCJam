@@ -39,7 +39,7 @@ public class BugBehavior : IsInteractable
 
         base.Update();
 
-        if (health <= 0) { animator.SetBool("Die", true); return; }
+        if (health <= 0) { animator.SetBool("Die", true); currSpeed = 0; return; }
         // Check if dead 
 
         

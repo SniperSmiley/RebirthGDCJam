@@ -445,6 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62461b5a95a5e4468c867eae230d84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animtor: {fileID: 6061959288298975647}
   HitTree: {fileID: 8300000, guid: 94c220fba3dc4eb48a18d1d414ba5052, type: 3}
   HitTree1: {fileID: 8300000, guid: a683532712ff1344882e6fce281aa035, type: 3}
   HitTree2: {fileID: 8300000, guid: 300f665be96820b4b9b6ca357fadf09c, type: 3}
