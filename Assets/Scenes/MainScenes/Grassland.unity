@@ -9183,12 +9183,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1931247556540075139, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
+      propertyPath: Rend
+      value: 
+      objectReference: {fileID: 1124478151}
+    - target: {fileID: 1931247556540075139, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931247556540075139, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1464981540}
     - target: {fileID: 1931247556540075150, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
       propertyPath: m_Name
       value: P_Bug
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931247556540075150, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
@@ -13813,6 +13825,42 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9111248780356700246, guid: b76b68ac0b8718f4091be5a290d8f9a8, type: 3}
   m_PrefabInstance: {fileID: 1113480952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124478145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1931247556540075150, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
+  m_PrefabInstance: {fileID: 723906429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1124478146
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124478145}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.065078735, y: -0.07050228}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.4375, y: 3.25}
+    newSize: {x: 1.71875, y: 1.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6327362, y: 3.3910046}
+  m_EdgeRadius: 0
+--- !u!212 &1124478151 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1931247556540075136, guid: 9ba93d182d69e8945ae0bbbca9282d56, type: 3}
+  m_PrefabInstance: {fileID: 723906429}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127909864
 PrefabInstance:

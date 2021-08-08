@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BugBehavior : MonoBehaviour
+public class BugBehavior : IsInteractable
 {
+    public float health = 100;
+
     public float speed = 1.0f;
     public float chargeSpeed = 3.0f;
     public float walkDist = 5.0f;
@@ -23,16 +25,24 @@ public class BugBehavior : MonoBehaviour
     private bool charge = false;
     private float elapsed = 0.0f;
     private float angle = 0.0f;
-    void Awake()
+
+    protected override void  Awake()
     {
+        base.Awake();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         startingPosition = rb2d.transform.position;
         animator = gameObject.GetComponent<Animator>();
         playerRb2d = player.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-    {
+    protected override void Update() {
+
+        base.Update();
+
+        if (health <= 0) { animator.SetBool("Die", true); return; }
+        // Check if dead 
+
+        
         Vector2 curr = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
         Vector2 playerCurr = new Vector2(playerRb2d.transform.position.x, playerRb2d.transform.position.y);
         float distToPlayer = Vector2.Distance(playerRb2d.transform.position, curr);
@@ -104,9 +114,31 @@ public class BugBehavior : MonoBehaviour
         }
     }
 
+    
+
     private void FixedUpdate()
     {
         rb2d.velocity = direction * currSpeed;
         gameObject.GetComponent<SpriteRenderer>().flipX = (rb2d.velocity.x < 0.0f);
     }
+
+
+     public override void Interact() {
+       
+        // Only runs once
+        if (!base.EnsureOnlyOneExecution()) { return; }
+
+        // base.Interact();
+        // Attack
+        health -= 10;
+
+
+        //else { StartCoroutine(FlashColourFunc()); }
+
+    }
+
+    public override void DisplayInteractable(bool display) {
+       base.DisplayInteractable(display);
+    }
+
 }
