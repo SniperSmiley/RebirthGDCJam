@@ -70,5 +70,10 @@ public class IsInteractable : MonoBehaviour {
         Rend.color = color;
     }
 
+    public void DisplayInteractOveride(bool display) {
+        if (display) { Rend.color = newcol; }
+        else { Rend.color = color; }
+    }
+
 
 }

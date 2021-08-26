@@ -26,6 +26,8 @@ public class BugBehavior : IsInteractable
     private float elapsed = 0.0f;
     private float angle = 0.0f;
 
+    bool dead = false;
+
     protected override void  Awake()
     {
         base.Awake();
@@ -37,9 +39,11 @@ public class BugBehavior : IsInteractable
 
     protected override void Update() {
 
+        if (dead) { base.DisplayInteractOveride(false);  Destroy(this); }
+
         base.Update();
 
-        if (health <= 0) { animator.SetBool("Die", true); currSpeed = 0; return; }
+        if (health <= 0) { animator.SetBool("Die", true); currSpeed = 0; dead = true;;  return; }
         // Check if dead 
 
         
@@ -47,6 +51,7 @@ public class BugBehavior : IsInteractable
         Vector2 playerCurr = new Vector2(playerRb2d.transform.position.x, playerRb2d.transform.position.y);
         float distToPlayer = Vector2.Distance(playerRb2d.transform.position, curr);
         elapsed += Time.deltaTime;
+
         //Player close to Bug
         if (!charging && distToPlayer < attackDistance)
         {
@@ -119,7 +124,28 @@ public class BugBehavior : IsInteractable
     private void FixedUpdate()
     {
         rb2d.velocity = direction * currSpeed;
-        gameObject.GetComponent<SpriteRenderer>().flipX = (rb2d.velocity.x < 0.0f);
+
+        Flip();
+
+        //gameObject.GetComponent<SpriteRenderer>().flipX = (rb2d.velocity.x < 0.0f);
+    }
+
+    // Flip
+    public void Flip() {
+
+        // If moving 
+        if (rb2d.velocity.magnitude > 0) {
+
+            // Right
+            if (rb2d.velocity.x > 0 && transform.localScale.x < 0) {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+
+            // Left
+            else if  (rb2d.velocity.x < 0 && transform.localScale.x > 0){
+                 transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+        }
     }
 
 
@@ -139,6 +165,7 @@ public class BugBehavior : IsInteractable
 
     public override void DisplayInteractable(bool display) {
        base.DisplayInteractable(display);
+        Debug.Log("TEST");
     }
 
 }

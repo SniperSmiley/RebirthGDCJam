@@ -9,11 +9,15 @@ public class InputManager : MonoBehaviour
     public static bool first = false;
 
     private void Awake() {
+
+
+
         PlayerInputScript = new PlayerInput();
         PlayerInputScript.Enable();
 
         if (!first) {
                     PlayerInputScript.Player.CloseMenu.performed += ctx => GameManagerScript.GameManager.UiManagerScripto.OpenCloseOptions();
+             //  Application.targetFrameRate = 80;
             first = true;
         }
 
