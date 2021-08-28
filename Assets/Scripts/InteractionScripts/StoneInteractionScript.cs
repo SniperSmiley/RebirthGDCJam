@@ -40,7 +40,13 @@ public class StoneInteractionScript : IsInteractable {
     private void OnGathered() {
 
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, StoneGive);
-       // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += StoneGive;
+        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += StoneGive;
+
+        // Display Change
+        string textToDisplay = "Stone + " + StoneGive;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+        
+        
         col.enabled = false;
         Rend.sprite = newSprite;
         isCrushed = true;

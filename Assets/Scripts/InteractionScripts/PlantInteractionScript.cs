@@ -57,6 +57,10 @@ public class PlantInteractionScript : IsInteractable {
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonGive);
         // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonGive;
 
+        // Display Change
+        string textToDisplay =  "Carbon + " + CarbonGive;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
         timeOfInteract = Time.time;
         IsGrown = false;
         base.Disabled = true;

@@ -71,6 +71,7 @@ public class SceneManagerScript : MonoBehaviour {
             case 5: FindAndMovePlayer(new Vector2(pos.x, TopDesert)); break;   // Desert   down from grass
             case 6: FindAndMovePlayer(new Vector2(RightTundra, pos.y)); break;   // Tundra   left from grass
         }
+
     }
 
 

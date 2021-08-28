@@ -25,6 +25,7 @@ public class GameManagerScript : MonoBehaviour {
     public InputManager InputManagerScript;
     public UiManagerScript UiManagerScripto;
     public SceneManagerScript SceneManagerScritpto;
+    public ResourceChangeDisplayScript resourceChangeDisplayScripto = null;
 
     public float CarbonGeneratorEnergy = 2f;
     private float LastTime = 0;
@@ -85,7 +86,6 @@ public class GameManagerScript : MonoBehaviour {
 
 
 }
-
 
 
 public class PrisonerAction {

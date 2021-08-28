@@ -42,8 +42,13 @@ public class TreeInteraction : IsInteractable {
 
      private void OnGathered() {
 
+        // Change the values
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Wood, WoodResourceGainFrom);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonResourceGainFrom);
+
+        // Display Change
+        string textToDisplay = "Wood + " + WoodResourceGainFrom + "\n" + "Carbon + " + CarbonResourceGainFrom;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
 
         //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood] += WoodResourceGainFrom;
         //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonResourceGainFrom;
