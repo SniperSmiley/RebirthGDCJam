@@ -30,15 +30,27 @@ public class TreeInteraction : IsInteractable {
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood] += WoodResourceGainFrom;
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonResourceGainFrom;
-            Rend.sprite = newSprite;
-            isTrunk = true;
-            base.Disabled = true;
+
+            OnGathered();
+
+          
         }
 
         else { TreeShake.SetTrigger("ShakeTree"); StartCoroutine(FlashColourFunc()); }
 
+    }
+
+     private void OnGathered() {
+
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Wood, WoodResourceGainFrom);
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonResourceGainFrom);
+
+        //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood] += WoodResourceGainFrom;
+        //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonResourceGainFrom;
+
+        Rend.sprite = newSprite;
+        isTrunk = true;
+        base.Disabled = true;
     }
 
 

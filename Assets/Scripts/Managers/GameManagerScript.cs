@@ -77,7 +77,11 @@ public class GameManagerScript : MonoBehaviour {
 
     }
 
-
+    
+    // Simplifies adding resources to inventory.
+    public void AddResourceToInventory(Resources.ResourcesIndex resource, float quantity) {
+        GameManager.PlayerResources.ResourceArray[(int)resource] += quantity;
+    }
 
 
 }
@@ -163,4 +167,7 @@ public class Resources {
             ResourceArray[i] -= resource[i];
         }
     }
+
 }
+
+
