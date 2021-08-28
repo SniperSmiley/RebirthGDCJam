@@ -39,7 +39,7 @@ public class BugBehavior : IsInteractable
 
     protected override void Update() {
 
-        if (dead) { base.DisplayInteractOveride(false);  Destroy(this); }
+        if (dead) { OnDeath();}
 
         base.Update();
 
@@ -117,6 +117,11 @@ public class BugBehavior : IsInteractable
         {
             currSpeed = 0.0001f;
         }
+    }
+
+    private void OnDeath() {
+        base.DisplayInteractOveride(false); 
+        Destroy(this); 
     }
 
     
