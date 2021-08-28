@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BerryBushScript : IsInteractable
-{
+public class BerryBushScript : IsInteractable {
     public Sprite Bush;
     public Sprite BushWithBerries;
     public float ResfreshTime = 5f;
@@ -17,8 +16,8 @@ public class BerryBushScript : IsInteractable
     protected override void Awake() {
         base.Awake();
 
-        if (IsBerries) {Rend.sprite = BushWithBerries;         base.Disabled = false;}
-        else { Rend.sprite = Bush;        base.Disabled = true; }
+        if (IsBerries) { Rend.sprite = BushWithBerries; base.Disabled = false; }
+        else { Rend.sprite = Bush; base.Disabled = true; }
 
         timeOfInteract = Time.time;
     }
@@ -27,30 +26,38 @@ public class BerryBushScript : IsInteractable
 
         base.Update();
 
-        if ((Time.time - timeOfInteract) > ResfreshTime ) {
+        if ((Time.time - timeOfInteract) > ResfreshTime) {
             if (!IsBerries) {
                 IsBerries = true;
                 base.Disabled = false;
                 Rend.sprite = BushWithBerries;
             }
-        
+
         }
     }
 
 
     public override void Interact() {
-        
+
         if (!IsBerries) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
         base.Interact();
 
-        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food] += BerryGive;
+        OnGathered();
+
+    }
+
+    private void OnGathered() {
+
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Food, BerryGive);
+
+       // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] += BerryGive;
 
         timeOfInteract = Time.time;
         IsBerries = false;
-               base.Disabled = true;
+        base.Disabled = true;
         Rend.sprite = Bush;
 
     }

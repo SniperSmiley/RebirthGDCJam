@@ -31,16 +31,28 @@ public class BruxiteInteractionScript : IsInteractable
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]   += StoneGive;
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]  += BruxiteGive;
-            col.enabled = false;
-            Rend.sprite = newSprite;
-            isCrushed = true;
-                   base.Disabled = true;
-            Rend.sortingOrder = 1;
+            OnGathered();
+
+           
         }
 
         else { StartCoroutine(FlashColourFunc()); }
 
+    }
+
+    private void OnGathered() {
+
+         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, StoneGive);
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Buxite, BruxiteGive);
+
+       //  GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]   += StoneGive;
+        //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]  += BruxiteGive;
+
+
+        col.enabled = false;
+        Rend.sprite = newSprite;
+        isCrushed = true;
+        base.Disabled = true;
+        Rend.sortingOrder = 1;
     }
 }
