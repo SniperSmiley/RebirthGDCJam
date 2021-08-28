@@ -6102,6 +6102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IntroSpeach: {fileID: 8300000, guid: 22d8343e95e02d04193366ff2547593f, type: 3}
+  vidPlay: {fileID: 0}
 --- !u!1 &1215628335
 GameObject:
   m_ObjectHideFlags: 0
@@ -8973,7 +8974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689796306}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: TopBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19146,6 +19147,8 @@ MonoBehaviour:
   EffectsMixer: {fileID: 773464880990229756, guid: 8bfef5aefadbdbd42b5c6ea8e24ef846, type: 2}
   NumberOfAudioSources: 25
   AudioSourcesList: []
+  Chil1: {fileID: 0}
+  Chill2: {fileID: 0}
   SoundEffectsGo: {fileID: 1341166750}
   UISuccess: {fileID: 8300000, guid: 9922129d57a1dd74bac73d5eaeb38210, type: 3}
   UIFail: {fileID: 8300000, guid: 7d1f9de4ca2fb53469307746cc8de620, type: 3}
@@ -19341,6 +19344,7 @@ MonoBehaviour:
   InputManagerScript: {fileID: 5370567749488974198}
   UiManagerScripto: {fileID: 439281208}
   SceneManagerScritpto: {fileID: 1240525963}
+  resourceChangeDisplayScripto: {fileID: 0}
   CarbonGeneratorEnergy: 2
 --- !u!1 &5451775055708492243
 GameObject:

@@ -46,6 +46,10 @@ public class IronInteractionScript : IsInteractable
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Iron, IronGain);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
+          // Display Change
+        string textToDisplay =  "Iron + " + IronGain + "\n" + "Stone + " + 1;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron] += IronGain;
         //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone] += 1f;
 

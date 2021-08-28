@@ -41,6 +41,11 @@ public class GoldInteractionScript : IsInteractable {
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Gold, goldGain);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
+          // Display Change
+        string textToDisplay =  "Gold + " + goldGain + "\n" + "Stone + " + 1;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
+
        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold] += goldGain;
       //  GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += 1f;
 

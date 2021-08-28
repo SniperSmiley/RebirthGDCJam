@@ -42,8 +42,12 @@ public class BruxiteInteractionScript : IsInteractable
 
     private void OnGathered() {
 
-         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, StoneGive);
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, StoneGive);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Buxite, BruxiteGive);
+
+          // Display Change
+        string textToDisplay =  "Bruxite + " + BruxiteGive + "\n" + "Stone + " + StoneGive;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
 
        //  GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]   += StoneGive;
         //GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]  += BruxiteGive;

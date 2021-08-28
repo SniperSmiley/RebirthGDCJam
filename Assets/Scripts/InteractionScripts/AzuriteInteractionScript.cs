@@ -40,6 +40,10 @@ public class AzuriteInteractionScript : IsInteractable {
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Copper, AzuriteGain);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
+        // Display Change
+        string textToDisplay =  "Copper + " + AzuriteGain + "\n" + "Stone + " + 1;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
         col.enabled = false;
         Rend.sprite = newSprite;
         isCrushed = true;

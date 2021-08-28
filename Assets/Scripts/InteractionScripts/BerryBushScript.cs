@@ -53,6 +53,10 @@ public class BerryBushScript : IsInteractable {
 
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Food, BerryGive);
 
+        // Display Change
+        string textToDisplay = "Food + " + BerryGive;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] += BerryGive;
 
         timeOfInteract = Time.time;

@@ -40,6 +40,9 @@ public class TitaniumInteractableScript : IsInteractable {
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Titanium, TitaniumGain);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
+        // Display Change
+        string textToDisplay =  "Titanium + " + TitaniumGain + "\n" + "Stone + " + 1;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
 
 
        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium] += TitaniumGain;
