@@ -17,8 +17,8 @@ public class PlantInteractionScript : IsInteractable {
     protected override void Awake() {
         base.Awake();
 
-        if (IsGrown) { Rend.sprite = Grown;        base.Disabled = false; }
-        else { Rend.sprite = Chopped;         base.Disabled = true;}
+        if (IsGrown) { Rend.sprite = Grown; base.Disabled = false; }
+        else { Rend.sprite = Chopped; base.Disabled = true; }
 
         timeOfInteract = Time.time;
     }
@@ -27,36 +27,44 @@ public class PlantInteractionScript : IsInteractable {
 
         base.Update();
 
-        if ((Time.time - timeOfInteract) > ResfreshTime ) {
+        if ((Time.time - timeOfInteract) > ResfreshTime) {
             if (!IsGrown) {
                 IsGrown = true;
-                       base.Disabled = false;
+                base.Disabled = false;
                 Rend.sprite = Grown;
             }
-        
+
         }
     }
 
 
     public override void Interact() {
-        
+
         if (!IsGrown) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
         base.Interact();
 
-        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonGive;
+        OnGathered();
+
+    }
+
+
+    private void OnGathered() {
+
+
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonGive);
+        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon] += CarbonGive;
 
         timeOfInteract = Time.time;
         IsGrown = false;
-               base.Disabled = true;
+        base.Disabled = true;
         Rend.sprite = Chopped;
-
     }
 
 }
 
 
-    
+
 
