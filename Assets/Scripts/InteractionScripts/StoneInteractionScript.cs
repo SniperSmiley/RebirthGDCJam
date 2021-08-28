@@ -19,9 +19,9 @@ public class StoneInteractionScript : IsInteractable {
     }
 
     public override void Interact() {
-       
 
-        if (isCrushed) { return;  }
+
+        if (isCrushed) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
@@ -30,17 +30,23 @@ public class StoneInteractionScript : IsInteractable {
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]  += StoneGive;
-            col.enabled = false;
-            Rend.sprite = newSprite;
-            isCrushed = true;
-                   base.Disabled = true;
-            Rend.sortingOrder = 1;
+            OnGathered();
         }
 
         else { StartCoroutine(FlashColourFunc()); }
 
     }
 
+    private void OnGathered() {
+
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, StoneGive);
+       // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += StoneGive;
+        col.enabled = false;
+        Rend.sprite = newSprite;
+        isCrushed = true;
+        base.Disabled = true;
+        Rend.sortingOrder = 1;
+
+    }
 
 }

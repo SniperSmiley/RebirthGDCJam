@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitaniumInteractableScript : IsInteractable
-{
+public class TitaniumInteractableScript : IsInteractable {
     public float health = 140f;
     public float TitaniumGain = 2f;
 
@@ -18,9 +17,9 @@ public class TitaniumInteractableScript : IsInteractable
     }
 
     public override void Interact() {
-       
 
-        if (isCrushed) { return;  }
+
+        if (isCrushed) { return; }
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
@@ -29,17 +28,28 @@ public class TitaniumInteractableScript : IsInteractable
         health -= 20f * GameManagerScript.GameManager.PlayerStats.ResourceGatheringLevel;
 
         if (health <= 0) {
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium] += TitaniumGain;
-            GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone] += 1f;
-            col.enabled = false;
-            Rend.sprite = newSprite;
-            isCrushed = true;
-
-            base.Disabled = true;
-            Rend.sortingOrder = 1;
+            OnGathered();
         }
 
         else { StartCoroutine(FlashColourFunc()); }
 
+    }
+
+    private void OnGathered() {
+        
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Titanium, TitaniumGain);
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
+
+
+
+       // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium] += TitaniumGain;
+       // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += 1f;
+
+        col.enabled = false;
+        Rend.sprite = newSprite;
+        isCrushed = true;
+
+        base.Disabled = true;
+        Rend.sortingOrder = 1;
     }
 }
