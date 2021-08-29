@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour {
 
     public IEnumerator PlayEffect(AudioClip clip) {
 
-        Debug.Log("Play effect");
+        //Debug.Log("Play effect");
         AudioSource _audioSource = null;
         foreach (AudioSource source in AudioSourcesList) {
             if (source.clip == null) {

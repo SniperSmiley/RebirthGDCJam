@@ -30,7 +30,7 @@ public class ShipInteractionScript : IsInteractable
         if (display == false) {
             DisplayingUI = false;
             GameManagerScript.GameManager.UiManagerScripto.CloseCurrentMenu();
-            Debug.Log("CLOSE");
+           // Debug.Log("CLOSE");
         }
 
         base.DisplayInteractable(display);
