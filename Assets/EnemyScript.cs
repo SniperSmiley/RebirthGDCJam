@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyScript : IsInteractable {
 
+    public Transform RayPos;
+    public LayerMask Environment;
+
     public GameObject Player;
     public Animator EnemyAnimator;
 
@@ -16,6 +19,8 @@ public class EnemyScript : IsInteractable {
 
     [SerializeField] private float _chaseSpeed;
     [SerializeField] private float _chaseAcceleration;
+
+    [SerializeField] private float _drag;
 
     private enum EnemyStates {
         Idle,
@@ -40,6 +45,9 @@ public class EnemyScript : IsInteractable {
     private float _idleWalkTime = 0;
     private float _idleWalkTimeStart = 0;
     private bool _idleing = true;
+    private bool switchdirection = true;
+    private float _timePotentiallyHitWall = 0;
+    
 
     protected override void Awake() {
         base.Awake();
@@ -82,10 +90,10 @@ public class EnemyScript : IsInteractable {
                 else {
                     _currentState = EnemyStates.Idle;
                     _idleing = true;
-                    _idleWalkTime /= 3f;
+                    _idleWalkTime /= 5f;
                 }
 
-                
+                switchdirection = true;
                 _idleWalkTimeStart = Time.time;
             }
 
@@ -100,6 +108,8 @@ public class EnemyScript : IsInteractable {
 
     // Perform the movements made this frame.
     protected virtual void FixedUpdate() {
+
+        Flip();
 
         // Now we know the state, run the appropriate function.
         switch (_currentState) {
@@ -124,34 +134,70 @@ public class EnemyScript : IsInteractable {
     public virtual void Roaming() {
         Debug.Log("Roaming");
 
-        Vector2 newVel = _enemyRig.velocity + _direction * _walkAcceleration;
+        // Set animation
+        if (!EnemyAnimator.GetBool("Walking")) { EnemyAnimator.SetBool("Walking", true); }
 
-        if (newVel == _enemyRig.velocity) {
-            // Potentially stuck? Change direction.
-            Debug.Log("ASASSADASD");
+        // Halfway through walking change direction.
+        if (Time.time - _idleWalkTimeStart > _idleWalkTime / 2 && switchdirection) {
             RandomiseDirection();
+            switchdirection = false;
         }
 
-        else if (newVel.magnitude < _walkTopSpeed) {
-           
-             _enemyRig.velocity = newVel;
-        }
-      
+        Vector2 newVel = _enemyRig.velocity + (_direction * _walkAcceleration) ;
 
-        Debug.Log(_enemyRig.velocity.magnitude);
+        // Check if potentially stuck? The velocity will roughly equal the acceleration
+        if (newVel.magnitude <= _walkAcceleration + .2f) {
+            // If first
+            if (_timePotentiallyHitWall == 0) {
+                _timePotentiallyHitWall = Time.time;
+            }
+            else if (Time.time - _timePotentiallyHitWall > 0.20) {
+                RandomiseDirection();
+                _timePotentiallyHitWall = 0;
+                Debug.Log("STUCK");
+            }
+        }
+
+        if (newVel.magnitude <= _walkTopSpeed) { _enemyRig.velocity = newVel; }
+        else { Debug.Log("REE" + _enemyRig.velocity.magnitude); }
+
+        Debug.Log(newVel.magnitude  + " "+_enemyRig.velocity.magnitude + " " + _direction);
 
     }
 
     public virtual void Idleing() {
+
+        if (EnemyAnimator.GetBool("Walking")) { EnemyAnimator.SetBool("Walking", false); }
+
+        if ( _enemyRig.velocity.magnitude <= 0.2) {
+            _enemyRig.velocity = Vector2.zero;
+        }
+        else if ( _enemyRig.velocity.magnitude > 0) {
+            _enemyRig.velocity /= 2;
+        }
         Debug.Log("IDLE");
     }
-
-
 
     private void RandomiseDirection() {
         float x = Random.Range(-1f, 1f);
         float y = Random.Range(-1f, 1f);
-        _direction = new Vector3(x, y, 0f);
+        _direction = new Vector3(x, y, 0f).normalized;
     }
+       // Flip
+    private void Flip() {
 
+        // If moving 
+        if (_enemyRig.velocity.magnitude > 0) {
+
+            // Right
+            if (_enemyRig.velocity.x > 0.12 && transform.localScale.x < 0) {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+
+            // Left
+            else if  (_enemyRig.velocity.x < -0.12 && transform.localScale.x > 0){
+                 transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+        }
+    }
 }
