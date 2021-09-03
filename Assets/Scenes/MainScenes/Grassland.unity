@@ -79329,12 +79329,12 @@ MonoBehaviour:
   _chaseAcceleration: 3
   _MaxIdleWalkTime: 26
   _minIdleWalkTime: 16
-  _ChargeUpColour: {r: 0.8018868, g: 0.41583136, b: 0.374466, a: 0}
-  _ChargeColour: {r: 0.735849, g: 0.17007832, b: 0.17007832, a: 0}
+  _ChargeUpColour: {r: 1, g: 0.4963851, b: 0.43867922, a: 1}
+  _ChargeColour: {r: 1, g: 0, b: 0, a: 1}
   _attackCooldown: 2
   _attackDuration: 0.9
   _attackChargeUpTime: 0.3
-  _attackChargeSpeed: 5.5
+  _attackChargeSpeed: 6.2
 --- !u!4 &1931247556185842684
 Transform:
   m_ObjectHideFlags: 0

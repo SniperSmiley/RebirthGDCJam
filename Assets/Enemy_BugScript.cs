@@ -27,7 +27,7 @@ public class Enemy_BugScript : EnemyScript {
         // Attack
 
         // Attack cooldown
-        if (Time.time - _timeOfLastAttack <= _attackCooldown) { return; }
+        if (Time.time - _timeOfLastAttack <= _attackCooldown) { base.Chasing(); return; }
 
         // Starting attack animation
         // on first time work out direction
