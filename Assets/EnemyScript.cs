@@ -5,9 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyScript : IsInteractable {
 
-    public Transform RayPos;
-    public LayerMask Environment;
-
+    public float health;
     public GameObject Player;
     public Animator EnemyAnimator;
 
@@ -17,10 +15,7 @@ public class EnemyScript : IsInteractable {
     [SerializeField] private float _walkTopSpeed;
     [SerializeField] private float _walkAcceleration;
 
-    [SerializeField] private float _chaseSpeed;
     [SerializeField] private float _chaseAcceleration;
-
-    [SerializeField] private float _drag;
 
     private enum EnemyStates {
         Idle,
@@ -30,14 +25,11 @@ public class EnemyScript : IsInteractable {
     }
     private EnemyStates _currentState;
 
-    private Rigidbody2D _enemyRig;
-    private float _distFromPlayer;
-
-    private Vector2 _enemyPos;
-    private Vector2 _playerPos;
-
-    private Vector2 _direction;
-
+    protected Rigidbody2D _enemyRig;
+    protected float _distFromPlayer;
+    protected Vector2 _enemyPos;
+    protected Vector2 _playerPos;
+    protected Vector2 _direction;
 
     // Idle walk
     [SerializeField] private float _MaxIdleWalkTime = 6;
@@ -47,18 +39,23 @@ public class EnemyScript : IsInteractable {
     private bool _idleing = true;
     private bool switchdirection = true;
     private float _timePotentiallyHitWall = 0;
-    
+
+    protected bool _lockedInState = false;
 
     protected override void Awake() {
         base.Awake();
 
         _enemyRig = GetComponent<Rigidbody2D>();
 
+
     }
 
     protected override void Update() {
 
         base.Update();
+
+        // Prevent swithing state in attack animation etc,
+        if (_lockedInState) { return; }
 
         _playerPos = new Vector2(Player.transform.position.x, Player.transform.position.y);
         _enemyPos = new Vector2(transform.position.x, transform.position.y);
@@ -124,17 +121,30 @@ public class EnemyScript : IsInteractable {
 
 
     public virtual void Chasing() {
-        Debug.Log("CHASING");
+        //Debug.Log("CHASING");
+        if (!EnemyAnimator.GetBool("Charging")) { EnemyAnimator.SetBool("Charging", true); }
+
+        // Set direction to look at player
+        _direction = (_playerPos - _enemyPos).normalized;
+
+        // Add velocity
+
+        _enemyRig.velocity = _direction * _chaseAcceleration;
     }
 
     public virtual void Attacking() {
-        Debug.Log("ATTACKING");
+       // Debug.Log("ATTACKING");
+
+        // Attack is different for each creature.
+
+        // Charge in last direction.
     }
 
     public virtual void Roaming() {
-        Debug.Log("Roaming");
+        //Debug.Log("Roaming");
 
         // Set animation
+        if (EnemyAnimator.GetBool("Charging")) { EnemyAnimator.SetBool("Charging", false); }
         if (!EnemyAnimator.GetBool("Walking")) { EnemyAnimator.SetBool("Walking", true); }
 
         // Halfway through walking change direction.
@@ -143,7 +153,7 @@ public class EnemyScript : IsInteractable {
             switchdirection = false;
         }
 
-        Vector2 newVel = _enemyRig.velocity + (_direction * _walkAcceleration) ;
+        Vector2 newVel = _enemyRig.velocity + (_direction * _walkAcceleration);
 
         // Check if potentially stuck? The velocity will roughly equal the acceleration
         if (newVel.magnitude <= _walkAcceleration + .2f) {
@@ -159,23 +169,24 @@ public class EnemyScript : IsInteractable {
         }
 
         if (newVel.magnitude <= _walkTopSpeed) { _enemyRig.velocity = newVel; }
-        else { Debug.Log("REE" + _enemyRig.velocity.magnitude); }
+        //  else { Debug.Log("REE" + _enemyRig.velocity.magnitude); }
 
-        Debug.Log(newVel.magnitude  + " "+_enemyRig.velocity.magnitude + " " + _direction);
+        // Debug.Log(newVel.magnitude  + " "+_enemyRig.velocity.magnitude + " " + _direction);
 
     }
 
     public virtual void Idleing() {
-
+        // Debug.Log("IDLE");
         if (EnemyAnimator.GetBool("Walking")) { EnemyAnimator.SetBool("Walking", false); }
+        if (EnemyAnimator.GetBool("Charging")) { EnemyAnimator.SetBool("Charging", false); }
 
-        if ( _enemyRig.velocity.magnitude <= 0.2) {
+        if (_enemyRig.velocity.magnitude <= 0.2) {
             _enemyRig.velocity = Vector2.zero;
         }
-        else if ( _enemyRig.velocity.magnitude > 0) {
+        else if (_enemyRig.velocity.magnitude > 0) {
             _enemyRig.velocity /= 2;
         }
-        Debug.Log("IDLE");
+   
     }
 
     private void RandomiseDirection() {
@@ -183,21 +194,36 @@ public class EnemyScript : IsInteractable {
         float y = Random.Range(-1f, 1f);
         _direction = new Vector3(x, y, 0f).normalized;
     }
-       // Flip
+    // Flip
     private void Flip() {
 
         // If moving 
         if (_enemyRig.velocity.magnitude > 0) {
 
             // Right
-            if (_enemyRig.velocity.x > 0.12 && transform.localScale.x < 0) {
-                transform.localScale = new Vector3(1f, 1f, 1f);
-            }
+            if (_enemyRig.velocity.x > 0.12 && transform.localScale.x < 0) { transform.localScale = new Vector3(1f, 1f, 1f); }
 
             // Left
-            else if  (_enemyRig.velocity.x < -0.12 && transform.localScale.x > 0){
-                 transform.localScale = new Vector3(-1f, 1f, 1f);
-            }
+            else if (_enemyRig.velocity.x < -0.12 && transform.localScale.x > 0) { transform.localScale = new Vector3(-1f, 1f, 1f); }
         }
+    }
+
+
+    public override void Interact() {
+
+        // Only runs once
+        if (!base.EnsureOnlyOneExecution()) { return; }
+
+        // base.Interact();
+        // Attack
+        health -= 10;
+
+        //else { StartCoroutine(FlashColourFunc()); }
+
+    }
+
+    public override void DisplayInteractable(bool display) {
+        base.DisplayInteractable(display);
+        Debug.Log("TEST");
     }
 }

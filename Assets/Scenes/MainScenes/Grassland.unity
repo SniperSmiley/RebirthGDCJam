@@ -3588,7 +3588,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1931247556185842684}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &262531902
 SpriteRenderer:
@@ -4757,6 +4757,7 @@ MonoBehaviour:
   Disabled: 0
   CoolDown: 0
   isCoolingDown: 0
+  PreventInteractionColorChange: 0
   col: {fileID: 0}
   Delay: 2
 --- !u!1001 &320627302
@@ -11333,6 +11334,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3108606056677573282, guid: b3f240d3c8d56614f9feea1984e422f7, type: 3}
   m_PrefabInstance: {fileID: 880020874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &893597648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 893597649}
+  - component: {fileID: 893597650}
+  m_Layer: 9
+  m_Name: Collider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &893597649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893597648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1931247556185842684}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &893597650
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893597648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.35461965, y: -0.80020106}
+  m_Size: {x: 2.1301937, y: 0.79707336}
+  m_Direction: 1
 --- !u!1001 &894499422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11880,6 +11928,7 @@ MonoBehaviour:
   Disabled: 0
   CoolDown: 0.2
   isCoolingDown: 0
+  PreventInteractionColorChange: 0
   Delay: 1
 --- !u!1001 &945359241
 PrefabInstance:
@@ -13562,7 +13611,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1931247556185842684}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1067150076 stripped
 Transform:
@@ -79267,23 +79316,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rend: {fileID: 262531902}
   Disabled: 0
-  CoolDown: 0.2
+  CoolDown: 0.5
   isCoolingDown: 0
-  RayPos: {fileID: 1062422129}
-  Environment:
-    serializedVersion: 2
-    m_Bits: 1
+  PreventInteractionColorChange: 0
+  health: 0
   Player: {fileID: 1464981540}
   EnemyAnimator: {fileID: 262531903}
-  _sightRange: 7
+  _sightRange: 8
   _attackRange: 4
   _walkTopSpeed: 0.5
   _walkAcceleration: 0.025
-  _chaseSpeed: 5
-  _chaseAcceleration: 0
-  _drag: 0
+  _chaseAcceleration: 3
   _MaxIdleWalkTime: 26
   _minIdleWalkTime: 16
+  _ChargeUpColour: {r: 0.8018868, g: 0.41583136, b: 0.374466, a: 0}
+  _ChargeColour: {r: 0.735849, g: 0.17007832, b: 0.17007832, a: 0}
+  _attackCooldown: 2
+  _attackDuration: 0.9
+  _attackChargeUpTime: 0.3
+  _attackChargeSpeed: 5.5
 --- !u!4 &1931247556185842684
 Transform:
   m_ObjectHideFlags: 0
@@ -79297,6 +79348,7 @@ Transform:
   m_Children:
   - {fileID: 87528008}
   - {fileID: 8339078797575876581}
+  - {fileID: 893597649}
   - {fileID: 262531901}
   - {fileID: 1062422129}
   m_Father: {fileID: 559521532}
@@ -79314,7 +79366,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 7
+  m_Mass: 60
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -79422,7 +79474,7 @@ GameObject:
   - component: {fileID: 8339078797575876581}
   - component: {fileID: 246947382338027743}
   - component: {fileID: 6645442219568760239}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79662,6 +79714,7 @@ MonoBehaviour:
   Disabled: 0
   CoolDown: 0
   isCoolingDown: 0
+  PreventInteractionColorChange: 0
   anim: {fileID: 868184993}
   Col1: {fileID: 139511999}
   Col2: {fileID: 1624624762}

@@ -15,6 +15,8 @@ public class IsInteractable : MonoBehaviour {
     public bool isCoolingDown = false;
     private float coolDownStartTime = 0;
 
+    public bool PreventInteractionColorChange = false;
+
 
     protected virtual void Awake() {
         color = Rend.color;
@@ -53,7 +55,7 @@ public class IsInteractable : MonoBehaviour {
     public virtual void DisplayInteractable(bool display) {
 
         if (isCoolingDown) { return; }
-            
+        if (PreventInteractionColorChange) { return; }    
 
         // Debug.Log("Intercting with " + transform.name );
         if (display) { Rend.color = newcol; }

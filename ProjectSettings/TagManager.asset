@@ -19,8 +19,8 @@ TagManager:
   - Player
   - Background
   - Enemy
-  - 
-  - 
+  - Only Environment
+  - OnlyWithPlayer
   - 
   - 
   - 
