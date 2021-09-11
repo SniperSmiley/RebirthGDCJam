@@ -79319,7 +79319,7 @@ MonoBehaviour:
   CoolDown: 0.5
   isCoolingDown: 0
   PreventInteractionColorChange: 0
-  health: 0
+  health: 60
   Player: {fileID: 1464981540}
   EnemyAnimator: {fileID: 262531903}
   _sightRange: 8
@@ -79330,7 +79330,7 @@ MonoBehaviour:
   _MaxIdleWalkTime: 26
   _minIdleWalkTime: 16
   _ChargeUpColour: {r: 1, g: 0.4963851, b: 0.43867922, a: 1}
-  _ChargeColour: {r: 1, g: 0, b: 0, a: 1}
+  _ChargeColour: {r: 0.9716981, g: 0.23375754, b: 0.23375754, a: 1}
   _attackCooldown: 2
   _attackDuration: 0.9
   _attackChargeUpTime: 0.3
@@ -79370,7 +79370,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 94f39988744108943a4fd7f246fed939, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

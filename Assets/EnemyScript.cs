@@ -218,8 +218,24 @@ public class EnemyScript : IsInteractable {
         // Attack
         health -= 10;
 
+        if (health <= 0) {
+            OnDeath();
+        }
+
+
         //else { StartCoroutine(FlashColourFunc()); }
 
+    }
+
+    public virtual void OnDeath() {
+        _enemyRig.velocity = Vector3.zero;
+        EnemyAnimator.SetBool("Die", true);
+        DisplayInteractOveride(false); // Set normal colour.
+        _enemyRig.sharedMaterial = null;
+        _enemyRig.drag = 3f;
+        Destroy(this);
+
+        
     }
 
     public override void DisplayInteractable(bool display) {
