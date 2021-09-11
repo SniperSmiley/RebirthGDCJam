@@ -1,0 +1,345 @@
+fileFormatVersion: 2
+guid: d0b32e31076fc6248a0e7ef57c8782fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4320083761787114519
+    second: ShockswordUp_0
+  - first:
+      213: -386112983265834008
+    second: ShockswordUp_1
+  - first:
+      213: -6700988361747475430
+    second: ShockswordUp_2
+  - first:
+      213: 8319705756832698103
+    second: ShockswordUp_3
+  - first:
+      213: -9072324321682236235
+    second: ShockswordUp_4
+  - first:
+      213: 8844840843925254739
+    second: ShockswordUp_5
+  - first:
+      213: 4308706405503468512
+    second: ShockswordUp_6
+  - first:
+      213: -3431616535314343065
+    second: ShockswordUp_7
+  - first:
+      213: -4143404695192859658
+    second: ShockswordUp_8
+  - first:
+      213: 8936826864081064449
+    second: ShockswordUp_9
+  - first:
+      213: 3721538185403974119
+    second: ShockswordUp_10
+  - first:
+      213: 4686581188822698250
+    second: ShockswordUp_11
+  - first:
+      213: 3468554569339593653
+    second: ShockswordUp_12
+  - first:
+      213: 2164976067757414253
+    second: ShockswordUp_13
+  - first:
+      213: 5099867905170848521
+    second: ShockswordUp_14
+  - first:
+      213: 2165965219428487385
+    second: ShockswordUp_15
+  - first:
+      213: -3041912261460870650
+    second: ShockswordUp_16
+  - first:
+      213: 1119648034005658823
+    second: ShockswordUp_17
+  - first:
+      213: -8691222969939014052
+    second: ShockswordUp_18
+  - first:
+      213: -4569652911131980191
+    second: ShockswordUp_19
+  - first:
+      213: 3650463450437611457
+    second: ShockswordUp_20
+  - first:
+      213: 2309629153036648292
+    second: ShockswordUp_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShockswordUp_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1
+        width: 14
+        height: 37
+      alignment: 9
+      pivot: {x: 0.4642857, y: 0.054054055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe09cf5e48857370800000000000000
+      internalID: 8319705756832698103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_6
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1
+        width: 18
+        height: 56
+      alignment: 9
+      pivot: {x: 0.5277778, y: 0.035714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e30c75b5a99bcb30800000000000000
+      internalID: 4308706405503468512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_18
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1
+        width: 14
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4642857, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ec115c1c2926780800000000000000
+      internalID: -8691222969939014052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_19
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1
+        width: 16
+        height: 54
+      alignment: 9
+      pivot: {x: 0.40625, y: 0.037037037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e062d63e45590c0800000000000000
+      internalID: -4569652911131980191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_20
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1
+        width: 16
+        height: 56
+      alignment: 9
+      pivot: {x: 0.40625, y: 0.035714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf61ecca2d09a230800000000000000
+      internalID: 3650463450437611457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_21
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1
+        width: 13
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03508772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fb2ad4a737d0020800000000000000
+      internalID: 2309629153036648292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockswordUp_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 14
+        height: 26
+      alignment: 9
+      pivot: {x: 0.53571427, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebeeba15bafb04c0800000000000000
+      internalID: -4320083761787114519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

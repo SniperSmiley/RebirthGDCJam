@@ -216,6 +216,8 @@ public class EnemyScript : IsInteractable {
 
         // base.Interact();
         // Attack
+
+        base.FlashColourFunc();
         health -= 10;
 
         if (health <= 0) {
