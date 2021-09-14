@@ -72,6 +72,9 @@ public class SceneManagerScript : MonoBehaviour {
             case 6: FindAndMovePlayer(new Vector2(RightTundra, pos.y)); break;   // Tundra   left from grass
         }
 
+        // Spawn prisoners
+        GameManagerScript.GameManager.PrisSpawner.SpawnPrisoners();
+
     }
 
 

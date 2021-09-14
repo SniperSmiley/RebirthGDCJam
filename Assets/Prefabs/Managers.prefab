@@ -19339,6 +19339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f25b1193698c6d42a45ebe078cffba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PrisSpawner: {fileID: 0}
   StartResources: {fileID: 11400000, guid: 8fe8924964371b2429207ca27a32d4be, type: 2}
   AudioManagerScript: {fileID: 5370567748599495310}
   InputManagerScript: {fileID: 5370567749488974198}

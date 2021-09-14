@@ -51,7 +51,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     public GameObject[] Mugs;
     public CriminalInfoSO[] Crims;
 
-    public List<Prisoner> Prisoners;
+   // public List<Prisoner> Prisoners;
 
     public GameObject Awake;
     public GameObject Asleep;
@@ -68,13 +68,13 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        Prisoners = new List<Prisoner>();
+        GameManagerScript.GameManager.Prisoners =  new List<Prisoner>();
 
         for (int i = 0; i < Crims.Length; i++) {
             Prisoner pris = new Prisoner();
             pris.Data = Crims[i];
             pris.MugImageGO = Mugs[i];
-            Prisoners.Add(pris);
+            GameManagerScript.GameManager.Prisoners.Add(pris);
         }
 
         PowerOn.SetActive(false);
@@ -85,7 +85,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
         Awake.SetActive(false);
 
 
-        Debug.Log(Prisoners.Count);
+        Debug.Log(GameManagerScript.GameManager.Prisoners.Count);
 
         /*
         foreach (GameObject mug in Mugs) {
@@ -120,9 +120,9 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     public void MugClicked(int id) {
 
 
-        if (Prisoners[id] == null) { Debug.LogError("HMMM"); }
+        if (GameManagerScript.GameManager.Prisoners[id] == null) { Debug.LogError("HMMM"); }
 
-        CurrentPrisoner = Prisoners[id];
+        CurrentPrisoner = GameManagerScript.GameManager.Prisoners[id];
         CurrentPrisonerIndex = id;
 
         if (CurrentPrisoner.Awake) { Asleep.SetActive(false); Awake.SetActive(true); }
@@ -137,10 +137,10 @@ public class PrisonerManagementUIScript : MonoBehaviour {
         resetButtons();
 
         // Update option is awake
-        if (Prisoners[CurrentPrisonerIndex].Awake) {
+        if (GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Awake) {
             // Set old button on if active?
-            if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
-                Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = false;
+            if (GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
+                GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = false;
             }
         }
 
@@ -158,10 +158,10 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
         float FoodRequired = (CurrentPrisoner.Level) * 10;
 
-        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] >= FoodRequired &&  Prisoners[CurrentPrisonerIndex].Level < 21) {
+        if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] >= FoodRequired &&  GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Level < 21) {
 
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
-            Prisoners[CurrentPrisonerIndex].Level += 1;
+            GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Level += 1;
 
             /*
             if (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage == 0) { Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = 10; }
@@ -169,15 +169,15 @@ public class PrisonerManagementUIScript : MonoBehaviour {
                 Prisoners[CurrentPrisonerIndex].ResourceGainPercentage = ( Prisoners[CurrentPrisonerIndex].ResourceGainPercentage + 10);
             }*/
 
-            Debug.Log("TEST: " + Prisoners[CurrentPrisonerIndex].ResourceGainPercentage);
-            Prisoners[CurrentPrisonerIndex].ResourceGainRate += 10;
+            Debug.Log("TEST: " + GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].ResourceGainPercentage);
+            GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].ResourceGainRate += 10;
 
             GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Food] -= FoodRequired;
 
             // Actually increase change
             for (int i = 0; i < GameManagerScript.GameManager.PrisonerActions.Count; i++) {
                 if (GameManagerScript.GameManager.PrisonerActions[i].PrisIndex == CurrentPrisonerIndex) {
-                    GameManagerScript.GameManager.PrisonerActions[i].Change = Prisoners[CurrentPrisonerIndex].ResourceGainRate * GameManagerScript.GameManager.PrisonerActions[i].BaseChange / 100f; //  GameManagerScript.GameManager.PrisonerActions[i].BaseChange * (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100f);
+                    GameManagerScript.GameManager.PrisonerActions[i].Change = GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].ResourceGainRate * GameManagerScript.GameManager.PrisonerActions[i].BaseChange / 100f; //  GameManagerScript.GameManager.PrisonerActions[i].BaseChange * (Prisoners[CurrentPrisonerIndex].ResourceGainPercentage / 100f);
                     break;
                 }
 
@@ -196,19 +196,19 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
         try {
             CostToAwake.text = "Requires: " + CurrentCostToAwake + " Energy to awaken";
-            MugDescriptionText.text = Prisoners[CurrentPrisonerIndex].Data.Description;
+            MugDescriptionText.text = GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Data.Description;
 
             string crimes = "";
-            foreach (string txt in Prisoners[CurrentPrisonerIndex].Data.Crimes) {
+            foreach (string txt in GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Data.Crimes) {
                 crimes += txt + " \n";
             }
 
-            LevelText.text = "Current Level: " + Prisoners[CurrentPrisonerIndex].Level;
-            ResourceGainText.text = "Resource Gain: " + Mathf.Round(Prisoners[CurrentPrisonerIndex].ResourceGainRate).ToString() + "%";
+            LevelText.text = "Current Level: " + GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Level;
+            ResourceGainText.text = "Resource Gain: " + Mathf.Round(GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].ResourceGainRate).ToString() + "%";
             MugCrimes.text = crimes;
-            MugImageDisplay.sprite = Prisoners[CurrentPrisonerIndex].Data.img;
+            MugImageDisplay.sprite = GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Data.img;
             Nametxt.text = "name: " + CurrentPrisoner.Data.Name;
-            FoodRequiredForLevelUp.text = "Food To LVL Up: " + (Prisoners[CurrentPrisonerIndex].Level) * 10;
+            FoodRequiredForLevelUp.text = "Food To LVL Up: " + (GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Level) * 10;
         }
         catch (Exception e) {
             Debug.Log("ERROR: " + e.Message);
@@ -222,7 +222,7 @@ public class PrisonerManagementUIScript : MonoBehaviour {
 
     public void AttemptToWakeUp() {
 
-        if (Prisoners[CurrentPrisonerIndex].Awake) { return; }
+        if (GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Awake) { return; }
 
         if (GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] >= CurrentCostToAwake) {
             StartCoroutine(GameManagerScript.GameManager.AudioManagerScript.PlayEffect(GameManagerScript.GameManager.AudioManagerScript.UISuccess));
@@ -237,10 +237,10 @@ public class PrisonerManagementUIScript : MonoBehaviour {
     public void OnWakeUp() {
 
         Debug.Log("WAKE UP!! ");
-        Prisoners[CurrentPrisonerIndex].Awake = true;
+        GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].Awake = true;
         GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] -= CurrentCostToAwake;
         Asleep.SetActive(false); Awake.SetActive(true);
-        Prisoners[CurrentPrisonerIndex].MugImageGO.GetComponent<Image>().color = AwkenedColour;
+        GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].MugImageGO.GetComponent<Image>().color = AwkenedColour;
         CurrentCostToAwake *= 2.5f;
 
         // Setting up action
@@ -252,6 +252,9 @@ public class PrisonerManagementUIScript : MonoBehaviour {
         newAction.resource = Resources.ResourcesIndex.Wood;
 
         GameManagerScript.GameManager.PrisonerActions.Add(newAction);
+
+        GameManagerScript.GameManager.PrisSpawner.SpawnPris(CurrentPrisonerIndex);
+
     }
 
     public void OnResourceGatherSettingSet(Resources.ResourcesIndex res, Button but) {
@@ -260,11 +263,11 @@ public class PrisonerManagementUIScript : MonoBehaviour {
                 GameManagerScript.GameManager.PrisonerActions[i].resource = res;
 
                 // Set old button on if active?
-                if (Prisoners[CurrentPrisonerIndex].resourceButtonSelected != but && Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
-                    Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = true;
+                if (GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected != but && GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected != null) {
+                    GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected.interactable = true;
                 }
 
-                Prisoners[CurrentPrisonerIndex].resourceButtonSelected = but;
+                GameManagerScript.GameManager.Prisoners[CurrentPrisonerIndex].resourceButtonSelected = but;
                 but.interactable = false;
                 //but.enabled = false;
 

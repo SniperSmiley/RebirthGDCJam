@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour {
     public static GameManagerScript GameManager;
 
+    public List<Prisoner> Prisoners; // new List<Prisoner>();
+    public PrisonerSpawnerScript PrisSpawner;
 
     private bool discoveredIron = false;
     private bool discoveredCopper = false;
@@ -31,6 +33,9 @@ public class GameManagerScript : MonoBehaviour {
     private float LastTime = 0;
 
     private void Awake() {
+
+        Prisoners = new List<Prisoner>();
+
 
         PlayerResources = new Resources();
         PlayerResources.ResourceArray = StartResources.Array;

@@ -303,7 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SortingPos: {fileID: 4686315371269997598}
   BaseSortLayer: 500
-  rend: {fileID: 4686315372209265207}
+  rend: {fileID: 1836435849900632435}
 --- !u!50 &4686315370206483212
 Rigidbody2D:
   serializedVersion: 4
