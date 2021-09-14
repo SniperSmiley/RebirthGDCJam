@@ -16,7 +16,7 @@ public class IsInteractable : MonoBehaviour {
     private float coolDownStartTime = 0;
 
     public bool PreventInteractionColorChange = false;
-
+    private bool _lockColour = false;
 
     protected virtual void Awake() {
         color = Rend.color;
@@ -58,13 +58,17 @@ public class IsInteractable : MonoBehaviour {
         if (PreventInteractionColorChange) { return; }    
 
         // Debug.Log("Intercting with " + transform.name );
+        if (_lockColour) { return; }
         if (display) { Rend.color = newcol; }
         else { Rend.color = color; }
     }
 
-    
+
 
     public virtual IEnumerator FlashColourFunc() {
+
+        if (_lockColour) { yield return null; }
+
         Rend.color = FlashColour;
 
         yield return new WaitForSeconds(CoolDown - 0.1f);
@@ -72,7 +76,18 @@ public class IsInteractable : MonoBehaviour {
         Rend.color = color;
     }
 
+    public virtual IEnumerator FlashColourFunc(Color col, float time) {
+        _lockColour = true;
+        Rend.color = col;
+
+        yield return new WaitForSeconds(time);
+
+        Rend.color = color;
+        _lockColour = false;
+    }
+
     public void DisplayInteractOveride(bool display) {
+        if (_lockColour) { return; }
         if (display) { Rend.color = newcol; }
         else { Rend.color = color; }
     }

@@ -217,7 +217,7 @@ public class EnemyScript : IsInteractable {
         // base.Interact();
         // Attack
 
-        base.FlashColourFunc();
+        StartCoroutine(base.FlashColourFunc(Color.green, 1f));
         health -= 10;
 
         if (health <= 0) {
@@ -236,8 +236,6 @@ public class EnemyScript : IsInteractable {
         _enemyRig.sharedMaterial = null;
         _enemyRig.drag = 3f;
         Destroy(this);
-
-        
     }
 
     public override void DisplayInteractable(bool display) {
