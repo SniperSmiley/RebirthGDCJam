@@ -19,6 +19,7 @@ public class IsInteractable : MonoBehaviour {
     private bool _lockColour = false;
 
     protected virtual void Awake() {
+
         color = Rend.color;
         newcol = color;
         newcol.b = newcol.b - 0.3f;
@@ -36,6 +37,8 @@ public class IsInteractable : MonoBehaviour {
 
 
     public virtual void Interact() {
+
+
 
         // Ensure only interacted with once per click
         

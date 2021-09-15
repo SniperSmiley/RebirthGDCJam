@@ -9,6 +9,9 @@ public class EnemyScript : IsInteractable {
     public GameObject Player;
     public Animator EnemyAnimator;
 
+    public float CarbonGive = 6f;
+    public float FoodGive = 10f;
+
     [SerializeField] private float _sightRange;
     [SerializeField] private float _attackRange;
 
@@ -43,6 +46,8 @@ public class EnemyScript : IsInteractable {
     protected bool _lockedInState = false;
 
     protected override void Awake() {
+           
+
         base.Awake();
 
         _enemyRig = GetComponent<Rigidbody2D>();
@@ -211,13 +216,21 @@ public class EnemyScript : IsInteractable {
 
     public override void Interact() {
 
+
+      
+
         // Only runs once
-        if (!base.EnsureOnlyOneExecution()) { return; }
+       //f (!base.EnsureOnlyOneExecution()) { return; }
+
+       //ebug.Log("ENEMY SCRIPT 1");
 
         // base.Interact();
         // Attack
 
-        StartCoroutine(base.FlashColourFunc(Color.green, 1f));
+        // Stop movement
+        _enemyRig.velocity = Vector2.zero;
+
+        StartCoroutine(base.FlashColourFunc(Color.grey, .5f));
         health -= 10;
 
         if (health <= 0) {
@@ -230,6 +243,16 @@ public class EnemyScript : IsInteractable {
     }
 
     public virtual void OnDeath() {
+
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonGive);
+        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Food, FoodGive);
+        // GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Stone] += StoneGive;
+
+        // Display Change
+        string textToDisplay = "Carbon + " + CarbonGive +"\n" + "Food + " + FoodGive;
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+        
+
         _enemyRig.velocity = Vector3.zero;
         EnemyAnimator.SetBool("Die", true);
         DisplayInteractOveride(false); // Set normal colour.

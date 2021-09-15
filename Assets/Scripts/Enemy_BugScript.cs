@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy_BugScript : EnemyScript {
 
+    private float originalHelf;
+    public Transform Helf;
+
     [SerializeField] private Color _ChargeUpColour;
     [SerializeField] private Color _ChargeColour;
     [SerializeField] private float _attackCooldown = 2f;
@@ -18,8 +21,11 @@ public class Enemy_BugScript : EnemyScript {
 
 
     protected override void Awake() {
+
+
         base.Awake();
         startColor = Rend.color;
+        originalHelf = health;
     }
 
     public override void Attacking() {
@@ -77,4 +83,28 @@ public class Enemy_BugScript : EnemyScript {
 
 
     }
+
+    public override void Interact() {
+
+        if (!base.EnsureOnlyOneExecution()) { return; }
+            
+        base.Interact();
+
+       //ebug.Log("ENEMY SCRIPT");
+
+        string textToDisplay = "OUCH! - 25";
+        GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
+
+        // Display Health
+        Helf.localScale = new Vector3(base.health / originalHelf, 1f, 1f);
+
+        
+    }
+
+    public override void OnDeath() {
+        base.OnDeath();
+        Helf.gameObject.transform.parent.gameObject.SetActive(false);
+    }
+
+
 }

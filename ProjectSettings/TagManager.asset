@@ -9,6 +9,7 @@ TagManager:
   - Leaf
   - Fruit
   - Enemy
+  - IgnoreFromSort
   layers:
   - Default
   - TransparentFX

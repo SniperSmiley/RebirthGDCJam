@@ -18,6 +18,8 @@ public class CorrectRenderingOrder : MonoBehaviour
      
         foreach (SpriteRenderer rend in transform.GetComponentsInChildren<SpriteRenderer>()) {
 
+            if (rend.tag == "IgnoreFromSort") { continue; }
+
             // Find the objects Script. 
             envScript = rend.transform.GetComponentInParent<EnvironmentObjectScript>();
             if (envScript == null) {
