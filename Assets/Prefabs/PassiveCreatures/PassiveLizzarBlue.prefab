@@ -141,13 +141,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3922401954833313320}
-  - component: {fileID: 3922401954833313323}
   - component: {fileID: 3922401954833313324}
+  - component: {fileID: 4139537943013028009}
   - component: {fileID: 3922401954833313322}
   - component: {fileID: 3922401954833313321}
   m_Layer: 0
   m_Name: PassiveLizzarBlue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,26 +167,10 @@ Transform:
   - {fileID: 3922401953769797944}
   - {fileID: 5553156807211424084}
   - {fileID: 3150306555855660370}
+  - {fileID: 6867676325842106396}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3922401954833313323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3922401954833313319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91de46bd3e099a488a4a72016fd4fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkAcceleration: 0.04
-  _walkTopSpeed: 0.8
-  _minChangeDirectionTime: 1.2
-  _maxChangeDirectionTime: 4
-  _name: {fileID: 1617340192155632042}
 --- !u!114 &3922401954833313324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +186,30 @@ MonoBehaviour:
   SortingPos: {fileID: 3922401953769797944}
   BaseSortLayer: 500
   rend: {fileID: 5553156807211424107}
+--- !u!114 &4139537943013028009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922401954833313319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62990c1c907f749438b3098d7a402f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rend: {fileID: 5553156807211424107}
+  Disabled: 0
+  CoolDown: 0.2
+  isCoolingDown: 0
+  PreventInteractionColorChange: 0
+  CarbonGain: 2
+  DeathParticleEffect: {fileID: 5697471146011109917, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
+  _textSpawnPoint: {fileID: 6867676325842106396}
+  _walkAcceleration: 0.04
+  _walkTopSpeed: 0.8
+  _minChangeDirectionTime: 1.2
+  _maxChangeDirectionTime: 4
 --- !u!50 &3922401954833313322
 Rigidbody2D:
   serializedVersion: 4
@@ -249,6 +257,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7381039, y: 0.44516325}
   m_EdgeRadius: 0
+--- !u!1 &5173574815818885592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6867676325842106396}
+  m_Layer: 0
+  m_Name: TextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6867676325842106396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5173574815818885592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.042, y: 1.067, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3922401954833313320}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5553156807211424105
 GameObject:
   m_ObjectHideFlags: 0

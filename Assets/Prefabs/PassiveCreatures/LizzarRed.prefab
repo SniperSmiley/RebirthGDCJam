@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2278151982158231832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314348870165176607}
+  m_Layer: 0
+  m_Name: TextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &314348870165176607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278151982158231832}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.091, y: 1.056, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2756762703615437118}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2756762703615437105
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,13 +39,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2756762703615437118}
-  - component: {fileID: 2756762703615437117}
   - component: {fileID: 2756762703615437114}
+  - component: {fileID: 6145707723918615631}
   - component: {fileID: 2756762703615437116}
   - component: {fileID: 2756762703615437119}
   m_Layer: 0
   m_Name: LizzarRed
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,26 +65,10 @@ Transform:
   - {fileID: 2756762704698359342}
   - {fileID: 6718825736247516738}
   - {fileID: 4293889527182025284}
+  - {fileID: 314348870165176607}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2756762703615437117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2756762703615437105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91de46bd3e099a488a4a72016fd4fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkAcceleration: 0.04
-  _walkTopSpeed: 0.8
-  _minChangeDirectionTime: 1.2
-  _maxChangeDirectionTime: 4
-  _name: {fileID: 459125873099802300}
 --- !u!114 &2756762703615437114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +84,30 @@ MonoBehaviour:
   SortingPos: {fileID: 2756762704698359342}
   BaseSortLayer: 500
   rend: {fileID: 6718825736247516797}
+--- !u!114 &6145707723918615631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2756762703615437105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62990c1c907f749438b3098d7a402f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rend: {fileID: 6718825736247516797}
+  Disabled: 0
+  CoolDown: 0.2
+  isCoolingDown: 0
+  PreventInteractionColorChange: 0
+  CarbonGain: 2
+  DeathParticleEffect: {fileID: 5697471146011109917, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
+  _textSpawnPoint: {fileID: 314348870165176607}
+  _walkAcceleration: 0.04
+  _walkTopSpeed: 0.8
+  _minChangeDirectionTime: 1.2
+  _maxChangeDirectionTime: 4
 --- !u!50 &2756762703615437116
 Rigidbody2D:
   serializedVersion: 4

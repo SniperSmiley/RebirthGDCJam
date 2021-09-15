@@ -58,7 +58,10 @@ public class ResourceChangeDisplayScript : MonoBehaviour {
     private int NumActive = 0;
     private int ChangeInActive = 0;
 
-    private void Awake() {
+
+    private void Start() {
+        
+    
 
         GameManagerScript.GameManager.resourceChangeDisplayScripto = this;
         for (int i = 0; i < StartTextPoolSize; i++) { GenerateTextObject(); }

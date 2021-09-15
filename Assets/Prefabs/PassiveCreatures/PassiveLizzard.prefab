@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875415663486857617}
-  - component: {fileID: 1875415663486857618}
   - component: {fileID: 1875415663486857621}
+  - component: {fileID: -6419599003351032995}
   - component: {fileID: 1875415663486857619}
   - component: {fileID: 1875415663486857616}
   m_Layer: 0
   m_Name: PassiveLizzard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,26 +35,10 @@ Transform:
   - {fileID: 1875415664568198785}
   - {fileID: 7023713153650542317}
   - {fileID: 563469235488635627}
+  - {fileID: 5015902185603063419}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1875415663486857618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875415663486857630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91de46bd3e099a488a4a72016fd4fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _walkAcceleration: 0.04
-  _walkTopSpeed: 0.8
-  _minChangeDirectionTime: 1.2
-  _maxChangeDirectionTime: 4
-  _name: {fileID: 4186105758608481811}
 --- !u!114 &1875415663486857621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +54,30 @@ MonoBehaviour:
   SortingPos: {fileID: 1875415664568198785}
   BaseSortLayer: 500
   rend: {fileID: 7023713153650542290}
+--- !u!114 &-6419599003351032995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875415663486857630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62990c1c907f749438b3098d7a402f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rend: {fileID: 7023713153650542290}
+  Disabled: 0
+  CoolDown: 0.2
+  isCoolingDown: 0
+  PreventInteractionColorChange: 0
+  CarbonGain: 2
+  DeathParticleEffect: {fileID: 5697471146011109917, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
+  _textSpawnPoint: {fileID: 5015902185603063419}
+  _walkAcceleration: 0.04
+  _walkTopSpeed: 0.8
+  _minChangeDirectionTime: 1.2
+  _maxChangeDirectionTime: 4
 --- !u!50 &1875415663486857619
 Rigidbody2D:
   serializedVersion: 4
@@ -249,6 +257,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &3717373154455215308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5015902185603063419}
+  m_Layer: 0
+  m_Name: TextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5015902185603063419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717373154455215308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.055, y: 1.043, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1875415663486857617}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4625928246921270850
 GameObject:
   m_ObjectHideFlags: 0
