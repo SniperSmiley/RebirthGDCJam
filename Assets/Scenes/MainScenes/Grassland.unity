@@ -9783,6 +9783,7 @@ Transform:
   - {fileID: 1875415664800269205}
   - {fileID: 3944069404562254897}
   - {fileID: 448747170119668952}
+  - {fileID: 2120617370}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -79957,6 +79958,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5824881665825167048, guid: febcc3ec605a04b4da7aadabd91627ab, type: 3}
   m_PrefabInstance: {fileID: 294333705}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2120617370 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
+  m_PrefabInstance: {fileID: 5697471147057194890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2121008047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5824881665825167048, guid: febcc3ec605a04b4da7aadabd91627ab, type: 3}
@@ -81628,7 +81634,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 709718768}
     m_Modifications:
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_RootOrder
@@ -81636,15 +81642,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.64
+      value: 5.304281
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.1
+      value: -5.048172
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.666278
+      value: 0.98064446
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -81656,11 +81662,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5697471146011109904, guid: bc8a105890d2f0348b0be5eef675dee5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
