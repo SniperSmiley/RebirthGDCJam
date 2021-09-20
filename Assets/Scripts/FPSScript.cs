@@ -6,8 +6,6 @@ using TMPro;
 
 public class FPSScript : MonoBehaviour {
 
-
-
     public TextMeshProUGUI fpsText;
     public float deltaTime;
 

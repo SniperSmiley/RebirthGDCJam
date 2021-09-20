@@ -21,7 +21,7 @@ public class GameManagerScript : MonoBehaviour {
     public UpgradeCostsSO StartResources;
 
 
-    public CharacterStats PlayerStats = new CharacterStats(100, 1, 1, 1);
+    public CharacterStats PlayerStats = new CharacterStats(3, 1, 1, 1);
 
     public AudioManager AudioManagerScript;
     public InputManager InputManagerScript;
@@ -36,7 +36,6 @@ public class GameManagerScript : MonoBehaviour {
 
         Prisoners = new List<Prisoner>();
 
-
         PlayerResources = new Resources();
         PlayerResources.ResourceArray = StartResources.Array;
 
@@ -47,7 +46,6 @@ public class GameManagerScript : MonoBehaviour {
         }
 
         AudioManagerScript = GetComponentInChildren<AudioManager>();
-
     }
 
     private void Update() {
@@ -68,9 +66,6 @@ public class GameManagerScript : MonoBehaviour {
                     PrisonerActions[i]._lastUpdated = Time.time;
                 }
             }
-
-
-
         }
 
         // Check if new resource gathered.
@@ -79,19 +74,33 @@ public class GameManagerScript : MonoBehaviour {
         if (!discoveredBruxite) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Buxite] > 0) { discoveredBruxite = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Buxite); } }
         if (!discoveredTitanium) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium] > 0) { discoveredTitanium = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Titanium); } }
         if (!discoveredGold) { if (PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold] > 0) { discoveredGold = true; UiManagerScripto.PrisonnerManagementUI.GetComponent<PrisonerManagementUIScript>().MakeButtonActive(Resources.ResourcesIndex.Gold); } }
-
-
     }
-
     
     // Simplifies adding resources to inventory.
-    public void AddResourceToInventory(Resources.ResourcesIndex resource, float quantity) {
-        GameManager.PlayerResources.ResourceArray[(int)resource] += quantity;
+    public void AddResourceToInventory(Resources.ResourcesIndex resource, float quantity) { GameManager.PlayerResources.ResourceArray[(int)resource] += quantity;  }
+
+    public void DealDamage() {
+
+        Debug.Log("hgelf " + PlayerStats.Heath);
+
+        if (PlayerStats.Heath - 1 < 0) {
+            // Death
+            OnPlayerDeath();
+        }
+
+        PlayerStats.Heath -= 1;
+        // Update Health
+        UiManagerScripto.PlayerUI.GetComponent<InGameUIScript>().UpdateHelfUi(PlayerStats.Heath);
+    }
+
+    private void OnPlayerDeath() {
+        // Reset Health
+        PlayerStats.Heath = 3;
+        UiManagerScripto.PlayerUI.GetComponent<InGameUIScript>().UpdateHelfUi(PlayerStats.Heath);
     }
 
 
 }
-
 
 public class PrisonerAction {
 
@@ -164,7 +173,6 @@ public class Resources {
         for (int i = 0; i < ResourceArray.Length; i++) { if (ResourceArray[i] < resRequirements[i]) { Debug.Log("AAA"); AllGood = false; } }
 
         return AllGood;
-
     }
 
     public void SubtractResource(float[] resource) {
@@ -172,6 +180,7 @@ public class Resources {
             ResourceArray[i] -= resource[i];
         }
     }
+
 
 }
 

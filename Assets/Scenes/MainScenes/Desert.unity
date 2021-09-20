@@ -3589,6 +3589,10 @@ PrefabInstance:
       value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 5370567749727209302, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
+      propertyPath: PrisSpawner
+      value: 
+      objectReference: {fileID: 1425625659}
+    - target: {fileID: 5370567749727209302, guid: 39eccf64264123846b2775cf49b303f9, type: 3}
       propertyPath: resourceChangeDisplayScripto
       value: 
       objectReference: {fileID: 1207544742}
@@ -52528,6 +52532,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BaseLayer: 500
+--- !u!114 &1425625659 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 298550032333906456, guid: 7ff900ad1ef1a6c4d95005685967f0ed, type: 3}
+  m_PrefabInstance: {fileID: 1552714787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5054047e80aac2a49a51cc7932369ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1449425253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6497702977972280444, guid: 8f6c113a3b9cf40df8f7d133768e85d1, type: 3}
@@ -59043,20 +59058,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6061959288046067302, guid: 1ef6c20cc0434e0459cd61d42a9902f9, type: 3}
   m_PrefabInstance: {fileID: 1991690853}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2129182249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129182247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7a48ca605fdd4e2fb0dc078fa511d05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObject: {fileID: 0}
-  energyDeathDecrease: 0.05
 --- !u!1001 &2143567221
 PrefabInstance:
   m_ObjectHideFlags: 0

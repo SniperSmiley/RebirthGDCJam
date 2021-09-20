@@ -21,6 +21,7 @@ public class UiManagerScript : MonoBehaviour
 
     public bool IsGeneratorBroken = true;
 
+
     public enum UI {
         NOTHING,
         CarbonGenerator,

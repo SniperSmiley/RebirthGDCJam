@@ -19,6 +19,10 @@ public class Enemy_BugScript : EnemyScript {
     private float _timeAttackStarted = 0;
     private float _timeOfLastAttack = 0;
 
+    private float _lastTimeDamageDealt;
+    [SerializeField] private float _timeDelayDamage;
+
+    public bool _colWithPlayer = false;
 
     protected override void Awake() {
 
@@ -39,6 +43,7 @@ public class Enemy_BugScript : EnemyScript {
         // on first time work out direction
         // Start
         if (FirstOff == 0) {
+
             FirstOff ++;
             _lockedInState = true;
             _direction = (_playerPos - _enemyPos).normalized;
@@ -53,7 +58,6 @@ public class Enemy_BugScript : EnemyScript {
         if (Time.time - _timeAttackStarted <= _attackChargeUpTime) {
             if (FirstOff == 1) {
                  FirstOff ++;
-                 base.Rend.color = _ChargeUpColour;
             }
         }
 
@@ -68,6 +72,17 @@ public class Enemy_BugScript : EnemyScript {
             _enemyRig.velocity = _direction * _attackChargeSpeed;
 
             // Deal damage if the player is in the way.
+            if (_colWithPlayer) {
+
+                 // Damage delay ensure damage is not spammed
+                 if (Time.time - _timeOfLastAttack > _timeDelayDamage) {
+
+                     // Deal damage
+                     GameManagerScript.GameManager.DealDamage();
+                     _timeOfLastAttack = Time.time;
+                 }
+            }
+
         }
 
         // End
@@ -79,9 +94,6 @@ public class Enemy_BugScript : EnemyScript {
             base.Rend.color = startColor;
             base.PreventInteractionColorChange = false;
         }
-
-
-
     }
 
     public override void Interact() {
@@ -90,21 +102,44 @@ public class Enemy_BugScript : EnemyScript {
             
         base.Interact();
 
-       //ebug.Log("ENEMY SCRIPT");
-
         string textToDisplay = "OUCH! - 25";
         GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, transform.position);
 
         // Display Health
         Helf.localScale = new Vector3(base.health / originalHelf, 1f, 1f);
-
-        
     }
 
     public override void OnDeath() {
         base.OnDeath();
         Helf.gameObject.transform.parent.gameObject.SetActive(false);
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+         if (collision.transform.tag == "Player") { _colWithPlayer = true; }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+         if (collision.transform.tag == "Player") { _colWithPlayer = false; }
+    }
+
+    /* private void OnCollisionStay2D(Collision2D collision) {
+
+         // Stop if collision not palyer
+         if (collision.transform.tag != "Player") { return; }
+
+         // Stop if not in attack state or in attack state but not actually in attack animation.
+         if (_currentState != EnemyScript.EnemyStates.Attacking || !_attacking) { return; }
+
+         // Damage delay ensure damage is not spammed
+         if (Time.time - _timeOfLastAttack > _timeDelayDamage) {
+
+             // Deal damage
+           //  GameManagerScript.GameManager.DealDamage();
+             _timeOfLastAttack = Time.time;
+         }
+
+     }*/
 
 
 }

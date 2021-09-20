@@ -20,13 +20,13 @@ public class EnemyScript : IsInteractable {
 
     [SerializeField] private float _chaseAcceleration;
 
-    private enum EnemyStates {
+    public enum EnemyStates {
         Idle,
         Roaming,
         Chasing,
         Attacking
     }
-    private EnemyStates _currentState;
+    public EnemyStates _currentState;
 
     protected Rigidbody2D _enemyRig;
     protected float _distFromPlayer;
@@ -263,6 +263,6 @@ public class EnemyScript : IsInteractable {
 
     public override void DisplayInteractable(bool display) {
         base.DisplayInteractable(display);
-        Debug.Log("TEST");
+        //Debug.Log("TEST");
     }
 }
