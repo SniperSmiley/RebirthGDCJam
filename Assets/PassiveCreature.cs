@@ -6,6 +6,8 @@ public class PassiveCreature : IsInteractable
 {
     public float CarbonGain = 2f;
     public GameObject DeathParticleEffect;
+    public GameObject DeadObject;
+
     [SerializeField] private Transform _textSpawnPoint;
 
     [SerializeField] private float _walkAcceleration = 4f;
@@ -84,13 +86,23 @@ public class PassiveCreature : IsInteractable
         base.DisplayInteractable(display);
     }
 
+    // Die
     public override void Interact() {
 
         if (!base.EnsureOnlyOneExecution()) { return; }
 
         base.Interact();
 
-        gameObject.SetActive(false);
+        gameObject.layer = 11;
+
+        _rig.velocity = Vector2.zero;
+        _rig.isKinematic = true;
+
+       
+
+        Rend.gameObject.SetActive(false);
+        if (DeadObject != null) {  DeadObject.GetComponent<SpriteRenderer>().sortingOrder = Rend.sortingOrder; DeadObject.SetActive(true); }
+
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonGain);
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
@@ -101,5 +113,7 @@ public class PassiveCreature : IsInteractable
         GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, _textSpawnPoint.position);
 
 
+        Destroy(this);
     }
+
 }

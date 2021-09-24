@@ -483,8 +483,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35461965, y: -0.80020106}
-  m_Size: {x: 2.1301937, y: 0.79707336}
+  m_Offset: {x: -0.35461965, y: -0.8597298}
+  m_Size: {x: 2.1301944, y: 0.91613114}
   m_Direction: 1
 --- !u!1 &2182400408203527788
 GameObject:
@@ -554,6 +554,7 @@ MonoBehaviour:
   _walkTopSpeed: 0.5
   _walkAcceleration: 0.025
   _chaseAcceleration: 2
+  _currentState: 0
   _MaxIdleWalkTime: 26
   _minIdleWalkTime: 16
   Helf: {fileID: 1506048218}
@@ -563,6 +564,8 @@ MonoBehaviour:
   _attackDuration: 0.9
   _attackChargeUpTime: 0.3
   _attackChargeSpeed: 5
+  _timeDelayDamage: 0.3
+  _colWithPlayer: 0
 --- !u!114 &325485060957220250
 MonoBehaviour:
   m_ObjectHideFlags: 0
