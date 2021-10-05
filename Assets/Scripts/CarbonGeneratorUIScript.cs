@@ -86,7 +86,7 @@ public class CarbonGeneratorUIScript : MonoBehaviour {
         Debug.Log("Attempt Upgrade");
 
         if (!GameManagerScript.GameManager.PlayerResources.CheckIfEnoughResources(upgradeRequirments.ResourceArray)) {  StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail)); return; }
- 
+        if ( CurrentUpgrade + 1 > UpgradeCosts.Length - 1) { StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail)); return; } // Ensures that there is still more upgrades available.
        
         StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UISuccess));
 

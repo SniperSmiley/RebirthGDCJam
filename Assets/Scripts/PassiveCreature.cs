@@ -52,7 +52,7 @@ public class PassiveCreature : IsInteractable
             else if (Time.time - _timePotentiallyHitWall > 0.20) {
                 RandomiseDirection();
                 _timePotentiallyHitWall = 0;
-                Debug.Log("STUCK");
+                //Debug.Log("STUCK");
             }
         }
 
@@ -104,12 +104,11 @@ public class PassiveCreature : IsInteractable
         if (DeadObject != null) {  DeadObject.GetComponent<SpriteRenderer>().sortingOrder = Rend.sortingOrder; DeadObject.SetActive(true); }
 
         GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Carbon, CarbonGain);
-        GameManagerScript.GameManager.AddResourceToInventory(Resources.ResourcesIndex.Stone, 1f);
 
           // Display Change
         string textToDisplay =  "Carbon + " + CarbonGain;
-        GameObject effect =  Instantiate(DeathParticleEffect);
-        effect.transform.position = _textSpawnPoint.position;
+       // GameObject effect =  Instantiate(DeathParticleEffect);
+        //effect.transform.position = _textSpawnPoint.position;
         GameManagerScript.GameManager.resourceChangeDisplayScripto.DisplayChange(textToDisplay, _textSpawnPoint.position);
 
 
