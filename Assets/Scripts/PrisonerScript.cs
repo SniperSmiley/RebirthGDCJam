@@ -21,10 +21,36 @@ public class PrisonerScript : MonoBehaviour {
 
     private float _timePotentiallyHitWall;
 
+    [SerializeField] private float _minTimeSpeak = 2;
+    [SerializeField] private float _maxTimeSpeak = 10;
+
+    private float _timeOfLastSpeak = 0; // Speak on awake
+    private float _timeBetweenSpeak = 0;
+
+    public AudioClip[] VoiceLines;
+    private AudioSource audioSource;
+
 
     private void Awake() {
         _rig = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
          _currentTimeUntillDirectionChange = Random.Range(_minChangeDirectionTime, _maxChangeDirectionTime);
+    }
+
+    private void Update() {
+        if (Time.time - _timeOfLastSpeak > _timeBetweenSpeak) {
+            // Speak
+            if (VoiceLines.Length != 0) {
+
+                int randNum = Random.Range(0, VoiceLines.Length);
+                audioSource.clip = VoiceLines[randNum];
+                audioSource.Play();
+            }
+
+            _timeOfLastSpeak = Time.time;
+            _timeBetweenSpeak = Random.Range(2, _maxTimeSpeak);
+
+        }
     }
 
     private void FixedUpdate() {

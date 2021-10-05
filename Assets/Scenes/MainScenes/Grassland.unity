@@ -82162,6 +82162,18 @@ PrefabInstance:
       propertyPath: rend
       value: 
       objectReference: {fileID: 1713854820}
+    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
+      propertyPath: MaxDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8204326767584491380, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
       propertyPath: m_RootOrder
       value: 8

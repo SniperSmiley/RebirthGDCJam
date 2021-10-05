@@ -129,6 +129,58 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4286081535
       objectReference: {fileID: 0}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: _maxTimeSpeak
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: _minTimeSpeak
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c8691f546129b0e489017fdb3b2f6d24, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b10a425c05a4e4db01e4a6e87ea8e4, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: ecbf48616d310d847982258c9f3a4df0, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ef4885905ffabd46872313f813564df, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc1cf6141a8957b4faa3dbde24041658, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: c8691f546129b0e489017fdb3b2f6d24, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b10a425c05a4e4db01e4a6e87ea8e4, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: ecbf48616d310d847982258c9f3a4df0, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ef4885905ffabd46872313f813564df, type: 3}
+    - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: VoiceLines.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc1cf6141a8957b4faa3dbde24041658, type: 3}
     - target: {fileID: 1847145099955392914, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -179,11 +231,27 @@ PrefabInstance:
       objectReference: {fileID: 4976601606972043977}
     - target: {fileID: 1847145099955392925, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: m_Name
-      value: Prionser_Ximon
+      value: Prionser_Ximon Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1847145101643602133, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: m_Volume
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: MaxDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: MinDistance
+      value: 5.940594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
