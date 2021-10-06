@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117283fc275d3e341abcf861ee294a79, type: 3}
   m_Name: CostToRepairShip
   m_EditorClassIdentifier: 
-  Wood: 8000
-  Stone: 8000
+  Wood: 4000
+  Stone: 4000
   Food: 0
   Carbon: 0
-  Iron: 4000
-  Copper: 1500
-  Titanium: 1500
-  Bruxite: 1500
-  Gold: 1500
-  Energy: 5000000
+  Iron: 2000
+  Copper: 750
+  Titanium: 750
+  Bruxite: 750
+  Gold: 750
+  Energy: 1000000
   Array:
-  - 8000
-  - 8000
-  - 0
-  - 0
   - 4000
-  - 1500
-  - 1500
-  - 1500
-  - 1500
-  - 5000000
+  - 4000
+  - 0
+  - 0
+  - 2000
+  - 750
+  - 750
+  - 750
+  - 750
+  - 1000000

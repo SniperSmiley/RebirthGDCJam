@@ -75,6 +75,10 @@ public class ShipUserInterfaceScript : MonoBehaviour {
             Debug.Log("Gen repaired");
             script.UiManagerScripto.IsGeneratorBroken = false;
 
+            
+            Broken.SetActive(false);
+            Repaired.SetActive(true);
+
         }
         else {
             StartCoroutine(script.AudioManagerScript.PlayEffect(script.AudioManagerScript.UIFail));
@@ -83,8 +87,6 @@ public class ShipUserInterfaceScript : MonoBehaviour {
 
         Debug.Log("Tried to repair ship!");
 
-        Broken.SetActive(false);
-        Repaired.SetActive(true);
     }
 
 

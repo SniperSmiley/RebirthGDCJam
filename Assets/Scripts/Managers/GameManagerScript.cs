@@ -29,6 +29,8 @@ public class GameManagerScript : MonoBehaviour {
     public SceneManagerScript SceneManagerScritpto;
     public ResourceChangeDisplayScript resourceChangeDisplayScripto = null;
 
+    public GameObject Player;
+
     public float CarbonGeneratorEnergy = 2f;
     private float LastTime = 0;
 
@@ -46,6 +48,7 @@ public class GameManagerScript : MonoBehaviour {
         }
 
         AudioManagerScript = GetComponentInChildren<AudioManager>();
+        Player = GameObject.Find("Player");
     }
 
     private void Update() {
@@ -82,13 +85,14 @@ public class GameManagerScript : MonoBehaviour {
     public void DealDamage() {
 
         Debug.Log("hgelf " + PlayerStats.Heath);
+        PlayerStats.Heath -= 1;
 
         if (PlayerStats.Heath - 1 < 0) {
             // Death
             OnPlayerDeath();
         }
 
-        PlayerStats.Heath -= 1;
+      
         // Update Health
         UiManagerScripto.PlayerUI.GetComponent<InGameUIScript>().UpdateHelfUi(PlayerStats.Heath);
     }
@@ -97,6 +101,16 @@ public class GameManagerScript : MonoBehaviour {
         // Reset Health
         PlayerStats.Heath = 3;
         UiManagerScripto.PlayerUI.GetComponent<InGameUIScript>().UpdateHelfUi(PlayerStats.Heath);
+
+        StartCoroutine(UiManagerScripto.DisplayDeath());
+
+        // Check which scene, if grass, reset pos to centre, otherwise load grass
+        if (SceneManagerScritpto.CurrScene == 2) {
+            Player.transform.position = Vector2.zero;
+        }
+        else {
+            SceneManagerScritpto.SwitchScene(2, Vector2.zero, 0);
+        }
     }
 
 
@@ -111,6 +125,10 @@ public class PrisonerAction {
     public int PrisIndex = 0;
     public float BaseChange = 5;
 }
+
+
+
+
 
 
 public class CharacterStats {

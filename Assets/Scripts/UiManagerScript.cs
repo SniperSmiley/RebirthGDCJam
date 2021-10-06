@@ -13,6 +13,7 @@ public class UiManagerScript : MonoBehaviour
     public GameObject Options;
     public GameObject IntroScene;
     public GameObject EndScene;
+    public GameObject DeathScreen;
 
     private GameObject currentlyShowingUI;
     private bool isShowingUi = false;
@@ -96,5 +97,15 @@ public class UiManagerScript : MonoBehaviour
 
     public void PrisonScene() { EndScene.SetActive(true); EndScene.GetComponent<EndScene>().DisplayPrison(); }
     public void FreedomeScene() { EndScene.SetActive(true); EndScene.GetComponent<EndScene>().DisplayFreedomeee(); }
+
+    public IEnumerator DisplayDeath() {
+
+        DeathScreen.SetActive(true);
+
+        yield return new WaitForSeconds(2.5f);
+
+        DeathScreen.SetActive(false);
+    
+    }
 
 }

@@ -16,16 +16,19 @@ public class SceneManagerScript : MonoBehaviour {
     public float TopDesert;
     public float RightTundra;
 
+    public int CurrScene = 0;
 
     private void Start() {
         if (SceneManager.GetActiveScene().buildIndex != 0 && SceneManager.GetActiveScene().buildIndex != 1) {
               GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(true);
         }
+        CurrScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void SwitchScene(int scene, Vector2 Pos, int Grass = 0) {
            GameManagerScript.GameManager.UiManagerScripto.CloseCurrentMenu();
         SceneManager.LoadScene(scene);
+        CurrScene = scene;
      
         if (scene == 0 || scene == 1) {
             GameManagerScript.GameManager.UiManagerScripto.OnPlayingUI(false);
@@ -42,6 +45,7 @@ public class SceneManagerScript : MonoBehaviour {
         if (SceneManager.GetActiveScene().buildIndex != scene) {
             StartCoroutine(WaitForSceneToLoad(scene, Pos, Grass));
         }
+
         // Wait for scene to load.
     }
 
@@ -74,7 +78,7 @@ public class SceneManagerScript : MonoBehaviour {
 
         // Spawn prisoners
         GameManagerScript.GameManager.PrisSpawner.SpawnPrisoners();
-
+        
     }
 
 
@@ -84,5 +88,6 @@ public class SceneManagerScript : MonoBehaviour {
         Player = GameObject.Find("Player");
 
         Player.transform.position = newPos;
+        GameManagerScript.GameManager.Player = Player;
     }
 }

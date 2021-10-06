@@ -16514,10 +16514,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 559521532}
     m_Modifications:
-    - target: {fileID: 325485061003153057, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4760
-      objectReference: {fileID: 0}
     - target: {fileID: 2182400408203527779, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16569,14 +16565,6 @@ PrefabInstance:
     - target: {fileID: 2182400408203527788, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
       propertyPath: m_Name
       value: P_NewBug (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2294567119406417109, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7136489913773334128, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f1ea57deb648394f819136671424e8c, type: 3}
@@ -74158,11 +74146,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae196def84d68244cbadc406589470e8, type: 3}
---- !u!212 &1713854820 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3462292538197810944, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-  m_PrefabInstance: {fileID: 8204326767851741839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1715810399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2223432901706206529, guid: 22a7a3e57af534740a7a010e8d4184ad, type: 3}
@@ -82154,26 +82137,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7528328717169780082, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7528328717169780089, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-      propertyPath: rend
-      value: 
-      objectReference: {fileID: 1713854820}
-    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-      propertyPath: m_Volume
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-      propertyPath: MaxDistance
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7852620493043759311, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8204326767584491380, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -82222,8 +82185,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrisonersContainer
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8204326767584491379, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc7e7f89d27948b418658f8df35e6896, type: 3}
 --- !u!1001 &8804364502632472843
 PrefabInstance:

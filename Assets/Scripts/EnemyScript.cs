@@ -169,7 +169,7 @@ public class EnemyScript : IsInteractable {
             else if (Time.time - _timePotentiallyHitWall > 0.20) {
                 RandomiseDirection();
                 _timePotentiallyHitWall = 0;
-                Debug.Log("STUCK");
+               // Debug.Log("STUCK");
             }
         }
 
