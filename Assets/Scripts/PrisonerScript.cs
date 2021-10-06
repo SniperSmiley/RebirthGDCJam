@@ -35,6 +35,8 @@ public class PrisonerScript : MonoBehaviour {
         _rig = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
          _currentTimeUntillDirectionChange = Random.Range(_minChangeDirectionTime, _maxChangeDirectionTime);
+          _timeOfLastSpeak = Time.time;
+            _timeBetweenSpeak = Random.Range(2, _maxTimeSpeak);
     }
 
     private void Update() {

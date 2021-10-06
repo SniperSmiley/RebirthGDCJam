@@ -10,9 +10,7 @@ public class AudioManager : MonoBehaviour {
     public int NumberOfAudioSources = 25;
     public List<AudioSource> AudioSourcesList = new List<AudioSource>();
 
-    public AudioSource Chil1;
-    public AudioSource Chill2;
-
+    public AudioClip[] ChillTracks;
 
     public GameObject SoundEffectsGo;
 
@@ -37,13 +35,63 @@ public class AudioManager : MonoBehaviour {
     }
 
     AudioSource audioSource;
+    bool trackPlaying = false;
+    bool pausingBetweenTracks = false;
+
+    int tracksPos = 0;
+    float timePauseStarted;
+    float timePause;
 
     private void Start() {
         //   DontDestroyOnLoad(this);
         audioSource = GetComponent<AudioSource>();
+        //audioSource.clip = ChillTracks[tracksPos];
+       // PlayTrack();
+        
+        StartCoroutine(PlayTrack());
+
         //audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
 
+    private void Update() {
+        
+        // Check if audioclip is done. If it is, pause or play new etc.
+
+        if (trackPlaying) { return;  }
+
+        if (pausingBetweenTracks) {
+            if (Time.time - timePauseStarted > timePause) {
+                pausingBetweenTracks = false;
+
+                if (tracksPos + 1 >= ChillTracks.Length ) { tracksPos = 0;  }
+                else { tracksPos++; }
+
+                tracksPos++;
+                StartCoroutine(PlayTrack());
+            }
+        }
+
+        else {
+            // Wait for a couple seconds? 
+            timePause = Random.Range(5, 30);
+            pausingBetweenTracks = true;
+            timePauseStarted = Time.time;
+        }
+
+       
+
+
+        
+
+    }
+
+    private IEnumerator PlayTrack() {
+        audioSource.clip = ChillTracks[tracksPos];
+        audioSource.Play();
+        trackPlaying = true;
+        yield return new WaitForSeconds(audioSource.clip.length);
+        trackPlaying = false;
+    }
 
     public IEnumerator PlayEffect(AudioClip clip) {
 

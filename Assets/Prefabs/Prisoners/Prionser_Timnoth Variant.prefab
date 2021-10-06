@@ -115,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: _maxTimeSpeak
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1847145099955392913, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: _minTimeSpeak
@@ -223,7 +223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: m_Volume
-      value: 0.9
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: MaxDistance
@@ -231,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: MinDistance
-      value: 5.940594
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5447572959438793337, guid: 99fb238027c232d4faac3e63753c7734, type: 3}
       propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value

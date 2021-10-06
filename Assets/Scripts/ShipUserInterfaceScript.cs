@@ -36,14 +36,14 @@ public class ShipUserInterfaceScript : MonoBehaviour {
         Broken.SetActive(true);
         Repaired.SetActive(false);
 
-        EnergyTxt.text = "Energy: " + CorrectUiValue(RepairCosts.Energy);
-        WoodTxt.text = "Wood: " + CorrectUiValue(RepairCosts.Wood);
-        StoneTxt.text = "Stone: " + CorrectUiValue(RepairCosts.Stone);
-        IronTxt.text = "Iron: " + CorrectUiValue(RepairCosts.Iron);
-        CopperTxt.text = "Copper: " + CorrectUiValue(RepairCosts.Copper);
-        BruxiteTxt.text = "Bruxite: " + CorrectUiValue(RepairCosts.Bruxite);
-        GoldTxt.text = "Gold: " + CorrectUiValue(RepairCosts.Gold);
-        TitaniumTxt.text = "Titanium: " + CorrectUiValue(RepairCosts.Titanium);
+        EnergyTxt.text = "Energy: " + UiTextCorrection.CorrectUiValue(RepairCosts.Energy);
+        WoodTxt.text = "Wood: " + UiTextCorrection.CorrectUiValue(RepairCosts.Wood);
+        StoneTxt.text = "Stone: " + UiTextCorrection.CorrectUiValue(RepairCosts.Stone);
+        IronTxt.text = "Iron: " + UiTextCorrection.CorrectUiValue(RepairCosts.Iron);
+        CopperTxt.text = "Copper: " + UiTextCorrection.CorrectUiValue(RepairCosts.Copper);
+        BruxiteTxt.text = "Bruxite: " + UiTextCorrection.CorrectUiValue(RepairCosts.Bruxite);
+        GoldTxt.text = "Gold: " + UiTextCorrection.CorrectUiValue(RepairCosts.Gold);
+        TitaniumTxt.text = "Titanium: " + UiTextCorrection.CorrectUiValue(RepairCosts.Titanium);
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class ShipUserInterfaceScript : MonoBehaviour {
         if (RepairCosts.Copper > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Copper]) { CopperTxt.color = NotEnough; } else { CopperTxt.color = EnoughResources; }
         if (RepairCosts.Bruxite > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Buxite]) { BruxiteTxt.color = NotEnough; } else { BruxiteTxt.color = EnoughResources; }
         if (RepairCosts.Titanium > script.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Titanium]) { TitaniumTxt.color = NotEnough; } else { TitaniumTxt.color = EnoughResources; }
-          
+
 
     }
 
@@ -75,7 +75,7 @@ public class ShipUserInterfaceScript : MonoBehaviour {
             Debug.Log("Gen repaired");
             script.UiManagerScripto.IsGeneratorBroken = false;
 
-            
+
             Broken.SetActive(false);
             Repaired.SetActive(true);
 
@@ -87,33 +87,6 @@ public class ShipUserInterfaceScript : MonoBehaviour {
 
         Debug.Log("Tried to repair ship!");
 
-    }
-
-
-    private string CorrectUiValue(float val) {
-        float test;
-        string newVal = "Error";
-        // 1k   000
-        // 10k  000
-        // 100k  000
-        // 1M    000 000
-
-        if (val >= 1000000000) {
-            newVal = Mathf.Round(val / 1000000000).ToString() + "B";
-        }
-
-        else if (val >= 1000000) {
-            newVal = Mathf.Round(val / 1000000).ToString() + "M";   ///.ToString("B") + "M";
-        }
-        else if (val >= 1000) {
-            newVal = Mathf.Round(val / 1000).ToString() + "K";
-        }
-
-        else {
-            newVal = Mathf.Round(val).ToString();
-        }
-
-        return newVal;
     }
 
 

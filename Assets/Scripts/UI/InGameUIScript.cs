@@ -32,43 +32,18 @@ public class InGameUIScript : MonoBehaviour {
     }
 
     public void OnUpdateUI() {
-        WoodText.text = "Wood: " +  CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood]);
-        StoneText.text = "Stone: " + CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]);
-        FoodText.text = "Food: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food]);
-        IronText.text = "Iron: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron]);
-        CopperText.text = "Copper: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper]);
-        BruxiteText.text = "Bruxite: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]);
-        TitaniumText.text = "Titanium: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium]);
-        GoldText.text = "Gold: " + CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold]);
-        CarbonText.text = "Carbon: " +CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon]);   
-        EnergyText.text = "Energy: " +CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy]);  
+        WoodText.text = "Wood: " +  UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Wood]);
+        StoneText.text = "Stone: " + UiTextCorrection.CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Stone]);
+        FoodText.text = "Food: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Food]);
+        IronText.text = "Iron: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Iron]);
+        CopperText.text = "Copper: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Copper]);
+        BruxiteText.text = "Bruxite: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Buxite]);
+        TitaniumText.text = "Titanium: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Titanium]);
+        GoldText.text = "Gold: " + UiTextCorrection.CorrectUiValue(GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Gold]);
+        CarbonText.text = "Carbon: " +UiTextCorrection.CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Carbon]);   
+        EnergyText.text = "Energy: " +UiTextCorrection.CorrectUiValue( GameManagerScript.GameManager.PlayerResources.ResourceArray[(int) Resources.ResourcesIndex.Energy]);  
     }
 
-    private string CorrectUiValue(float val) {
-        float test;
-        string newVal = "Error";
-        // 1k   000
-        // 10k  000
-        // 100k  000
-        // 1M    000 000
-
-        if (val >= 1000000000) {
-            newVal = Math.Round(val / 1000000000, 1).ToString() + "B"; 
-        }
-
-        else if (val >= 1000000) {
-            newVal = Math.Round(val / 1000000, 1).ToString() + "M";   ///.ToString("B") + "M";
-        }
-        else if (val >= 1000) {
-              newVal = Math.Round(val / 1000 , 1).ToString() + "K";  
-        }
-
-        else {
-            newVal =  Math.Round(val,1).ToString();
-        }
-
-        return newVal;
-    }
     
     public void UpdateHelfUi(float helf) {
         Debug.Log("Update helf");

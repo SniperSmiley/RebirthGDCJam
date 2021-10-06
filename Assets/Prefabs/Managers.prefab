@@ -3160,6 +3160,7 @@ MonoBehaviour:
   DeathScreen: {fileID: 1085887526}
   CarbonGenLevel: 0
   IsGeneratorBroken: 1
+  DeathScreenText: {fileID: 2073351985}
 --- !u!1 &443344597
 GameObject:
   m_ObjectHideFlags: 0
@@ -11482,7 +11483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You lost 2% of your energy
+  m_text: lost 200 energy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: acb8421c366dfca42896261f04662b65, type: 2}
   m_sharedMaterial: {fileID: 261307315979848620, guid: acb8421c366dfca42896261f04662b65, type: 2}
@@ -19875,8 +19876,10 @@ MonoBehaviour:
   EffectsMixer: {fileID: 773464880990229756, guid: 8bfef5aefadbdbd42b5c6ea8e24ef846, type: 2}
   NumberOfAudioSources: 25
   AudioSourcesList: []
-  Chil1: {fileID: 0}
-  Chill2: {fileID: 0}
+  ChillTracks:
+  - {fileID: 8300000, guid: 0670dbe44e4bcc548b74e30eeb0e3846, type: 3}
+  - {fileID: 8300000, guid: 554c1a07c8f87134da8df18d7e0f2645, type: 3}
+  - {fileID: 8300000, guid: 3494ffe654210b34bb76e68fd5254226, type: 3}
   SoundEffectsGo: {fileID: 1341166750}
   UISuccess: {fileID: 8300000, guid: 9922129d57a1dd74bac73d5eaeb38210, type: 3}
   UIFail: {fileID: 8300000, guid: 7d1f9de4ca2fb53469307746cc8de620, type: 3}
@@ -19891,11 +19894,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3478459653808883761, guid: 8bfef5aefadbdbd42b5c6ea8e24ef846, type: 2}
-  m_audioClip: {fileID: 8300000, guid: fc37b2aed77cf2d4189eeb6f2703d097, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

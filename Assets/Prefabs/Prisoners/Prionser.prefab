@@ -56,7 +56,7 @@ MonoBehaviour:
   _maxChangeDirectionTime: 1.8
   _name: {fileID: 4160403774431886864}
   _minTimeSpeak: 6
-  _maxTimeSpeak: 50
+  _maxTimeSpeak: 100
   VoiceLines:
   - {fileID: 8300000, guid: c8691f546129b0e489017fdb3b2f6d24, type: 3}
   - {fileID: 8300000, guid: 62b10a425c05a4e4db01e4a6e87ea8e4, type: 3}
@@ -137,7 +137,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.78
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -145,7 +145,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 5.940594
+  MinDistance: 3
   MaxDistance: 6
   Pan2D: 0
   rolloffMode: 0

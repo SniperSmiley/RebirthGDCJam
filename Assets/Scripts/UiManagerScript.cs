@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UiManagerScript : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class UiManagerScript : MonoBehaviour
     public int CarbonGenLevel = 0;
 
     public bool IsGeneratorBroken = true;
-
+    [SerializeField] private TextMeshProUGUI DeathScreenText;
 
     public enum UI {
         NOTHING,
@@ -102,10 +103,22 @@ public class UiManagerScript : MonoBehaviour
 
         DeathScreen.SetActive(true);
 
+
+        // Subtract Resources.
+        // How much resources? 3%
+
+        float resLost = GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] * 0.03f;
+        DeathScreenText.text = "Lost " + UiTextCorrection.CorrectUiValue(resLost) + " energy";
+        GameManagerScript.GameManager.PlayerResources.ResourceArray[(int)Resources.ResourcesIndex.Energy] -= resLost;
+
         yield return new WaitForSeconds(2.5f);
 
         DeathScreen.SetActive(false);
     
     }
+
+
+
+
 
 }
