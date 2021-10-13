@@ -1,5 +1,5 @@
 # RebirthGDCJam
-
+asmdkmkasdnasdnks
 Summary:
 
 This is a top-down 2D game which focuses around exploration and gathering resources. There is the unique “Rebirth” mechanic which allows you to bring in NPCs to help you in your endeavours and reach your end goal. In the game, there are lots of cool environments to explore as well as a computer interface to guide you along the way. The gameplay loop revolves around going to a new biome to discover new things and then eventually automating everything so you can gather tons of Wood, Stone, Ores and more!
